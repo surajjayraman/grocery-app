@@ -59,19 +59,6 @@ function ProductTable({ products }) {
   );
 }
 
-/*function SearchBar() {
-  return (
-    <form>
-      
-      <label>
-        
-        {' '}
-        
-      </label>
-    </form>
-  );
-}*/
-
 function FilterableProductTable({ products }) {
   return (
     <div>
