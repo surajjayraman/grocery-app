@@ -1,4 +1,5 @@
 import "./styles.css";
+import SearchBar from "./components/searchBar";
 
 
 function ProductCategoryRow({ category }) {
@@ -58,7 +59,7 @@ function ProductTable({ products }) {
   );
 }
 
-function SearchBar() {
+/*function SearchBar() {
   return (
     <form>
       
@@ -69,7 +70,7 @@ function SearchBar() {
       </label>
     </form>
   );
-}
+}*/
 
 function FilterableProductTable({ products }) {
   return (
