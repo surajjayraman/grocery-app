@@ -1,36 +1,6 @@
 import "./styles.css";
 import SearchBar from "./components/searchBar";
-import ProductCategoryRow from "./components/productCategoryRow";
-import ProductRow from "./components/productRow";
-import ProductTableHeader from "./components/productTableHeader"
-
-function ProductTable({ products }) {
-  const rows = [];
-  let lastCategory = null;
-
-  products.forEach((product) => {
-    if (product.category !== lastCategory) {
-      rows.push(
-        <ProductCategoryRow
-          category={product.category}
-          key={product.category} />
-      );
-    }
-    rows.push(
-      <ProductRow
-        product={product}
-        key={product.name} />
-    );
-    lastCategory = product.category;
-  });
-
-  return (
-    <div>
-     <ProductTableHeader />
-      {rows}
-    </div>
-  );
-}
+import ProductTable from "./components/productTable"
 
 function FilterableProductTable({ products }) {
   return (
