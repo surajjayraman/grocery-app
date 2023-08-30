@@ -1,7 +1,8 @@
 import "./styles.css";
 import SearchBar from "./components/searchBar";
 import ProductCategoryRow from "./components/productCategoryRow";
-import ProductRow from "./components/productRow"
+import ProductRow from "./components/productRow";
+import ProductTableHeader from "./components/productTableHeader"
 
 function ProductTable({ products }) {
   const rows = [];
@@ -24,15 +25,10 @@ function ProductTable({ products }) {
   });
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <div>
+     <ProductTableHeader />
+      {rows}
+    </div>
   );
 }
 
