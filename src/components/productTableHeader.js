@@ -7,8 +7,16 @@ const ProductTableHeader = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Price</th>
+                        <td>
+                            <th colSpan="2">
+                                Name
+                            </th>
+                        </td>
+                        <td>
+                            <th colSpan="2">
+                                Price
+                            </th>
+                        </td>
                     </tr>
                 </thead>
             </table>
