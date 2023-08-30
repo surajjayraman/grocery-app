@@ -1,16 +1,6 @@
 import "./styles.css";
 import SearchBar from "./components/searchBar";
-
-
-function ProductCategoryRow({ category }) {
-  return (
-    <tr>
-      <th colSpan="2">
-        {category}
-      </th>
-    </tr>
-  );
-}
+import ProductCategoryRow from "./components/productCategoryRow";
 
 function ProductRow({ product }) {
   const name = product.stocked ? product.name :
