@@ -1,20 +1,7 @@
 import "./styles.css";
 import SearchBar from "./components/searchBar";
 import ProductCategoryRow from "./components/productCategoryRow";
-
-function ProductRow({ product }) {
-  const name = product.stocked ? product.name :
-    <span style={{ color: 'red' }}>
-      {product.name}
-    </span>;
-
-  return (
-    <tr>
-      <td>{name}</td>
-      <td>{product.price}</td>
-    </tr>
-  );
-}
+import ProductRow from "./components/productRow"
 
 function ProductTable({ products }) {
   const rows = [];
