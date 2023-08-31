@@ -8,15 +8,19 @@ function Profile() {
                 alt="Katherine Johnson"
             />
             <img
-            src="https://i.imgur.com/lICfvbD.jpg"
-            alt="Aklilu Lemma"
+                src="https://i.imgur.com/lICfvbD.jpg"
+                alt="Aklilu Lemma"
             />
             <img 
-            src="https://i.imgur.com/jA8hHMpm.jpg" 
-            alt="Katsuko Saruhashi" 
-            />            
+                src="https://i.imgur.com/jA8hHMpm.jpg" 
+                alt="Katsuko Saruhashi" 
+            />
+            <img
+                src="https://i.imgur.com/QIrZWGIs.jpg"
+                alt="Alan L. Hart"
+            />
         </div>
-      
+
     );
   }
 
@@ -26,7 +30,6 @@ const Gallery = () => {
         <br/>
         <h1>Amazing scientists</h1>
         <Profile />
-        
       </section>
     );
   }
