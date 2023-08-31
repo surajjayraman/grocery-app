@@ -1,15 +1,5 @@
 import "./styles.css";
-import SearchBar from "./components/searchBar";
-import ProductTable from "./components/productTable"
-
-function FilterableProductTable({ products }) {
-  return (
-    <div>
-      <SearchBar />
-      <ProductTable products={products} />
-    </div>
-  );
-}
+import FilterableProductTable from "./components/filterableProductTable"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
