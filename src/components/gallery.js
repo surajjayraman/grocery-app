@@ -2,10 +2,21 @@ import React from 'react';
 
 function Profile() {
     return (
-      <img
-        src="https://i.imgur.com/MK3eW3As.jpg"
-        alt="Katherine Johnson"
-      />
+        <div>
+            <img
+                src="https://i.imgur.com/MK3eW3As.jpg"
+                alt="Katherine Johnson"
+            />
+            <img
+            src="https://i.imgur.com/lICfvbD.jpg"
+            alt="Aklilu Lemma"
+            />
+            <img 
+            src="https://i.imgur.com/jA8hHMpm.jpg" 
+            alt="Katsuko Saruhashi" 
+            />            
+        </div>
+      
     );
   }
 
@@ -15,10 +26,10 @@ const Gallery = () => {
         <br/>
         <h1>Amazing scientists</h1>
         <Profile />
-        <Profile />
-        <Profile />
+        
       </section>
     );
   }
 
 export default Gallery;  
+
