@@ -10,7 +10,9 @@ const FilterableProductTable = ({ products }) => {
     return (
         <div>
             <SearchBar filterText={filterText}
-                inStockOnly={inStockOnly} />
+                inStockOnly={inStockOnly}
+                onFilterTextChange={setFilterText}
+                onInStockOnlyChange={setInStockOnly} />
             <ProductTable 
                 filterText={filterText}
                 inStockOnly={inStockOnly}
