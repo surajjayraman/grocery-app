@@ -1,5 +1,6 @@
 import "./styles.css";
-import FilterableProductTable from "./components/filterableProductTable"
+import FilterableProductTable from "./components/filterableProductTable";
+import Gallery from "./components/gallery";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -11,7 +12,12 @@ const PRODUCTS = [
 ];
 
 export default function App() {
-  return <FilterableProductTable products={PRODUCTS} />;
+  return (
+    <div>
+      <FilterableProductTable products={PRODUCTS} />      
+      <Gallery />
+    </div>
+  );
 }
 
 
