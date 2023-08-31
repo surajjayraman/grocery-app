@@ -1,14 +1,17 @@
 import React from 'react'
 
-const SearchBar = ({ children }) => {
+const SearchBar = ({ filterText, inStockOnly }) => {
   return (
     <div>
       <h1>This is the page title</h1>
-      { children }
+     
         <form>
-            <input type="text" placeholder="Search..." />
+            <input type="text" 
+                value={filterText}
+                placeholder="Search..." />
             <label>
-                <input type="checkbox" />
+                <input type="checkbox"
+                    checked={inStockOnly} />
                 {' '}
                 Only show products in stock
             </label>
