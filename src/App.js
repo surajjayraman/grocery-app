@@ -1,7 +1,8 @@
 import "./styles.css";
 import FilterableProductTable from "./components/filterableProductTable";
 import Gallery from "./components/gallery";
-import Bio from "./components/bio"
+import Bio from "./components/bio";
+import Avatar from "./components/avatar";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -29,7 +30,9 @@ export default function App() {
           <li>Rehearse a movie scene</li>
           <li>Improve the spectrum technology</li>
       </ul>
+      <Avatar />
     </div>
+    
   );
 }
 
