@@ -13,6 +13,14 @@ export default function TodoList() {
         <>
             <h1>{name}'s To Do List</h1>
             <h3>To Do List for {formatDate(today)}</h3>
+            <ul style={{
+                        backgroundColor: 'black',
+                        color: 'pink'
+                        }}>
+                        <li>Improve the videophone</li>
+                        <li>Prepare aeronautics lectures</li>
+                        <li>Work on the alcohol-fuelled engine</li>
+            </ul>
         </>
     );
 }
