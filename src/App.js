@@ -1,6 +1,7 @@
 import "./styles.css";
 import FilterableProductTable from "./components/filterableProductTable";
 import Gallery from "./components/gallery";
+import Bio from "./components/bio"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -14,8 +15,20 @@ const PRODUCTS = [
 export default function App() {
   return (
     <div>
-      <FilterableProductTable products={PRODUCTS} />      
+      <FilterableProductTable products={PRODUCTS} />
+      <Bio />      
       <Gallery />
+      <h1>Hedy Lamarr's Todos</h1>
+      <img 
+        src="https://i.imgur.com/yXOvdOSs.jpg" 
+        alt="Hedy Lamarr" 
+        className="photo"
+      />
+      <ul>
+          <li>Invent new traffic lights</li>
+          <li>Rehearse a movie scene</li>
+          <li>Improve the spectrum technology</li>
+      </ul>
     </div>
   );
 }
