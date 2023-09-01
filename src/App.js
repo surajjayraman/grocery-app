@@ -3,6 +3,7 @@ import FilterableProductTable from "./components/filterableProductTable";
 import Gallery from "./components/gallery";
 import Bio from "./components/bio";
 import Avatar from "./components/avatar";
+import TodoList from "./components/todoList"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -31,6 +32,7 @@ export default function App() {
           <li>Improve the spectrum technology</li>
       </ul>
       <Avatar />
+      <TodoList />
     </div>
     
   );
