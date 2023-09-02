@@ -1,6 +1,6 @@
 import { getImageUrl } from './utils.js';
 
-export default function Avatar({ person, size }) {
+export default function Avatar({ person, size=100 }) {
   return (
     <img
       className="avatar"

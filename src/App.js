@@ -3,7 +3,8 @@ import FilterableProductTable from "./components/filterableProductTable";
 import Gallery from "./components/gallery";
 import Bio from "./components/bio";
 import Avatar from "./components/avatar";
-import TodoList from "./components/todoList"
+import TodoList from "./components/todoList";
+import Profile from "./components/profile"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -35,6 +36,7 @@ export default function App() {
       size={100}
       />
       <TodoList />
+      <Profile />
     </div>
     
   );
