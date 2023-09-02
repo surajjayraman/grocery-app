@@ -20,6 +20,13 @@ export default function Profile() {
           imageId: 'YfeOqp2'
         }}
       />
+       <Avatar
+        size={40}
+        person={{ 
+          name: 'Gregorio Y. Zara', 
+          imageId: '7vQD0fP'
+        }}
+      />
     </Card>
   );
 }

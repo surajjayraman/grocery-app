@@ -1,7 +1,8 @@
 import React from 'react';
+import Profile from './profile';
 import { getImageUrl } from './utils';
 
-const Profile = () => {
+/*const Profile = () => {
     return (
         <div>
             <img
@@ -23,7 +24,7 @@ const Profile = () => {
         </div>
 
     );
-  }
+  }*/
 
 const Gallery = ({ person, size=100 }) => {
     return (
@@ -38,7 +39,7 @@ const Gallery = ({ person, size=100 }) => {
           <h2>Maria Skłodowska-Curie</h2>
           <img
             className="avatar"
-            src={getImageUrl(person)}
+            src={getImageUrl(person, size)}
             alt="Maria Skłodowska-Curie"
             width={size}
             height={size}
@@ -62,7 +63,7 @@ const Gallery = ({ person, size=100 }) => {
           <h2>Katsuko Saruhashi</h2>
           <img
             className="avatar"
-            src={getImageUrl(person)}
+            src={getImageUrl(person, size)}
             alt="Katsuko Saruhashi"
             width={size}
             height={size}
