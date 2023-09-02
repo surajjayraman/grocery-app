@@ -31,7 +31,9 @@ export default function App() {
           <li>Rehearse a movie scene</li>
           <li>Improve the spectrum technology</li>
       </ul>
-      <Avatar />
+      <Avatar personProp={{ baseUrl:'https://i.imgur.com/', name: 'Lin Lanying', imageId: '1bX5QH6' }}
+      size={100}
+      />
       <TodoList />
     </div>
     
