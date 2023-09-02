@@ -4,7 +4,9 @@ import Gallery from "./components/gallery";
 import Bio from "./components/bio";
 import Avatar from "./components/avatar";
 import TodoList from "./components/todoList";
-import Profile from "./components/profile"
+import Profile from "./components/profile";
+import Clock from "./components/clock"
+import { useState, useEffect } from 'react';
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -15,7 +17,20 @@ const PRODUCTS = [
   {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
 ];
 
+function useTime() {
+  const [time, setTime] = useState(() => new Date());
+  useEffect(() => {
+    const id = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(id);
+  }, []);
+  return time;
+}
+
 export default function App() {
+  const time = useTime();
+  const [color, setColor] = useState('lightcoral');
   return (
     <div>
       <FilterableProductTable products={PRODUCTS} />
@@ -37,6 +52,18 @@ export default function App() {
       />
       <TodoList />
       <Profile />
+        <div>
+          <h3>How props change over time</h3>
+          <p>
+            Pick a color:{' '}
+            <select value={color} onChange={e => setColor(e.target.value)}>
+              <option value="lightcoral">lightcoral</option>
+              <option value="midnightblue">midnightblue</option>
+              <option value="rebeccapurple">rebeccapurple</option>
+            </select>
+          </p>
+        <Clock color={color} time={time.toLocaleTimeString()} />
+      </div>
     </div>
     
   );
