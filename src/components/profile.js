@@ -11,6 +11,7 @@ function Card({ children }) {
 export default function Profile() {
   return (
     <Card>
+      <h3>Passing JSX as children</h3>  
       <Avatar
         size={100}
         person={{ 
