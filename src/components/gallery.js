@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from './utils';
 
 const Profile = () => {
     return (
@@ -24,13 +25,64 @@ const Profile = () => {
     );
   }
 
-const Gallery = () => {
+const Gallery = ({ person, size=100 }) => {
     return (
-      <section>
-        <br/>
-        <h1>Amazing scientists</h1>
-        <Profile />
-      </section>
+      <div>
+        <section>
+          <br/>
+          <h1>Amazing scientists</h1>
+          <Profile />
+        </section>
+        <h1>Notable Scientists</h1>
+        <section className="profile">
+          <h2>Maria Skłodowska-Curie</h2>
+          <img
+            className="avatar"
+            src={getImageUrl(person)}
+            alt="Maria Skłodowska-Curie"
+            width={size}
+            height={size}
+          />
+          <ul>
+            <li>
+              <b>Profession: </b> 
+              physicist and chemist
+            </li>
+            <li>
+              <b>Awards: 4 </b> 
+              (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
+            </li>
+            <li>
+              <b>Discovered: </b>
+              polonium (element)
+            </li>
+          </ul>
+        </section>
+        <section className="profile">
+          <h2>Katsuko Saruhashi</h2>
+          <img
+            className="avatar"
+            src={getImageUrl(person)}
+            alt="Katsuko Saruhashi"
+            width={size}
+            height={size}
+          />
+          <ul>
+            <li>
+              <b>Profession: </b> 
+              geochemist
+            </li>
+            <li>
+              <b>Awards: 2 </b> 
+              (Miyake Prize for geochemistry, Tanaka Prize)
+            </li>
+            <li>
+              <b>Discovered: </b>
+              a method for measuring carbon dioxide in seawater
+            </li>
+          </ul>
+        </section>
+      </div>
     );
   }
 

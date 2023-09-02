@@ -34,8 +34,7 @@ export default function App() {
   return (
     <div>
       <FilterableProductTable products={PRODUCTS} />
-      <Bio />      
-      <Gallery />
+      <Bio />
       <h1>Hedy Lamarr's Todos</h1>
       <img 
         src="https://i.imgur.com/yXOvdOSs.jpg" 
@@ -64,8 +63,10 @@ export default function App() {
           </p>
         <Clock color={color} time={time.toLocaleTimeString()} />
       </div>
+      <Gallery person={ { baseUrl :'https://i.imgur.com/', imageId: 'szV5sdG'} } size={70} />
+      <Gallery person={ { baseUrl :'https://i.imgur.com/', imageId: 'YfeOqp2'} } size={70} />
     </div>
-    
+
   );
 }
 
