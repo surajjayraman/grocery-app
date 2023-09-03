@@ -10,18 +10,19 @@ const drinks = {
       age: '1,000+ years'
     }
   };
-  
+
 function Drink({ name }) {
+    const info = drinks[name];
     return (
       <section>
         <h1>{name}</h1>
         <dl>
           <dt>Part of plant</dt>
-          <dd>{name === 'tea' ? 'leaf' : 'bean'}</dd>
+          <dd>{info.part}</dd>
           <dt>Caffeine content</dt>
-          <dd>{name === 'tea' ? '15–70 mg/cup' : '80–185 mg/cup'}</dd>
+          <dd>{info.caffeine}</dd>
           <dt>Age</dt>
-          <dd>{name === 'tea' ? '4,000+ years' : '1,000+ years'}</dd>
+          <dd>{info.age}</dd>
         </dl>
       </section>
     );
