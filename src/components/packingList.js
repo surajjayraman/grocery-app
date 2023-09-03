@@ -6,7 +6,8 @@ function Item({ name, isPacked }) {
   export default function PackingList() {
     return (
       <section>
-        <h1>Sally Ride's Packing List</h1>
+        <h1>Conditional Rendering</h1>
+        <h2>Sally Ride's Packing List</h2>
         <ul>
           <Item 
             isPacked={true} 
