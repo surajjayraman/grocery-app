@@ -15,21 +15,35 @@ import { getImageUrl } from "./utils";
     });
 
     const listItems = people.map((person) => {
-       return <li>{person.name}</li>
+       return (
+        <>
+        <li key={person.id}>
+        <img
+                src={getImageUrl(person)}
+                alt={person.name}
+                />
+            
+            {person.name}
+        </li>
+       </>
+       );
     });
 
     const chemistList = chemists.map((chemist) => {
         return (
         <>
+          <li key={chemist.id}>
             <img
-            src={getImageUrl(chemist)}
-            alt={chemist.name}
-            />
-            <p>
-                <b>{chemist.name}:</b>
-                {' ' + chemist.profession + ' '}
-                known for {chemist.accomplishment}
-            </p>
+                src={getImageUrl(chemist)}
+                alt={chemist.name}
+                />
+                <p>
+                    <b>{chemist.name}:</b>
+                    {' ' + chemist.profession + ' '}
+                    known for {chemist.accomplishment}
+                </p>
+          </li>
+            
         </> )
 
     });
