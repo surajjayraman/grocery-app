@@ -7,7 +7,8 @@ import TodoList from "./components/todoList";
 import Profile from "./components/profile";
 import Clock from "./components/clock"
 import { useState, useEffect } from 'react';
-import PackingList from "./components/packingList"
+import PackingList from "./components/packingList";
+import DrinkList from "./components/drinkList";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -67,6 +68,7 @@ export default function App() {
       <Gallery person={ { baseUrl :'https://i.imgur.com/', imageId: 'szV5sdG'} } size={70} />
       <Gallery person={ { baseUrl :'https://i.imgur.com/', imageId: 'YfeOqp2'} } size={70} />
       <PackingList />
+      <DrinkList />
     </div>
 
   );
