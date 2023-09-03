@@ -31,7 +31,7 @@ function Drink({ name }) {
   export default function DrinkList() {
     return (
       <div>
-        <h2>series of ? : variables</h2>
+        <h2>Drink list refactored</h2>
         <Drink name="tea" />
         <Drink name="coffee" />
       </div>
