@@ -42,10 +42,6 @@ code {
   font-size: 1.2em;
 }
 
-ul {
-  padding-inline-start: 20px;
-}
-
 .avatar { border-radius: 50%; height: 90px; }
 
 .card {
@@ -68,6 +64,12 @@ ul {
 }
 h1, h2 { margin: 5px; }
 h1 { margin-bottom: 10px; }
-ul { padding: 0px 10px 0px 20px; }
+
 li { margin: 5px; }
 img { width: 100px; height: 100px; border-radius: 50%; }
+
+ul {
+  padding-inline-start: 20px;
+}
+
+ul { list-style-type: none; padding: 0px 10px; }
