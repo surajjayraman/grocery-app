@@ -1,22 +1,33 @@
 import { recipes} from './data';
 
+export const Recipe = ({id, name, ingredients}) => {
+    const items = ingredients.map((item) => {
+        return (
+            <div key={id}>
+               <ul>
+                    <li key={item}>
+                    {item}
+                    </li>
+                </ul>
+            </div>
+        )
+    })
+
+    return (
+        <div>
+            <h2>{name}</h2>
+            {items}
+        </div>
+    )
+
+}
 const RecipeList = () => {
     const recipeItems = recipes.map((item) => {
         return (
-            <>
-                <div key={item.id}>
-                    <h2>{item.name}</h2>
-                    <ul>
-                        {item.ingredients.map((ingredient) => {
-                            return (
-                                <li key={ingredient}>
-                                        {ingredient}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </>
+            <div>
+                <Recipe id={item.id} name={item.name} 
+                    ingredients={item.ingredients} key={item.id} />
+            </div>
 
         );
     });

@@ -26,7 +26,6 @@ import { getImageUrl } from "./utils";
                 src={getImageUrl(person)}
                 alt={person.name}
                 />
-            
             {person.name}
         </li>
        </>
