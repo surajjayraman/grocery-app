@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react';
 import PackingList from "./components/packingList";
 import DrinkList from "./components/drinkList";
 import List from "./components/list";
+import RecipeList from "./components/recipeList"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -71,6 +72,7 @@ export default function App() {
       <PackingList />
       <DrinkList />
       <List />
+      <RecipeList />
     </div>
 
   );
