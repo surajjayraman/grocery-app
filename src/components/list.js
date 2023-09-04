@@ -14,6 +14,10 @@ import { getImageUrl } from "./utils";
         return person.profession === 'chemist';
     });
 
+    const physicists = people.filter((person) => {
+        return person.profession === 'physicist';
+    });
+
     const listItems = people.map((person) => {
        return (
         <>
@@ -48,12 +52,35 @@ import { getImageUrl } from "./utils";
 
     });
 
+    const physicistList = physicists.map((physicist) => {
+        return (
+        <>
+          <li key={physicist.id}>
+            <img
+                src={getImageUrl(physicist)}
+                alt={physicist.name}
+                />
+                <p>
+                    <b>{physicist.name}:</b>
+                    {' ' + physicist.profession + ' '}
+                    known for {physicist.accomplishment}
+                </p>
+          </li>
+            
+        </> )
+
+    });
+
+
+
     return (
         <article>
             <h2>Rendering Lists</h2>
             <ul>{listItems}</ul>
             <h2>All chemists</h2>
             <ul>{chemistList}</ul>
+            <h2>All physicists</h2>
+            <ul>{physicistList}</ul>
         </article>
         
     );
