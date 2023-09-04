@@ -70,3 +70,4 @@ h1, h2 { margin: 5px; }
 h1 { margin-bottom: 10px; }
 ul { padding: 0px 10px 0px 20px; }
 li { margin: 5px; }
+img { width: 100px; height: 100px; border-radius: 50%; }

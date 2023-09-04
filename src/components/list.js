@@ -49,12 +49,12 @@ import { getImageUrl } from "./utils";
     });
 
     return (
-        <>
-        <h2>Rendering Lists</h2>
-        <ul>{listItems}</ul>
-        <h2>All chemists</h2>
-        <ul>{chemistList}</ul>
-        </>
+        <article>
+            <h2>Rendering Lists</h2>
+            <ul>{listItems}</ul>
+            <h2>All chemists</h2>
+            <ul>{chemistList}</ul>
+        </article>
         
     );
 }
