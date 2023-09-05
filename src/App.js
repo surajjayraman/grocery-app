@@ -11,7 +11,8 @@ import PackingList from "./components/packingList";
 import DrinkList from "./components/drinkList";
 import List from "./components/list";
 import RecipeList from "./components/recipeList";
-import Poem from './components/poem'
+import Poem from './components/poem';
+import TeaSet from "./components/teaSet"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -75,6 +76,7 @@ export default function App() {
       <List />
       <RecipeList />
       <Poem />
+      <TeaSet />
     </div>
 
   );
