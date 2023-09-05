@@ -23,8 +23,16 @@ export const Recipe = ({id, name, ingredients}) => {
 }
 const RecipeList = () => {
     const recipeItems = recipes.map((item) => {
+        const stockImageUrl = 'https://media.istockphoto.com/id/1357113949/photo/food.webp?s=170667a&w=0&k=20&c=Bi9PCCV6PTvD6Jg3vht2nQRn7htRJfps8us3YaDNdv8=';
         return (
             <div>
+                <img
+                    className="avatar"
+                    src={stockImageUrl}
+                    alt="Cookies"
+                    width="100"
+                    height="100"
+                    />
                 <Recipe id={item.id} name={item.name} 
                     ingredients={item.ingredients} key={item.id} />
             </div>
