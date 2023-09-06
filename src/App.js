@@ -14,7 +14,8 @@ import RecipeList from "./components/recipeList";
 import Poem from './components/poem';
 import TeaSet from "./components/teaSet";
 import ClockRender from "./components/clockRender";
-import FixProfile from "./components/fixProfile"
+import FixProfile from "./components/fixProfile";
+import StoryTray from "./components/storyTray"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -89,8 +90,19 @@ export default function App() {
         imageId: 'MK3eW3A',
         name: 'Creola Katherine Johnson',
       }} />
-    </div>
+      <h1> Story Board</h1>
+      <p>It is <Clock color={color} time={time.toLocaleTimeString()} /> now!</p>
+      <StoryTray stories=
+        {[{
+          id: "My Story 1",
+          label: 'Create Story 1'
+        },
+        {
+          id: "My Story 2",
+          label: 'Create Story 2'
 
+        }]}/>
+    </div>
   );
 }
 
