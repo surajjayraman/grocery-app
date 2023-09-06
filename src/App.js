@@ -13,7 +13,8 @@ import List from "./components/list";
 import RecipeList from "./components/recipeList";
 import Poem from './components/poem';
 import TeaSet from "./components/teaSet";
-import ClockRender from "./components/clockRender"
+import ClockRender from "./components/clockRender";
+import FixProfile from "./components/fixProfile"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -79,6 +80,14 @@ export default function App() {
       <Poem />
       <TeaSet />
       <ClockRender time={time} />
+      <FixProfile person={{
+        imageId: 'lrWQx8l',
+        name: 'Subrahmanyan Chandrasekhar',
+      }} />
+      <FixProfile person={{
+        imageId: 'MK3eW3A',
+        name: 'Creola Katherine Johnson',
+      }} />
     </div>
 
   );
