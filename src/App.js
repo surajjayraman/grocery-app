@@ -12,7 +12,8 @@ import DrinkList from "./components/drinkList";
 import List from "./components/list";
 import RecipeList from "./components/recipeList";
 import Poem from './components/poem';
-import TeaSet from "./components/teaSet"
+import TeaSet from "./components/teaSet";
+import ClockRender from "./components/clockRender"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -77,6 +78,7 @@ export default function App() {
       <RecipeList />
       <Poem />
       <TeaSet />
+      <ClockRender time={time} />
     </div>
 
   );

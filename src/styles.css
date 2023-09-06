@@ -83,3 +83,11 @@ hr {
   margin: 0 120px 0 120px;
   border: 1px dashed #45c3d8;
 }
+.day {
+  background: #dada20;
+  color: #222;
+}
+.night {
+  background: #222;
+  color: #fff;
+}
