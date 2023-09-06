@@ -11,6 +11,15 @@ const DrinkRecipe = ({ drinkers }) => {
       </ol>
     );
   }
+
+  const TeaGathering = () => {
+    let cups = [];
+    for (let i = 1; i <= 12; i++) {
+      cups.push(<Cup key={i} guest={i} />);
+    }
+    return cups;
+  }
+
 export default function TeaSet() {
   return (
     <>
@@ -24,6 +33,7 @@ export default function TeaSet() {
         <DrinkRecipe drinkers={2}/>
         <p>For a gathering</p>
         <DrinkRecipe drinkers={4}/>
+        <TeaGathering />
       </section>
     </>
   );
