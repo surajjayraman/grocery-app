@@ -80,6 +80,7 @@ export default function App() {
       <Poem />
       <TeaSet />
       <ClockRender time={time} />
+      <h1>Panel Profiles</h1>
       <FixProfile person={{
         imageId: 'lrWQx8l',
         name: 'Subrahmanyan Chandrasekhar',

@@ -1,32 +1,28 @@
 import Panel from './panel.js';
 import { getImageUrl } from './utils.js';
 
-let currentPerson;
-
 export default function FixProfile({ person }) {
-  currentPerson = person;
+
   return (
     <>
-    <h1>Panel Profiles</h1>
     <Panel>
-      <Header />
-      <Avatar />
+      <Header name={person.name}/>
+      <Avatar person={person}/>
     </Panel>
     </>
-    
   )
 }
 
-function Header() {
-  return <h1>{currentPerson.name}</h1>;
+function Header({ name }) {
+  return <h1>{name}</h1>;
 }
 
-function Avatar() {
+function Avatar({ person }) {
   return (
     <img
       className="avatar"
-      src={getImageUrl(currentPerson)}
-      alt={currentPerson.name}
+      src={getImageUrl(person)}
+      alt={person.name}
       width={50}
       height={50}
     />
