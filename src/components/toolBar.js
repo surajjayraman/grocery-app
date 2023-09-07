@@ -10,6 +10,9 @@
         <Button onClick={onUploadImage}>
           Upload Image
         </Button>
+        <Button >
+            I don't do anything!
+        </Button>
       </div>
     );
   }
