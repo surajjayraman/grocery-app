@@ -10,7 +10,7 @@
         <Button onClick={onUploadImage}>
           Upload Image
         </Button>
-        <Button >
+        <Button onClick={() => alert(`Sorry I'm chilling!`)}>
             I don't do anything!
         </Button>
       </div>
