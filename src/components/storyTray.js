@@ -10,7 +10,7 @@ export default function StoryTray({ stories }) {
     return (
       <ul>
         {storiesToDisplay.map(story => (
-          <li key={story.id}>
+          <li className="panel" key={story.id}>
             {story.label}
           </li>
         ))}
