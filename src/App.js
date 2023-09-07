@@ -15,7 +15,8 @@ import Poem from './components/poem';
 import TeaSet from "./components/teaSet";
 import ClockRender from "./components/clockRender";
 import FixProfile from "./components/fixProfile";
-import StoryTray from "./components/storyTray"
+import StoryTray from "./components/storyTray";
+import Toolbar from "./components/toolBar"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -102,6 +103,10 @@ export default function App() {
           label: 'Create Story 2'
 
         }]}/>
+        <Toolbar
+        onPlayMovie={() => alert('Playing!')}
+        onUploadImage={() => alert('Uploading!')}
+        />
     </div>
   );
 }
