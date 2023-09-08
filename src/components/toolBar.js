@@ -1,6 +1,9 @@
 
   
  export default function Toolbar({ onPlayMovie, onUploadImage }) {
+
+    const handleIdleClick = () => alert(`Idle message >>> Sorry I'm chilling!`);
+
     return (
       <div>
         <h1>Play Toolbar</h1>
@@ -10,7 +13,7 @@
         <Button onClick={onUploadImage}>
           Upload Image
         </Button>
-        <Button onClick={() => alert(`Sorry I'm chilling!`)}>
+        <Button onClick={handleIdleClick}>
             I don't do anything!
         </Button>
       </div>
