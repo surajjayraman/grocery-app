@@ -16,6 +16,9 @@
         <Button onClick={handleIdleClick}>
             I don't do anything!
         </Button>
+        <AlertButton onClick={() => alert('Hello from Alert Button')} >
+            Click me for an Alert!
+        </AlertButton>
       </div>
     );
   }
@@ -26,5 +29,13 @@
         {children}
       </button>
     );
+  }
+
+  function AlertButton({ onClick, children}){
+    return (
+        <button onClick={onClick}>
+            {children}
+        </button>
+    )
   }
   
