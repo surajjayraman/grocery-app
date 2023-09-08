@@ -19,6 +19,10 @@
         <AlertButton message={'Hello from Alert Button'} >
             Click me for an Alert!
         </AlertButton>
+        <div>
+            <PlayButton movieName="Kiki's Delivery Service" />
+            <UploadButton />
+        </div>
       </div>
     );
   }
@@ -38,4 +42,24 @@
             {children}
         </button>
     )
+  }
+
+  function PlayButton({ movieName }) {
+    function handlePlayClick() {
+      alert(`Playing ${movieName}!`);
+    }
+  
+    return (
+      <Button onClick={handlePlayClick}>
+        Play "{movieName}"
+      </Button>
+    );
+  }
+  
+  function UploadButton() {
+    return (
+      <Button onClick={() => alert('Uploading!')}>
+        Upload Image
+      </Button>
+    );
   }
