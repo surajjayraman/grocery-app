@@ -5,7 +5,7 @@
     const handleIdleClick = () => alert(`Idle message >>> Sorry I'm chilling!`);
 
     return (
-      <div>
+      <div className="Toolbar">
         <h1>Play Toolbar</h1>
         <Button onClick={onPlayMovie}>
           Play Movie

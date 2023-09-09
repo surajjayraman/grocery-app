@@ -108,3 +108,8 @@ hr {
   width: 70px;
   height: 100px;
 }*/
+.Toolbar {
+  background: #aaa;
+  padding: 5px;
+}
+button { margin: 5px; }
