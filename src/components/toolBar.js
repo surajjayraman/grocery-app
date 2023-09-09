@@ -1,11 +1,12 @@
 
-  
  export default function Toolbar({ onPlayMovie, onUploadImage }) {
 
     const handleIdleClick = () => alert(`Idle message >>> Sorry I'm chilling!`);
 
     return (
-      <div className="Toolbar">
+      <div className="Toolbar" onClick={() => {
+        alert('You clicked on the toolbar!');
+        }}>
         <h1>Play Toolbar</h1>
         <Button onClick={onPlayMovie}>
           Play Movie
