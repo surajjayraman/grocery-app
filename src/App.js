@@ -18,6 +18,7 @@ import FixProfile from "./components/fixProfile";
 import StoryTray from "./components/storyTray";
 import Toolbar from "./components/toolBar";
 import SignUp from "./components/signUp";
+import LightSwitch from "./components/lightSwitch";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -109,6 +110,7 @@ export default function App() {
         onUploadImage={() => alert('Uploading!')}
         />
         <SignUp />
+        <LightSwitch />
     </div>
   );
 }
