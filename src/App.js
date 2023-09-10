@@ -16,7 +16,8 @@ import TeaSet from "./components/teaSet";
 import ClockRender from "./components/clockRender";
 import FixProfile from "./components/fixProfile";
 import StoryTray from "./components/storyTray";
-import Toolbar from "./components/toolBar"
+import Toolbar from "./components/toolBar";
+import SignUp from "./components/signUp";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -107,6 +108,7 @@ export default function App() {
         onPlayMovie={() => alert('Playing!')}
         onUploadImage={() => alert('Uploading!')}
         />
+        <SignUp />
     </div>
   );
 }
