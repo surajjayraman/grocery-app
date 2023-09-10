@@ -3,7 +3,9 @@ import { useState } from 'react';
 const StyleSwitch = ({ onChangeColor }) => {
 
     return (
-        <button onClick={onChangeColor}>
+        <button onClick={
+            e => {e.stopPropagation();
+            onChangeColor();}}>
             Toggle The Styles
         </button>
 
