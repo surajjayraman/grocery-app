@@ -10,7 +10,6 @@ const StyleSwitch = ({ onChangeColor }) => {
     );
 
 }
-
 export default function ColorSwitch () {
 
   const [clicks, setClicks] = useState(0);
