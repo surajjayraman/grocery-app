@@ -7,8 +7,22 @@ export default function SculptureGallery() {
   const [showMore, setShowMore] = useState(false);
   let sculpture = sculptureList[index];
 
+  // adds a guarding condition inside both event handlers
+  // and disables the buttons when needed
+  let hasPrev = index > 0;
+  let hasNext = index < sculptureList.length - 1;
+
+  function handlePrevClick() {
+    if (hasPrev) {
+        setIndex(index - 1);
+    }
+  }
+
   function handleClick() {
-    setIndex(index + 1);
+    if (hasNext){
+        setIndex(index + 1);
+    }
+
   }
 
   // show details
@@ -21,26 +35,31 @@ export default function SculptureGallery() {
     <>
        <h1>------------------------------------------------</h1>
        <h2>Sculpture Museum</h2> 
-       <button onClick={handleClick}>
-        {index <= 11 && `Next`}
+       <button
+        onClick={handlePrevClick}
+        disabled={!hasPrev}
+        >
+        Previous
+      </button>
+       <button onClick={handleClick}
+        disabled={!hasNext}>
+        Next
        </button>
       <h2>
-        <i>{index <= 11 && sculpture.name} </i> 
-        by {index <= 11 && sculpture.artist}
+        <i>{sculpture.name} </i>
+        by {sculpture.artist}
       </h2>
-      <h3>  
-        ({index <= 11 && index + 1} of {index <= 11 && sculptureList.length})
+      <h3>
+        ({index + 1} of {sculptureList.length})
       </h3>
         <button onClick={handleMoreClick}>
-        {index <= 11 && showMore ? 'Hide' : 'Show'} details
+        {showMore ? 'Hide' : 'Show'} details
         </button>
-        {showMore && <p>{index <= 11 && sculpture.description}</p>}
-        {index <= 11 && 
-      <img 
-        src={sculpture.url} 
-        alt={sculpture.alt}
-      />}
-      
+        {showMore && <p>{sculpture.description}</p>}
+        <img
+            src={sculpture.url}
+            alt={sculpture.alt}
+        />
     </>
   );
 }
