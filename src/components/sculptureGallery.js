@@ -29,15 +29,17 @@ export default function SculptureGallery() {
         by {sculpture.artist}
       </h2>
       <h3>  
-        ({`${index <= 11}` && `${index + 1} of ${sculptureList.length}`})
+        ({index + 1} of {sculptureList.length})
       </h3>
+        <button onClick={handleMoreClick}>
+            {showMore ? 'Hide' : 'Show'} details
+        </button>
+        {showMore && <p>{sculpture.description}</p>}
       <img 
         src={sculpture.url} 
         alt={sculpture.alt}
       />
-      <p>
-        {sculpture.description}
-      </p>
+      
     </>
   );
 }
