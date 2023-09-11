@@ -20,6 +20,7 @@ import Toolbar from "./components/toolBar";
 import SignUp from "./components/signUp";
 import LightSwitch from "./components/lightSwitch";
 import ColorSwitch from "./components/colorSwitch";
+import SculptureGallery from "./components/sculptureGallery";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -113,6 +114,7 @@ export default function App() {
         <SignUp />
         <LightSwitch />
         <ColorSwitch />
+        <SculptureGallery />
     </div>
   );
 }
