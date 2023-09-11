@@ -21,24 +21,25 @@ export default function SculptureGallery() {
     <>
        <h1>------------------------------------------------</h1>
        <h2>Sculpture Museum</h2> 
-      <button onClick={handleClick}>
-        Next
-      </button>
+       <button onClick={handleClick}>
+        {index <= 11 && `Next`}
+       </button>
       <h2>
-        <i>{sculpture.name} </i> 
-        by {sculpture.artist}
+        <i>{index <= 11 && sculpture.name} </i> 
+        by {index <= 11 && sculpture.artist}
       </h2>
       <h3>  
-        ({index + 1} of {sculptureList.length})
+        ({index <= 11 && index + 1} of {index <= 11 && sculptureList.length})
       </h3>
         <button onClick={handleMoreClick}>
-            {showMore ? 'Hide' : 'Show'} details
+        {index <= 11 && showMore ? 'Hide' : 'Show'} details
         </button>
-        {showMore && <p>{sculpture.description}</p>}
+        {showMore && <p>{index <= 11 && sculpture.description}</p>}
+        {index <= 11 && 
       <img 
         src={sculpture.url} 
         alt={sculpture.alt}
-      />
+      />}
       
     </>
   );
