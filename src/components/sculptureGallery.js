@@ -4,12 +4,19 @@ import { useState } from 'react';
 export default function SculptureGallery() {
   // let index = 0;
   const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
+  let sculpture = sculptureList[index];
 
   function handleClick() {
     setIndex(index + 1);
   }
 
-  let sculpture = sculptureList[index];
+  // show details
+  function handleMoreClick() {
+    setShowMore(!showMore);
+  }
+
+
   return (
     <>
        <h1>------------------------------------------------</h1>
@@ -22,7 +29,7 @@ export default function SculptureGallery() {
         by {sculpture.artist}
       </h2>
       <h3>  
-        ({index + 1} of {sculptureList.length})
+        ({`${index <= 11}` && `${index + 1} of ${sculptureList.length}`})
       </h3>
       <img 
         src={sculpture.url} 
