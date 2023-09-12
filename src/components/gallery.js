@@ -1,6 +1,7 @@
 import React from 'react';
 import Profile from './profile';
 import { getImageUrl } from './utils';
+import Image from './image';
 
 /*const Profile = () => {
     return (
@@ -82,6 +83,12 @@ const Gallery = ({ person, size=100 }) => {
               a method for measuring carbon dioxide in seawater
             </li>
           </ul>
+        </section>
+        <section>
+        <h1>Inspiring Sculptures</h1>
+        <Image />
+        <Image />
+        <Image />
         </section>
       </div>
     );
