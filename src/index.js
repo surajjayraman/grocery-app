@@ -1,6 +1,7 @@
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+//import Image from './components/image';
 
 import App from "./App";
 
@@ -10,3 +11,4 @@ root.render(
     <App />
   </StrictMode>
 );
+//root.render(<Image />);
