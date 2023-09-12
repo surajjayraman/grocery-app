@@ -23,6 +23,7 @@ import ColorSwitch from "./components/colorSwitch";
 import SculptureGallery from "./components/sculptureGallery";
 import Page from "./components/page";
 import Form from "./components/form";
+import FeedbackForm from "./components/feedbackForm";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -119,6 +120,7 @@ export default function App() {
         <SculptureGallery />
         <Page />
         <Form />
+        <FeedbackForm />
     </div>
   );
 }
