@@ -15,7 +15,6 @@ export default function FeedbackForm() {
   }
     return (
        <>
-
         <h1>Let us know how we are doing</h1>
         <form onSubmit={e => {
             e.preventDefault();
@@ -31,6 +30,7 @@ export default function FeedbackForm() {
             <button type="submit">Send</button>
         </form>
         <form>
+            <h1>Regular vs State Variable</h1>
             <button onClick={handleClick}>
                 Greet
             </button>
