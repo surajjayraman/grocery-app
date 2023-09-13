@@ -12,24 +12,27 @@ const FormStateDemo = () => {
     const handleTextChange = (e) => {
         setMessage(e.target.value);
     }
+    const sendMessage = () => {
+        alert(`Sent message ${message}`);
+    }
 
 
     return (
         <>
-        <form>
+        <h1> Setting state triggers renders Demo</h1>
+        <form onSubmit={ (e) => {
+                        e.preventDefault();
+                        setIsSent(true);
+                        sendMessage(message);
+                    }
+                }>
             <textarea
                 placeholder="Message"
                 value={message}
-                onChange={handleTextChange}>    
+                onChange={handleTextChange}>
             </textarea>
             <br />
-            <button type="submit"
-                onClick={ 
-                    (e) => {
-                        e.preventDefault();
-                        setIsSent(true);
-                    }
-                }>
+            <button type="submit">
                 Send
             </button>
         </form>
