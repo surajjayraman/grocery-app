@@ -5,6 +5,7 @@ const TrafficLight = () => {
 
     const handleClick = () => {
         setWalk(!walk);
+        walk ? alert('Stop is next') : alert('Walk is next');
     }
 
     return (
