@@ -26,6 +26,8 @@ import Form from "./components/form";
 import FeedbackForm from "./components/feedbackForm";
 import FormStateDemo from "./components/formStateDemo";
 import Counter from "./components/counter";
+import TrafficLight from "./components/trafficLight";
+
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -125,6 +127,7 @@ export default function App() {
         <FeedbackForm />
         <FormStateDemo />
         <Counter />
+        <TrafficLight />
     </div>
   );
 }
