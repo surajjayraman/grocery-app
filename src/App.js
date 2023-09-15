@@ -28,6 +28,7 @@ import FormStateDemo from "./components/formStateDemo";
 import Counter from "./components/counter";
 import TrafficLight from "./components/trafficLight";
 import RequestTracker from "./components/requestTracker";
+import AsyncRequestTracker from "./components/asyncRequestTracker";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -129,6 +130,7 @@ export default function App() {
         <Counter />
         <TrafficLight />
         <RequestTracker />
+        <AsyncRequestTracker />
     </div>
   );
 }
