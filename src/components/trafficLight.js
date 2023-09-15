@@ -10,7 +10,7 @@ const TrafficLight = () => {
 
     return (
         <>
-        <h1>Watch for the Lights before you Walk!</h1>
+        <h1 style={{color: 'red'}}>Watch for the Lights before you Walk!</h1>
         <button onClick={handleClick}>
             Change to { walk ? 'Stop' : 'Walk'}
         </button>
@@ -19,6 +19,9 @@ const TrafficLight = () => {
         }}>
             {walk ? 'Walk' : 'Stop'}
         </h1>
+        <p>
+            React waits until all code in the event handlers has run before processing your state updates
+        </p>
         </>
     );
 }

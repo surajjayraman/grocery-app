@@ -23,7 +23,7 @@ export default function Counter() {
         }, 3000);
       }}>+5 {`state render value:  `}{number}</button>
       <h2>Updated value of number: {number}</h2>
-      <h1>React keeps the state values “fixed” within one render's event handlers</h1>
+      <p>React keeps the state values “fixed” within one render's event handlers</p>
       <form onSubmit={handleSubmit}>
       <label>
         To:{' '}
@@ -42,6 +42,17 @@ export default function Counter() {
       <button type="submit">Send</button>
     </form>
     <h2>State value of Message:{message}</h2>
+    <p>
+        Updating the same state multiple times before the next render
+    </p>
+    <button onClick={ () => {
+        setNumber(n => n + 1);
+        setNumber(n => n + 1);
+        setNumber(n => n + 1);
+        }
+    }>
+        +3: {number}
+    </button>
     </>
   )
 }
