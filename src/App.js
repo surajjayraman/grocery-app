@@ -29,6 +29,7 @@ import Counter from "./components/counter";
 import TrafficLight from "./components/trafficLight";
 import RequestTracker from "./components/requestTracker";
 import AsyncRequestTracker from "./components/asyncRequestTracker";
+import ProcessQueue from "./components/processQueue";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -131,6 +132,10 @@ export default function App() {
         <TrafficLight />
         <RequestTracker />
         <AsyncRequestTracker />
+        <ProcessQueue baseState={0} queue={[1,1,1]}/>
+        <ProcessQueue baseState={0} queue={[n => n+1, n => n+1, n => n+1]}/>
+        <ProcessQueue baseState={0} queue={[5, n => n+1]}/>
+        <ProcessQueue baseState={0} queue={[5, n => n+1, 42]}/>
     </div>
   );
 }
