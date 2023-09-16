@@ -31,6 +31,7 @@ import RequestTracker from "./components/requestTracker";
 import AsyncRequestTracker from "./components/asyncRequestTracker";
 import ProcessQueue from "./components/processQueue";
 import MovingDot from "./components/movingDot";
+import FormUpdate from "./components/formUpdate";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -139,6 +140,7 @@ export default function App() {
         <ProcessQueue baseState={0} queue={[5, n => n+1, 42]}/>
         <ProcessQueue baseState={0} queue={[5, n => n+1, () => 'Hello Suraj']}/>
         <MovingDot />
+        <FormUpdate />
     </div>
   );
 }
