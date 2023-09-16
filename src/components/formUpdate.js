@@ -6,15 +6,31 @@ export default function FormUpdate() {
     lastName: 'Hepworth',
     email: 'bhepworth@sculpture.com'
   });
+  // nested objects
+  const [artist, setArtist] = useState({
+    name: 'Niki de Saint Phalle',
+    artwork: {
+      title: 'Blue Nana',
+      city: 'Hamburg',
+      image: 'https://i.imgur.com/Sd1AgUOm.jpg',
+    }
+  });
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     setPerson({
       ...person,
       [e.target.name]: e.target.value
     });
   }
 
-  return (
+  const handleArtChange = (e) => {
+    const newArtwork = {...artist.artwork,
+        [e.target.name]:e.target.value
+        };
+    setArtist({...artist, artwork: newArtwork});
+  }
+
+ return (
     <>
       <label>
         First name:
@@ -45,6 +61,47 @@ export default function FormUpdate() {
         {person.lastName}{' '}
         ({person.email})
       </p>
+      <h1 style={{color:'rebeccapurple'}}>Nested Artist City Objects</h1>
+      <label>
+        Artist Name:
+        <input
+          name='name'
+          value={artist.name}
+          onChange={handleArtChange}
+        />
+      </label>
+      <label>
+        Title:
+        <input
+          name='title'
+          value={artist.artwork.title}
+          onChange={handleArtChange}
+        />
+      </label>
+      <label>
+        City:
+        <input
+          name='city'
+          value={artist.artwork.city}
+          onChange={handleArtChange}
+        />
+      </label>
+      <label>
+        Image:
+        <input
+          value={artist.artwork.image}
+          onChange={handleArtChange}
+        />
+      </label>
+      <p>
+        {artist.name}{' '}
+      </p>
+      <p>
+        {artist.artwork.title}{' '}
+        ({artist.artwork.city})
+      </p>
+      <img src={artist.artwork.image}
+            alt={artist.artwork.title}/>
     </>
   );
 }
