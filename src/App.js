@@ -137,6 +137,7 @@ export default function App() {
         <ProcessQueue baseState={0} queue={[n => n+1, n => n+1, n => n+1]}/>
         <ProcessQueue baseState={0} queue={[5, n => n+1]}/>
         <ProcessQueue baseState={0} queue={[5, n => n+1, 42]}/>
+        <ProcessQueue baseState={0} queue={[5, n => n+1, () => 'Hello Suraj']}/>
         <MovingDot />
     </div>
   );
