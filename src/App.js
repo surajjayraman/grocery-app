@@ -30,6 +30,7 @@ import TrafficLight from "./components/trafficLight";
 import RequestTracker from "./components/requestTracker";
 import AsyncRequestTracker from "./components/asyncRequestTracker";
 import ProcessQueue from "./components/processQueue";
+import MovingDot from "./components/movingDot";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -136,6 +137,7 @@ export default function App() {
         <ProcessQueue baseState={0} queue={[n => n+1, n => n+1, n => n+1]}/>
         <ProcessQueue baseState={0} queue={[5, n => n+1]}/>
         <ProcessQueue baseState={0} queue={[5, n => n+1, 42]}/>
+        <MovingDot />
     </div>
   );
 }
