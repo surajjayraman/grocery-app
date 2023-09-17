@@ -6,11 +6,11 @@ const initialPosition = {
   x: 0,
   y: 0
 };
-
+const shapePosition = {...initialPosition};
 export default function Canvas() {
   const [shape, setShape] = useState({
     color: 'orange',
-    position: initialPosition
+    position: shapePosition
   });
 
   function handleMove(dx, dy) {
