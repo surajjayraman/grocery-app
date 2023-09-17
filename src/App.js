@@ -33,6 +33,7 @@ import ProcessQueue from "./components/processQueue";
 import MovingDot from "./components/movingDot";
 import FormUpdate from "./components/formUpdate";
 import ImmerForm from "./components/immerForm";
+import Scoreboard from "./components/scoreBoard";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -143,6 +144,7 @@ export default function App() {
         <MovingDot />
         <FormUpdate />
         <ImmerForm />
+        <Scoreboard />
     </div>
   );
 }
