@@ -8,18 +8,17 @@ export default function ListAdd() {
 
   return (
     <>
-      <p style={{color:'darkgoldenrod'}}>Adding to an array</p>  
+      <p style={{color:'darkgoldenrod'}}>Adding to an array</p>
       <h1>Inspiring sculptors:</h1>
       <input
         value={name}
         onChange={e => setName(e.target.value)}
       />
       <button onClick={() => {
-        setArtists([...artists,{
-          
+        setArtists([{
           id: nextId++,
           name: name,
-        }]);
+        }, ...artists]);
       }}>Add</button>
       <ul>
         {artists.map(artist => (
