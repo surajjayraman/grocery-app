@@ -30,7 +30,7 @@ export default function ShapeEditor() {
 
   return (
     <>
-      
+      <h1 style={{color:'darkgoldenrod'}}>Transforming an array</h1> 
       <button onClick={handleClick}>
         Move circles down!
       </button>

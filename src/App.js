@@ -34,8 +34,8 @@ import MovingDot from "./components/movingDot";
 import FormUpdate from "./components/formUpdate";
 import ImmerForm from "./components/immerForm";
 import Scoreboard from "./components/scoreBoard";
-import Canvas from  "./components/canvas";
 import ListUpdate from "./components/listUpdate";
+import CounterList from "./components/counterList";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -148,8 +148,7 @@ export default function App() {
         <ImmerForm />
         <Scoreboard />
         <ListUpdate />
-        <Canvas />
-        
+        <CounterList />
     </div>
   );
 }
