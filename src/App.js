@@ -35,6 +35,7 @@ import FormUpdate from "./components/formUpdate";
 import ImmerForm from "./components/immerForm";
 import Scoreboard from "./components/scoreBoard";
 import Canvas from  "./components/canvas";
+import ListUpdate from "./components/listUpdate";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -146,6 +147,7 @@ export default function App() {
         <FormUpdate />
         <ImmerForm />
         <Scoreboard />
+        <ListUpdate />
         <Canvas />
     </div>
   );
