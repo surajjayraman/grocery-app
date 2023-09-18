@@ -36,6 +36,7 @@ import ImmerForm from "./components/immerForm";
 import Scoreboard from "./components/scoreBoard";
 import ListUpdate from "./components/listUpdate";
 import CounterList from "./components/counterList";
+import ListAdd from "./components/listAdd";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -149,6 +150,7 @@ export default function App() {
         <Scoreboard />
         <ListUpdate />
         <CounterList />
+        <ListAdd />
     </div>
   );
 }
