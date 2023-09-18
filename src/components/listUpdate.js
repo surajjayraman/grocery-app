@@ -23,7 +23,7 @@ export default function ListUpdate() {
                 }}>
                   Delete
                 </button>
-        </li>
+              </li>
       })}
     </ul>
     </div>

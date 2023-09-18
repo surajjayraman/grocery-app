@@ -149,6 +149,7 @@ export default function App() {
         <Scoreboard />
         <ListUpdate />
         <Canvas />
+        
     </div>
   );
 }
