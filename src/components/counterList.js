@@ -13,9 +13,7 @@ export default function CounterList() {
       }
       return c;
     });
-    setCounter([
-      ...newCounter
-    ]);
+    setCounter(newCounter);
   }
 
 
