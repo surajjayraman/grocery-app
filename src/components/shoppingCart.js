@@ -34,6 +34,23 @@ export default function ShoppingCart() {
     setProducts(newProducts);
   }
 
+  function handleDecreaseClick(productId) {
+    // use the map function to create a new array,
+    // and then use the ... object spread syntax to create a copy of the changed object
+    // for the new array:
+    const newProducts = products.map((product) => {
+      if (product.id === productId){
+        return {
+          ...product,
+          count: product.count > 0 ? product.count - 1 : 0
+        }
+      }
+      return product;
+    });
+
+    setProducts(newProducts);
+  }
+
   return (
     <>
     <p style={{color:'darkorchid'}}>Update an item in the shopping cart</p>
@@ -47,6 +64,11 @@ export default function ShoppingCart() {
             handleIncreaseClick(product.id);
           }}>
             +
+          </button>
+          <button onClick={()=> {
+            handleDecreaseClick(product.id)
+          }}>
+            –
           </button>
         </li>
       ))}
