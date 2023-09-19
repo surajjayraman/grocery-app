@@ -42,13 +42,17 @@ export default function ShoppingCart() {
       if (product.id === productId){
         return {
           ...product,
-          count: product.count > 0 ? product.count - 1 : 0
+          count: product.count - 1
         }
       }
       return product;
     });
 
-    setProducts(newProducts);
+    const availableProds = newProducts.filter( p => {
+      return p.count > 0;
+    } )
+
+    setProducts(availableProds);
   }
 
   return (
