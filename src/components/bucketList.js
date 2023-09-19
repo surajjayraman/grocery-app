@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-let nextId = 3;
+//let nextId = 3;
 const initialList = [
   { id: 0, title: 'Big Bellies', seen: false },
   { id: 1, title: 'Lunar Landscape', seen: false },
@@ -18,8 +18,13 @@ export default function BucketList() {
     const artwork = myNextList.find(
       a => a.id === artworkId
     );
-    artwork.seen = nextSeen;
-    setMyList(myNextList);
+    //artwork.seen = nextSeen;
+    const nextArtWork = {
+        ...artwork,
+        seen: nextSeen
+    }
+    const newList = myNextList.filter((c) => c.id !== artworkId)
+    setMyList([...newList,nextArtWork]);
   }
 
   function handleToggleYourList(artworkId, nextSeen) {
