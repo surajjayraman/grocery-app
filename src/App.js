@@ -39,6 +39,7 @@ import CounterList from "./components/counterList";
 import ListAdd from "./components/listAdd";
 import ListInsert from "./components/listInsert";
 import ListReverse from "./components/listReverse";
+import BucketList from "./components/bucketList";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -155,6 +156,7 @@ export default function App() {
         <ListAdd />
         <ListInsert />
         <ListReverse />
+        <BucketList />
     </div>
   );
 }
