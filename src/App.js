@@ -37,6 +37,7 @@ import Scoreboard from "./components/scoreBoard";
 import ListUpdate from "./components/listUpdate";
 import CounterList from "./components/counterList";
 import ListAdd from "./components/listAdd";
+import ListInsert from "./components/listInsert"
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -151,6 +152,7 @@ export default function App() {
         <ListUpdate />
         <CounterList />
         <ListAdd />
+        <ListInsert />
     </div>
   );
 }

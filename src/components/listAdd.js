@@ -19,6 +19,7 @@ export default function ListAdd() {
           id: nextId++,
           name: name,
         }, ...artists]);
+        setName('');
       }}>Add</button>
       <ul>
         {artists.map(artist => (
