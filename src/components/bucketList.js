@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-//let nextId = 3;
 const initialList = [
   { id: 0, title: 'Big Bellies', seen: false },
   { id: 1, title: 'Lunar Landscape', seen: false },
@@ -14,30 +13,32 @@ export default function BucketList() {
   );
 
   function handleToggleMyList(artworkId, nextSeen) {
-    const myNextList = [...myList];
-    const artwork = myNextList.find(
-      a => a.id === artworkId
-    );
-    //artwork.seen = nextSeen;
-    const nextArtWork = {
-        ...artwork,
-        seen: nextSeen
-    }
-    const newList = myNextList.filter((c) => c.id !== artworkId)
-    setMyList([...newList,nextArtWork]);
+    setMyList(myList.map(artwork => {
+      if (artwork.id === artworkId) {
+        // Create a *new* object with changes
+        return { ...artwork, seen: nextSeen };
+      } else {
+        // No changes
+        return artwork;
+      }
+    }));
   }
 
   function handleToggleYourList(artworkId, nextSeen) {
-    const yourNextList = [...yourList];
-    const artwork = yourNextList.find(
-      a => a.id === artworkId
-    );
-    artwork.seen = nextSeen;
-    setYourList(yourNextList);
+    setYourList(yourList.map(artwork => {
+      if (artwork.id === artworkId) {
+        // Create a *new* object with changes
+        return { ...artwork, seen: nextSeen };
+      } else {
+        // No changes
+        return artwork;
+      }
+    }));
   }
 
   return (
     <>
+      <p style={{color:'rebeccapurple'}}>Updating objects inside arrays</p> 
       <h1>Art Bucket List</h1>
       <h2>My list of art to see:</h2>
       <ItemList
