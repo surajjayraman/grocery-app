@@ -15,17 +15,22 @@ export default function TaskManager() {
   );
 
   function handleAddTodo(title) {
-    todos.push({
-      id: nextId++,
-      title: title,
-      done: false
-    });
+    const newTodos = [
+        ...todos,
+        {
+            id: nextId++,
+            title: title,
+            done: false
+        }
+    ];
+    setTodos(newTodos);
   }
 
   function handleChangeTodo(nextTodo) {
     const todo = todos.find(t =>
       t.id === nextTodo.id
     );
+
     todo.title = nextTodo.title;
     todo.done = nextTodo.done;
   }
