@@ -41,10 +41,10 @@ export default function TaskManager() {
   }
 
   function handleDeleteTodo(todoId) {
-    const index = todos.findIndex(t =>
-      t.id === todoId
-    );
-    todos.splice(index, 1);
+    const newTodos = todos.filter(todo => {
+        return todo.id !== todoId
+    })
+    setTodos(newTodos);
   }
 
   return (
