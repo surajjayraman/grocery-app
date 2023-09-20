@@ -41,6 +41,7 @@ import ListInsert from "./components/listInsert";
 import ListReverse from "./components/listReverse";
 import BucketList from "./components/bucketList";
 import ShoppingCart from "./components/shoppingCart";
+import TaskManager from "./components/taskManager";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -159,6 +160,7 @@ export default function App() {
         <ListReverse />
         <BucketList />
         <ShoppingCart />
+        <TaskManager />
     </div>
   );
 }
