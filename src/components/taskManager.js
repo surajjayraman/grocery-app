@@ -27,12 +27,17 @@ export default function TaskManager() {
   }
 
   function handleChangeTodo(nextTodo) {
-    const todo = todos.find(t =>
-      t.id === nextTodo.id
-    );
-
-    todo.title = nextTodo.title;
-    todo.done = nextTodo.done;
+    const updatedTodos = todos.map( todo => {
+        if (todo.id === nextTodo.id){
+            return {
+                id: nextTodo.id,
+                title : nextTodo.title,
+                done : nextTodo.done
+            }
+        }
+        return todo;
+    });
+    setTodos(updatedTodos);
   }
 
   function handleDeleteTodo(todoId) {
