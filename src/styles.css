@@ -114,3 +114,4 @@ hr {
 }
 button { margin: 5px; }
 label, textarea { margin-bottom: 10px; display: block; }
+.Error { color: red; }

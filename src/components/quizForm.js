@@ -7,7 +7,7 @@ export default function QuizForm() {
 
   if (status === 'success') {
     return <h1>That's right!</h1>
-  }
+  } 
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -32,17 +32,13 @@ export default function QuizForm() {
       <p>
         In which city is there a billboard that turns air into drinkable water?
       </p>
-      <form onSubmit={handleSubmit}>
+      <form>
         <textarea
-          value={answer}
-          onChange={handleTextareaChange}
-          disabled={status === 'submitting'}
-        />
-        <br />
-        <button disabled={
-          answer.length === 0 ||
-          status === 'submitting'
-        }>
+         value={answer}
+         onChange={handleTextareaChange}
+        ></textarea>
+        <br/>
+        <button onClick={handleSubmit}>
           Submit
         </button>
         {error !== null &&
