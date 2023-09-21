@@ -42,6 +42,7 @@ import ListReverse from "./components/listReverse";
 import BucketList from "./components/bucketList";
 import ShoppingCart from "./components/shoppingCart";
 import TaskManager from "./components/taskManager";
+import QuizForm from "./components/quizForm";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -161,6 +162,7 @@ export default function App() {
         <BucketList />
         <ShoppingCart />
         <TaskManager />
+        <QuizForm />
     </div>
   );
 }
