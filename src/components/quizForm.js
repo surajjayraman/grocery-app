@@ -38,7 +38,8 @@ export default function QuizForm() {
          onChange={handleTextareaChange}
         ></textarea>
         <br/>
-        <button onClick={handleSubmit}>
+        <button onClick={handleSubmit}
+            disabled={answer.length === 0}>
           Submit
         </button>
         {error !== null &&
