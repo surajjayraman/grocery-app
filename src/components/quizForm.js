@@ -2,7 +2,7 @@
 
 export default function QuizForm({ 
      // Try 'submitting', 'error', 'success':
-    status = 'submitting' }) {
+    status = 'error' }) {
     if (status === 'success') {
       return <h1>That's right!</h1>
     }
@@ -21,6 +21,10 @@ export default function QuizForm({
           disabled={ status === 'submitting' || status === 'empty'}>
             Submit
           </button>
+          { status === 'error' && 
+          <p className="Error">Good guess! Please try again </p>
+          }
+          {<p style={{color:'purple'}}>Looking for a Hint :)...city starts with L</p>}
         </form>
       </>
     )
