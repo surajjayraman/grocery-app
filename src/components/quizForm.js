@@ -14,7 +14,8 @@ export default function QuizForm({
           In which city is there a billboard that turns air into drinkable water?
         </p>
         <form>
-          <textarea />
+          <textarea 
+          disabled={status === 'submitting'}/>
           <br />
           <button
           disabled={ status === 'submitting' || status === 'empty'}>
