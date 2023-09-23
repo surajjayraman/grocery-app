@@ -1,6 +1,29 @@
-import { useState } from 'react';
 
-export default function QuizForm() {
+
+export default function QuizForm({ status = 'empty' }) {
+    if (status === 'success') {
+      return <h1>That's right!</h1>
+    }
+    return (
+      <>
+        <p style={{color: 'darkorchid'}}>Managing State Demo</p>
+        <h2>City quiz</h2>
+        <p>
+          In which city is there a billboard that turns air into drinkable water?
+        </p>
+        <form>
+          <textarea />
+          <br />
+          <button>
+            Submit
+          </button>
+        </form>
+      </>
+    )
+  }
+
+
+/*export default function QuizForm() {
   const [answer, setAnswer] = useState('');
   const [error, setError] = useState(null);
   const [status, setStatus] = useState('typing');
@@ -65,3 +88,4 @@ function submitForm(answer) {
     }, 1500);
   });
 }
+*/
