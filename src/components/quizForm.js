@@ -1,6 +1,8 @@
 
 
-export default function QuizForm({ status = 'empty' }) {
+export default function QuizForm({ 
+     // Try 'submitting', 'error', 'success':
+    status = 'typing' }) {
     if (status === 'success') {
       return <h1>That's right!</h1>
     }
@@ -14,7 +16,8 @@ export default function QuizForm({ status = 'empty' }) {
         <form>
           <textarea />
           <br />
-          <button>
+          <button
+          disabled={ status === 'submitting' || status === 'empty'}>
             Submit
           </button>
         </form>
