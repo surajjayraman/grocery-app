@@ -2,7 +2,7 @@
 
 export default function QuizForm({ 
      // Try 'submitting', 'error', 'success':
-    status = 'typing' }) {
+    status = 'submitting' }) {
     if (status === 'success') {
       return <h1>That's right!</h1>
     }
