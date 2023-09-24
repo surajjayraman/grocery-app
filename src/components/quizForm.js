@@ -1,31 +1,41 @@
 
+let statuses = [
+    'empty',
+    'typing',
+    'submitting',
+    'success',
+    'error'
+]
 
-export default function QuizForm({ 
-     // Try 'submitting', 'error', 'success':
-    status = 'error' }) {
-    if (status === 'success') {
-      return <h1>That's right!</h1>
-    }
+export default function QuizForm() {
+    
     return (
       <>
-        <p style={{color: 'darkorchid'}}>Managing State Demo</p>
-        <h2>City quiz</h2>
-        <p>
-          In which city is there a billboard that turns air into drinkable water?
-        </p>
-        <form>
-          <textarea 
-          disabled={status === 'submitting'}/>
-          <br />
-          <button
-          disabled={ status === 'submitting' || status === 'empty'}>
-            Submit
-          </button>
-          { status === 'error' && 
-          <p className="Error">Good guess! Please try again </p>
-          }
-          {<p style={{color:'purple'}}>Looking for a Hint :)...city starts with L</p>}
-        </form>
+      <h1>City quiz</h1>
+        
+        { 
+            statuses.map( status => (
+                
+                <section key={status}>
+                    <h4>Form ({status}):</h4>
+                    <p>
+                    In which city is there a billboard that turns air into drinkable water?
+                    </p>
+                    <form>
+                        
+                        <textarea>
+
+                        </textarea>
+                        <br/>
+                        <button disabled={status === 'empty' || status === 'submitting'}>
+                        Submit
+                        </button>
+                    </form>
+                    
+                </section>
+            ))
+        }
+        
       </>
     )
   }
