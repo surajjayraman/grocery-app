@@ -10,11 +10,7 @@ let statuses = [
 export default function QuizForm() {
     const [answer, setAnswer] = useState('');
     const [error, setError] = useState(null);
-    const [isEmpty, setIsEmpty] = useState(true);
-    const [isTyping, setIsTyping] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-    const [isError, setIsError] = useState(false);
+    const [status, setStatus] = useState('typing'); // 'typing', 'submitting', or 'success'
 
     
     return (
