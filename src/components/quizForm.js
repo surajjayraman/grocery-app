@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 let statuses = [
     'empty',
     'typing',
@@ -8,21 +8,30 @@ let statuses = [
 ]
 
 export default function QuizForm() {
+    const [answer, setAnswer] = useState('');
+    const [error, setError] = useState(null);
+    const [isEmpty, setIsEmpty] = useState(true);
+    const [isTyping, setIsTyping] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isError, setIsError] = useState(false);
+
     
     return (
       <>
       <h1>City quiz</h1>
-        
-        { 
+
+        {
             statuses.map( status => (
-                
+
+
                 <section key={status}>
                     <h4>Form ({status}):</h4>
                     <p>
                     In which city is there a billboard that turns air into drinkable water?
                     </p>
                     <form>
-                        
+
                         <textarea>
 
                         </textarea>
