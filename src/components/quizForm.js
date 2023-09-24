@@ -1,59 +1,13 @@
 import { useState } from 'react';
-let statuses = [
-    'empty',
-    'typing',
-    'submitting',
-    'success',
-    'error'
-]
 
-export default function QuizForm() {
-    const [answer, setAnswer] = useState('');
-    const [error, setError] = useState(null);
-    const [status, setStatus] = useState('typing'); // 'typing', 'submitting', or 'success'
-
-    
-    return (
-      <>
-      <h1>City quiz</h1>
-
-        {
-            statuses.map( status => (
-
-
-                <section key={status}>
-                    <h4>Form ({status}):</h4>
-                    <p>
-                    In which city is there a billboard that turns air into drinkable water?
-                    </p>
-                    <form>
-
-                        <textarea>
-
-                        </textarea>
-                        <br/>
-                        <button disabled={status === 'empty' || status === 'submitting'}>
-                        Submit
-                        </button>
-                    </form>
-                    
-                </section>
-            ))
-        }
-        
-      </>
-    )
-  }
-
-
-/*export default function QuizForm() {
+export default function Form() {
   const [answer, setAnswer] = useState('');
   const [error, setError] = useState(null);
   const [status, setStatus] = useState('typing');
 
   if (status === 'success') {
     return <h1>That's right!</h1>
-  } 
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -73,19 +27,21 @@ export default function QuizForm() {
 
   return (
     <>
-      <p style={{color: 'darkorchid'}}>Managing State Demo</p>
       <h2>City quiz</h2>
       <p>
         In which city is there a billboard that turns air into drinkable water?
       </p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <textarea
-         value={answer}
-         onChange={handleTextareaChange}
-        ></textarea>
-        <br/>
-        <button onClick={handleSubmit}
-            disabled={answer.length === 0}>
+          value={answer}
+          onChange={handleTextareaChange}
+          disabled={status === 'submitting'}
+        />
+        <br />
+        <button disabled={
+          answer.length === 0 ||
+          status === 'submitting'
+        }>
           Submit
         </button>
         {error !== null &&
@@ -111,4 +67,3 @@ function submitForm(answer) {
     }, 1500);
   });
 }
-*/
