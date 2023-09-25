@@ -115,3 +115,18 @@ hr {
 button { margin: 5px; }
 label, textarea { margin-bottom: 10px; display: block; }
 .Error { color: red; }
+
+.background--active {
+  background: #a6b5ff;
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.picture--active {
+  border: 5px solid #a6b5ff;
+}
+
