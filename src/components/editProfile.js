@@ -2,8 +2,8 @@ export default function EditProfile() {
 
     const para = <p>Hello Paragraph!</p>
 
-    const Button = () => {
-        return <button>Click Me!</button>
+    const Button = ({ text }) => {
+        return <button>{text}</button>
     }
     return (
         <>
@@ -24,7 +24,7 @@ export default function EditProfile() {
             </button>
             <p><i>Hello, Jane Jacobs!</i></p>
         </form>
-        <Button />
+        <Button text='Alice'/>
         {para}
       </>
     );
