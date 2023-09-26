@@ -2,8 +2,13 @@ export default function EditProfile() {
 
     const para = <p>Hello Paragraph!</p>
 
-    const Button = ({ text }) => {
-        return <button>{text}</button>
+    const Button = (props) => {
+        return (
+            <>
+             <p>Hello {props.text}</p>
+             <button>{props.children}</button>
+            </>
+        )
     }
     return (
         <>
@@ -24,7 +29,9 @@ export default function EditProfile() {
             </button>
             <p><i>Hello, Jane Jacobs!</i></p>
         </form>
-        <Button text='Alice'/>
+        <Button text='Alice'>
+            <h4>Click Me!</h4>
+        </Button>
         {para}
       </>
     );
