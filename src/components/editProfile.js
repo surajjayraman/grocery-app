@@ -1,4 +1,10 @@
 export default function EditProfile() {
+
+    const para = <p>Hello Paragraph!</p>
+
+    const Button = () => {
+        return <button>Click Me!</button>
+    }
     return (
         <>
         <p style={{color:'darkorange'}}>Edit Profile Demo</p>
@@ -18,6 +24,8 @@ export default function EditProfile() {
             </button>
             <p><i>Hello, Jane Jacobs!</i></p>
         </form>
+        <Button />
+        {para}
       </>
     );
   }
