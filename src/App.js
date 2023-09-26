@@ -44,6 +44,7 @@ import ShoppingCart from "./components/shoppingCart";
 import TaskManager from "./components/taskManager";
 import QuizForm from "./components/quizForm";
 import Picture from './components/picture'
+import EditProfile from "./components/editProfile";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -165,6 +166,7 @@ export default function App() {
         <TaskManager />
         <QuizForm />
         <Picture />
+        <EditProfile />
     </div>
   );
 }
