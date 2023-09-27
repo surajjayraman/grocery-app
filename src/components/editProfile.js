@@ -1,8 +1,10 @@
 export default function EditProfile() {
+    let count = 0;
 
     const para = <p>Hello Paragraph!</p>
 
     const Button = (props) => {
+       
         return (
             <>
              <p>Hello {props.text}</p>
@@ -30,7 +32,7 @@ export default function EditProfile() {
             <p><i>Hello, Jane Jacobs!</i></p>
         </form>
         <Button text='Alice'>
-            <h4>Click Me!</h4>
+            <h4>{count} {' '} Click Me!</h4>
         </Button>
         {para}
       </>
