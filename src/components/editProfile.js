@@ -3,6 +3,7 @@ import { useState } from 'react';
 export default function EditProfile() {
 
    const [count, setCount] = useState(0);
+   const [text, setText] = useState('');
 
    const increment = () => {
     setCount(c => c + 1);
@@ -17,6 +18,9 @@ export default function EditProfile() {
              <button onClick={props.onClick}>{props.children}</button>
             </>
         )
+    }
+    const handleText = (e) => {
+        setText(e.target.value);
     }
 
     return (
@@ -38,10 +42,10 @@ export default function EditProfile() {
             </button>
             <p><i>Hello, Jane Jacobs!</i></p>
         </form>
-        <input value={count}/>
+        <input value={text} onChange={handleText}/>
         {count}
         <Button text='Alice' onClick={increment}>
-            <h4>Click Me!</h4>
+            Click Me!
         </Button>
         {para}
       </>
