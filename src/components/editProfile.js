@@ -8,7 +8,6 @@ export default function EditProfile() {
     setCount(c => c + 1);
    }
 
-
     const para = <p>Hello Paragraph!</p>
 
     const Button = (props) => {
@@ -19,7 +18,6 @@ export default function EditProfile() {
             </>
         )
     }
-    
 
     return (
         <>
@@ -40,6 +38,7 @@ export default function EditProfile() {
             </button>
             <p><i>Hello, Jane Jacobs!</i></p>
         </form>
+        <input value={count}/>
         {count}
         <Button text='Alice' onClick={increment}>
             <h4>Click Me!</h4>
