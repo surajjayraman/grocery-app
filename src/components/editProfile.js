@@ -10,6 +10,14 @@ export default function EditProfile() {
    }
 
     const para = <p>Hello Paragraph!</p>
+    const items = [
+                    <li>Item 1</li>,
+                    <li>Item 2</li>,
+                    <li>Item 3</li>
+                  ];
+    const updatedItems = items.map(item => 
+        <p style={{color:'rosybrown'}}>{item}</p>
+    );
 
     const Button = (props) => {
         return (
@@ -43,6 +51,13 @@ export default function EditProfile() {
             <p><i>Hello, Jane Jacobs!</i></p>
         </form>
         <input value={text} onChange={handleText}/>
+        <div>
+            {text}
+        </div>
+        <ul>
+            {updatedItems}
+        </ul>
+        
         {count}
         <Button text='Alice' onClick={increment}>
             Click Me!
