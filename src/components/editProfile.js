@@ -5,6 +5,8 @@ export default function EditProfile() {
    const [count, setCount] = useState(0);
    const [text, setText] = useState('');
    const [data, setData] = useState([]);
+   const [editing, setEditing] = useState(false);
+
    const testData = [
     {id: 1, quote: 'Item 1'},
     {id: 2, quote: 'Item 2'},
@@ -44,10 +46,15 @@ export default function EditProfile() {
         setText(e.target.value);
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setEditing(!editing)
+    }
+
     return (
         <>
         <p style={{color:'darkorange'}}>Edit Profile Demo</p>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>
             First name:{' '}
             <b>Jane</b>
