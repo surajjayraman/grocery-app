@@ -6,6 +6,8 @@ export default function EditProfile() {
    const [text, setText] = useState('');
    const [data, setData] = useState([]);
    const [editing, setEditing] = useState(false);
+   const [firstName, setFirstName] = useState('Jane');
+   const [lastName, setLastName] = useState('Jacobs')
 
    const testData = [
     {id: 1, quote: 'Item 1'},
@@ -57,18 +59,16 @@ export default function EditProfile() {
         <form onSubmit={handleSubmit}>
             <label>
             First name:{' '}
-            <b>Jane</b>
-            <input />
+            {editing ? <input value={firstName} onChange={e => setFirstName(e.target.value)}/> : firstName}
             </label>
             <label>
             Last name:{' '}
-            <b>Jacobs</b>
-            <input />
+            {editing ? <input value={lastName} onChange={e => setLastName(e.target.value)}/> : lastName}
             </label>
             <button type="submit">
-            Edit Profile
+            {editing ? 'Save' : 'Edit'} Profile
             </button>
-            <p><i>Hello, Jane Jacobs!</i></p>
+            <p><i>Hello, {firstName} {lastName}!</i></p>
         </form>
         <input value={text} onChange={handleText}/>
         <div>
