@@ -2,8 +2,12 @@ import { useState } from 'react';
 
 const SurveyForm = () => {
     const [answer, setAnswer] = useState('Excellent vacation!')
-    const [isSent, setIsSent] = useState(false);
-    const [isSending, setIsSending] = useState(false);
+    //const [isSent, setIsSent] = useState(false);
+    //const [isSending, setIsSending] = useState(false);
+    const [status, setStatus] = useState('typing'); // typing, sending and sent
+
+    const isSent = status === 'sent';
+    const isSending = status === 'sending';
 
     if (isSent) {
         return <p>Thank You for the feedback!</p>
@@ -12,9 +16,9 @@ const SurveyForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsSending(true);
+        setStatus('sending');
         await sendMessage();
-        setIsSent(!isSent);
+        setStatus('sent');
     }
 
     // Pretend to send a message.
