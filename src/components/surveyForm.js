@@ -2,9 +2,16 @@ import { useState } from 'react';
 
 const SurveyForm = () => {
     const [answer, setAnswer] = useState('Excellent vacation!')
+    const [isEdit, setIsEdit] = useState(false);
+
+    if (isEdit) {
+        return <p>Thank You for the feedback!</p>
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsEdit(true);
     }
 
     return (
