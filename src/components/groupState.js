@@ -22,7 +22,7 @@ export default function GroupState() {
       }}>
       <div style={{
         position: 'absolute',
-        backgroundColor: 'red',
+        backgroundColor: 'green',
         borderRadius: '50%',
         transform: `translate(${position.x}px, ${position.y}px)`,
         left: -10,

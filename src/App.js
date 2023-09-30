@@ -45,7 +45,7 @@ import TaskManager from "./components/taskManager";
 import QuizForm from "./components/quizForm";
 import Picture from './components/picture'
 import EditProfile from "./components/editProfile";
-import GroupState from "./components/groupState";
+import SurveyForm from "./components/surveyForm";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -168,7 +168,7 @@ export default function App() {
         <QuizForm />
         <Picture />
         <EditProfile />
-        <GroupState />
+        <SurveyForm />
     </div>
   );
 }
