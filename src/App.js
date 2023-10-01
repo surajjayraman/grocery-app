@@ -47,6 +47,7 @@ import Picture from './components/picture'
 import EditProfile from "./components/editProfile";
 import SurveyForm from "./components/surveyForm";
 import TicketForm from "./components/ticketForm";
+import Menu from "./components/menu";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -171,6 +172,7 @@ export default function App() {
         <EditProfile />
         <SurveyForm />
         <TicketForm />
+        <Menu />
     </div>
   );
 }
