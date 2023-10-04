@@ -1,8 +1,21 @@
 import { useImmer } from 'use-immer';
+import { useState } from 'react'
 import { initialTravelPlan } from './places.js';
+import TravelList from './travelList.js';
+import AddItem from './addItem.js';
+
+let nextId = 3;
+const initialItems = [
+  { id: 0, title: 'Warm socks', packed: true },
+  { id: 1, title: 'Travel journal', packed: false },
+  { id: 2, title: 'Watercolors', packed: false },
+];
 
 export default function TravelPlan() {
   const [plan, updatePlan] = useImmer(initialTravelPlan);
+  const [items, setItems] = useState(initialItems);
+  const [total, setTotal] = useState(3);
+  const [packed, setPacked] = useState(1);
 
   function handleComplete(parentId, childId) {
     updatePlan(draft => {
@@ -20,6 +33,45 @@ export default function TravelPlan() {
       }
     });
   }
+  function handleAddItem(title) {
+    setTotal(total => total + 1);
+    setItems([
+      ...items,
+      {
+        id: nextId++,
+        title: title,
+        packed: false
+      }
+    ]);
+  }
+  function handleChangeItem(nextItem) {
+    if (nextItem.packed) {
+      setPacked(packed => packed + 1);
+    } else {
+      setPacked(packed => packed - 1);
+    }
+    setItems(items.map(item => {
+      if (item.id === nextItem.id) {
+        return nextItem;
+      } else {
+        return item;
+      }
+    }));
+  }
+  function handleDeleteItem(itemId) {
+    setTotal(total => total - 1);
+    const updatedItems = items.map(item => {
+      if (item.id === itemId && item.packed){
+        setPacked(packed => packed - 1);
+      }
+      return item;      
+    })
+    setItems(
+      updatedItems.filter(item => item.id !== itemId)
+    );
+  }
+
+
 
   const root = plan[0];
   const planetIds = root.childIds;
@@ -37,6 +89,17 @@ export default function TravelPlan() {
           />
         ))}
       </ol>
+      <p style={{color:'purple'}}>Welcome to my Travel Pack list!!!</p>
+      <AddItem
+        onAddItem={handleAddItem}
+      />
+     <TravelList
+        items={items}
+        onChangeItem={handleChangeItem}
+        onDeleteItem={handleDeleteItem}
+      />
+      <hr />
+      <b>{packed} out of {total} packed!</b>
     </>
   );
 }
@@ -45,6 +108,7 @@ function PlaceTree({ id, parentId, placesById, onComplete }) {
   const place = placesById[id];
   const childIds = place.childIds;
   return (
+    
     <li>
       {place.title}
       <button onClick={() => {
@@ -66,5 +130,6 @@ function PlaceTree({ id, parentId, placesById, onComplete }) {
         </ol>
       }
     </li>
+    
   );
 }
