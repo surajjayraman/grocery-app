@@ -64,7 +64,7 @@ export default function TravelPlan() {
       if (item.id === itemId && item.packed){
         setPacked(packed => packed - 1);
       }
-      return item;      
+      return item;
     })
     setItems(
       updatedItems.filter(item => item.id !== itemId)
