@@ -6,13 +6,13 @@ export default function MailClient() {
   const [letters, setLetters] = useState(initialLetters);
   const [highlightedLetter, setHighlightedLetter] = useState(null);
 
-  function handleHover(letter) {
-    setHighlightedLetter(letter);
+  function handleHover(letterId) {
+    setHighlightedLetter(letterId);
   }
 
   function handleStar(starred) {
     setLetters(letters.map(letter => {
-      if (letter.id === starred.id) {
+      if (letter.id === starred) {
         return {
           ...letter,
           isStarred: !letter.isStarred
@@ -33,7 +33,7 @@ export default function MailClient() {
             key={letter.id}
             letter={letter}
             isHighlighted={
-              letter === highlightedLetter
+              letter.id === highlightedLetter
             }
             onHover={handleHover}
             onToggleStar={handleStar}
