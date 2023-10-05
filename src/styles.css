@@ -129,4 +129,10 @@ label, textarea { margin-bottom: 10px; display: block; }
 .picture--active {
   border: 5px solid #a6b5ff;
 }
+ul {
+  padding-inline-start: 20px;
+}
 
+button { margin: 5px; }
+li { border-radius: 5px; }
+.highlighted { background: #d2eaff; }

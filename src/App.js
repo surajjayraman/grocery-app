@@ -49,6 +49,7 @@ import SurveyForm from "./components/surveyForm";
 import TicketForm from "./components/ticketForm";
 import Menu from "./components/menu";
 import TravelPlan from "./components/travelPlan";
+import MailClient from "./components/mailClient";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -175,6 +176,7 @@ export default function App() {
         <TicketForm />
         <Menu />
         <TravelPlan />
+        <MailClient />
     </div>
   );
 }

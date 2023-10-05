@@ -25,6 +25,7 @@ export default function MailClient() {
 
   return (
     <>
+      <p style={{color: 'orangered'}}>My GMAIL Clone!</p>
       <h2>Inbox</h2>
       <ul>
         {letters.map(letter => (
