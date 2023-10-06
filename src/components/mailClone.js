@@ -3,15 +3,24 @@ import { letters } from './data.js';
 import Letter from './mailLetter.js';
 
 export default function MailClone() {
-  const [selectedId, setSelectedId] = useState(null);
-  //const [letters, setLetters] = useState(initialLetters);
-
-  // TODO: allow multiple selection
-  const selectedCount = 1;
+  const [selectedIds, setSelectedIds] = useState([]);
+  // allow multiple selection
+  const selectedCount = selectedIds.length;
 
   function handleToggle(toggledId) {
-    // TODO: allow multiple selection
-    setSelectedId(toggledId);
+   // allow multiple selection
+   // Was it previously selected?
+    if (selectedIds.includes(toggledId)) {
+        // Then remove this ID from the array.
+    return setSelectedIds(selectedIds.filter(id =>
+        id !== toggledId
+        ));
+    } 
+    // Otherwise, add this ID to the array.
+    return setSelectedIds([
+        ...selectedIds,
+        toggledId
+        ]);
   }
 
   return (
@@ -24,8 +33,8 @@ export default function MailClone() {
             key={letter.id}
             letter={letter}
             isSelected={
-              // TODO: allow multiple selection
-              letter.id === selectedId
+              // allow multiple selection
+              selectedIds.includes(letter.id)
             }
             onToggle={handleToggle}
           />
