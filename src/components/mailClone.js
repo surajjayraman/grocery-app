@@ -4,6 +4,7 @@ import Letter from './mailLetter.js';
 
 export default function MailClone() {
   const [selectedId, setSelectedId] = useState(null);
+  //const [letters, setLetters] = useState(initialLetters);
 
   // TODO: allow multiple selection
   const selectedCount = 1;
@@ -15,6 +16,7 @@ export default function MailClone() {
 
   return (
     <>
+      <p className='highlighted'>Updated Inbox!</p>
       <h2>Inbox</h2>
       <ul>
         {letters.map(letter => (
