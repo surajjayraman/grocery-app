@@ -19,6 +19,7 @@ function Panel({ title, children }) {
 export default function Accordion() {
   return (
     <>
+      <p className='highlighted'>Welcome to the Land of Apples!!!</p>
       <h2>Almaty, Kazakhstan</h2>
       <Panel title="About">
         With a population of about 2 million, Almaty is Kazakhstan's largest city. From 1929 to 1997, it was its capital city.
