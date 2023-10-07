@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { letters } from './data.js';
 import Letter from './mailLetter.js';
 
@@ -6,6 +6,10 @@ export default function MailClone() {
   const [selectedIds, setSelectedIds] = useState([]);
   // allow multiple selection
   const selectedCount = selectedIds.length;
+  //example code
+  useEffect(() => {
+    document.title = `The selected Id is: ${selectedIds}`;
+  },[selectedIds]);
 
   function handleToggle(toggledId) {
    // allow multiple selection
