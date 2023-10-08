@@ -13,7 +13,7 @@ export default function FilterableList() {
 
   return (
     <>
-      <p className='highlighted'>Filtering a list </p>
+      <p className='highlighted'>Filtering a Food Recipe list </p>
       <SearchBar query={query} onChange={handleChange}/>
       <hr />
       <List items={results} />
@@ -40,7 +40,7 @@ function filterItems(items, query) {
     query = query.toLowerCase();
     return items.filter(item =>
       item.name.split(' ').some(word =>
-        word.toLowerCase().startsWith(query)
+        word.toLowerCase().match(query)
       )
     );
   }
