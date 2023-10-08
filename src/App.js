@@ -52,6 +52,7 @@ import TravelPlan from "./components/travelPlan";
 import MailClient from "./components/mailClient";
 import MailClone from "./components/mailClone";
 import Accordion from "./components/accordion";
+import SyncedInputs from "./components/syncedInputs";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -181,6 +182,7 @@ export default function App() {
         <MailClient />
         <MailClone />
         <Accordion />
+        <SyncedInputs />
     </div>
   );
 }
