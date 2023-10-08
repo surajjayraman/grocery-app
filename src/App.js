@@ -53,6 +53,7 @@ import MailClient from "./components/mailClient";
 import MailClone from "./components/mailClone";
 import Accordion from "./components/accordion";
 import SyncedInputs from "./components/syncedInputs";
+import FilterableList from "./components/filterableList.js";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -183,6 +184,7 @@ export default function App() {
         <MailClone />
         <Accordion />
         <SyncedInputs />
+        <FilterableList />
     </div>
   );
 }
