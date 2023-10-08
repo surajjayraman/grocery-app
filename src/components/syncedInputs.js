@@ -11,13 +11,13 @@ export default function SyncedInputs() {
   return (
     <>
       <p className='highlighted'>Lifting State Up Demo!</p>
-      <Input label="First input" text={text} onChange={handleChange}/>
-      <Input label="Second input" text={text} onChange={handleChange}/>
+      <Input label="First input" value={text} onChange={handleChange}/>
+      <Input label="Second input" value={text} onChange={handleChange}/>
     </>
   );
 }
 
-function Input({ label, onChange, text}) {
+function Input({ label, onChange, value}) {
 
   return (
     <>
@@ -25,7 +25,7 @@ function Input({ label, onChange, text}) {
       {label}
       {' '}
       <input
-        value={text}
+        value={value}
         onChange={onChange}
       />
     </label>
