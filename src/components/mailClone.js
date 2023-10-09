@@ -9,6 +9,9 @@ export default function MailClone() {
   //example code
   useEffect(() => {
     document.title = `The selected Id is: ${selectedIds}`;
+    return () => {
+        // cleanup
+    }
   },[selectedIds]);
 
   function handleToggle(toggledId) {
