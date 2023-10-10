@@ -1,15 +1,20 @@
 import { useState } from 'react';
 
 export default function ResetCounter() {
+  const [showB, setShowB] = useState(true);  
   const counter = <Counter />;
   return (
-    <>
-    <p className='highlighted'>preserving-and-resetting-state</p>
     <div>
+    <p className='highlighted'>preserving-and-resetting-state</p>
       {counter}
-      {counter}
+      {showB && counter}
+      <label>
+        <input type='checkbox'
+         checked={showB}
+         onChange={e => setShowB(e.target.checked)}/>
+         Render the second counter
+      </label>
     </div>
-    </>
   );
 }
 
