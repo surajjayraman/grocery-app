@@ -55,6 +55,7 @@ import Accordion from "./components/accordion";
 import SyncedInputs from "./components/syncedInputs";
 import FilterableList from "./components/filterableList.js";
 import Quote from "./components/quote";
+import ResetCounter from "./components/resetCounter";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -187,6 +188,7 @@ export default function App() {
         <SyncedInputs />
         <FilterableList />
         <Quote />
+        <ResetCounter />
     </div>
   );
 }
