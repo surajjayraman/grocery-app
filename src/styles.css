@@ -154,3 +154,7 @@ label {
   display: block;
   clear: both;
 }
+.fancy {
+  border: 5px solid gold;
+  color: #ff6767;
+}

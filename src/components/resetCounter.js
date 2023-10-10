@@ -1,12 +1,15 @@
 import { useState } from 'react';
 
 export default function ResetCounter() {
-  const [showB, setShowB] = useState(true);  
-  const counter = <Counter />;
+  const [showB, setShowB] = useState(true);
+  const [isFancy, setIsFancy] = useState(false);
+  const counter = <Counter isFancy={isFancy} />;
   return (
     <div>
     <p className='highlighted'>preserving-and-resetting-state</p>
-      {counter}
+      {isFancy ? <Counter isFancy={true} />
+      : <Counter isFancy={false}/>
+      }
       {showB && counter}
       <label>
         <input type='checkbox'
@@ -14,17 +17,26 @@ export default function ResetCounter() {
          onChange={e => setShowB(e.target.checked)}/>
          Render the second counter
       </label>
+      <label>
+        <input type='checkbox'
+         checked={isFancy}
+         onChange={e => setIsFancy(e.target.checked)}/>
+         Use fancy styling
+      </label>
     </div>
   );
 }
 
-function Counter() {
+function Counter(props) {
   const [score, setScore] = useState(0);
   const [hover, setHover] = useState(false);
 
   let className = 'counter';
   if (hover) {
     className += ' hover';
+  }
+  if (props.isFancy){
+    className += ' fancy';
   }
 
   return (
