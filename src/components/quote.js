@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 
 const Quote = () => {
-    const [data, setData]= useState({});
     const [count, setCount] = useState(0);
+    const [data, setData]= useState({});
 
     useEffect(() => {
         axios.get('https://api.kanye.rest/')
