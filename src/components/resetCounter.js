@@ -3,6 +3,7 @@ import { useState } from 'react';
 export default function ResetCounter() {
   const [showB, setShowB] = useState(true);
   const [isFancy, setIsFancy] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const counter = <Counter isFancy={isFancy} />;
   return (
     <div>
@@ -11,6 +12,9 @@ export default function ResetCounter() {
       : <Counter isFancy={false}/>
       }
       {showB && counter}
+      {isPaused ? <p>See you later!</p>
+      : <Counter isPaused={false}/>
+      }
       <label>
         <input type='checkbox'
          checked={showB}
@@ -22,6 +26,12 @@ export default function ResetCounter() {
          checked={isFancy}
          onChange={e => setIsFancy(e.target.checked)}/>
          Use fancy styling
+      </label>
+      <label>
+        <input type='checkbox'
+         checked={isPaused}
+         onChange={e => setIsPaused(e.target.checked)}/>
+         Take a break
       </label>
     </div>
   );
