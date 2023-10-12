@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import useCounter from '../hooks/useCounter';
+import useAxios from '../hooks/useAxios';
 
 // simple custom hook invocation useCounter
 const MyGreeting = ({ greet }) => {
     const [greeting, setGreeting] = useState('Good Day!')
     const [count, increment, decrement, clear] = useCounter(0);
+    const url = 'https://api.kanye.rest';
+    const body = useAxios(url);
     return (
         <>
         <p onClick={() => {
@@ -15,10 +18,10 @@ const MyGreeting = ({ greet }) => {
         This is my greeting count{' '}{count}!! {' '} {greeting}
         <p className='highlighted'
             onClick={() => decrement()}>Decrement Count</p>
-        <button onClick={() => clear()}>Clear</button>    
+        <button onClick={() => clear()}>Clear</button>
+        <p className='highlighted'>Today's quote</p>
+          {body.quote}
         </>
-        
-    
     )
 }
 
