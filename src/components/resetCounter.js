@@ -1,5 +1,18 @@
 import { useState } from 'react';
 
+// simple custom hook
+const MyGreeting = ({ greet }) => {
+    const [greeting, setGreeting] = useState('Good Day!')
+    return (
+        <>
+        <p onClick={() => setGreeting(greet)}
+            className='highlighted'>My Custom Hook!</p>
+        {greeting}
+        </>
+    
+    )
+}
+
 export default function ResetCounter() {
   const [showB, setShowB] = useState(true);
   const [isFancy, setIsFancy] = useState(false);
@@ -33,6 +46,7 @@ export default function ResetCounter() {
          onChange={e => setIsPaused(e.target.checked)}/>
          Take a break
       </label>
+      <MyGreeting greet='Good Evening'/>
     </div>
   );
 }
