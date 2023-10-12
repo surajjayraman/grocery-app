@@ -7,20 +7,23 @@ const MyGreeting = ({ greet }) => {
     const [greeting, setGreeting] = useState('Good Day!')
     const [count, increment, decrement, clear] = useCounter(0);
     const url = 'https://api.kanye.rest';
-    const body = useAxios(url);
+    const [body, error] = useAxios(url);
     return (
         <>
-        <p onClick={() => {
-            setGreeting(greet);
-            increment();
-        }}
-            className='highlighted'>My Custom Hook!</p>
-        This is my greeting count{' '}{count}!! {' '} {greeting}
-        <p className='highlighted'
-            onClick={() => decrement()}>Decrement Count</p>
-        <button onClick={() => clear()}>Clear</button>
-        <p className='highlighted'>Today's quote</p>
-          {body.quote}
+            <p onClick={() => {
+                setGreeting(greet);
+                increment();
+            }}
+                className='highlighted'>My Custom Hook!</p>
+            This is my greeting count{' '}{count}!! {' '} {greeting}
+            <p className='highlighted'
+                onClick={() => decrement()}>Decrement Count</p>
+            <button onClick={() => clear()}>Clear</button>
+            <p className='highlighted'>Today's quote</p>
+            <ul>
+                <li>{body.quote}</li>
+                <li>{error}</li>
+            </ul>
         </>
     )
 }
