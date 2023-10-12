@@ -46,7 +46,7 @@ export default function ResetCounter() {
          onChange={e => setIsPaused(e.target.checked)}/>
          Take a break
       </label>
-      <MyGreeting greet='Good Evening'/>
+      <MyGreeting greet='Good Evening!'/>
     </div>
   );
 }
