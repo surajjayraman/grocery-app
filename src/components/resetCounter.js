@@ -21,8 +21,7 @@ const MyGreeting = ({ greet }) => {
             <button onClick={() => clear()}>Clear</button>
             <p className='highlighted'>Today's quote</p>
             <ul>
-                <li>{body.quote}</li>
-                <li>{error}</li>
+                <li>{body ? body.quote : error}</li>
             </ul>
         </>
     )
