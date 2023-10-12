@@ -56,6 +56,7 @@ export default function ResetCounter() {
          Take a break
       </label>
       <MyGreeting greet='Good Evening!'/>
+      <MyGreeting greet='Good Afternoon!'/>
     </div>
   );
 }
