@@ -1,16 +1,23 @@
 import { useState } from 'react';
 import useCounter from '../hooks/useCounter';
 
-// simple custom hook invocation
+// simple custom hook invocation useCounter
 const MyGreeting = ({ greet }) => {
     const [greeting, setGreeting] = useState('Good Day!')
-    const count = useCounter(0);
+    const {count, increment, decrement, clear} = useCounter(0);
     return (
         <>
-        <p onClick={() => setGreeting(greet)}
+        <p onClick={() => {
+            setGreeting(greet);
+            increment();
+        }}
             className='highlighted'>My Custom Hook!</p>
         This is my greeting count{' '}{count}!! {' '} {greeting}
+        <p className='highlighted'
+            onClick={() => decrement()}>Decrement Count</p>
+        <button onClick={() => clear()}>Clear</button>    
         </>
+        
     
     )
 }
