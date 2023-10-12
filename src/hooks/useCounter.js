@@ -14,7 +14,7 @@ const useCounter = (initial) => {
     const clear = () => {
         setCount(0);
     }
-    return {count, increment, decrement, clear};
+    return [count, increment, decrement, clear];
 }
 
 export default useCounter;
