@@ -56,6 +56,7 @@ import SyncedInputs from "./components/syncedInputs";
 import FilterableList from "./components/filterableList.js";
 import Quote from "./components/quote";
 import ResetCounter from "./components/resetCounter";
+import KanyeQuote from "./components/kanyeQuote";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -189,6 +190,7 @@ export default function App() {
         <FilterableList />
         <Quote />
         <ResetCounter />
+        <KanyeQuote />
     </div>
   );
 }
