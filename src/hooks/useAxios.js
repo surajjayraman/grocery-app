@@ -9,7 +9,8 @@ const useAxios = (url) => {
 
     useEffect(() => {
         setPending(true);
-        axios.get(url)
+        setTimeout(() => {
+            axios.get(url)
             .then(res => {
                 setBody(res.data);
             })
@@ -17,6 +18,8 @@ const useAxios = (url) => {
                 setError(err.message);
             })
             .finally(() => setPending(false));
+
+        }, 2000);
     }, [url])
 
     return [body, error, pending];
