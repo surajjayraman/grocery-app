@@ -7,7 +7,7 @@ const MyGreeting = ({ greet }) => {
     const [greeting, setGreeting] = useState('Good Day!')
     const [count, increment, decrement, clear] = useCounter(0);
     const url = 'https://api.kanye.rest';
-    const [body, error] = useAxios(url);
+    const [body, error, pending] = useAxios(url);
     return (
         <>
             <p onClick={() => {
@@ -22,6 +22,7 @@ const MyGreeting = ({ greet }) => {
             <p className='highlighted'>Today's quote</p>
             <ul>
                 <li>{body ? body.quote : error}</li>
+                <li>{pending && 'Please wait...'}</li>
             </ul>
         </>
     )
