@@ -57,6 +57,7 @@ import FilterableList from "./components/filterableList.js";
 import Quote from "./components/quote";
 import ResetCounter from "./components/resetCounter";
 import KanyeQuote from "./components/kanyeQuote";
+import OfficeQuote from "./components/officeQuote";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -191,6 +192,7 @@ export default function App() {
         <Quote />
         <ResetCounter />
         <KanyeQuote />
+        <OfficeQuote />
     </div>
   );
 }
