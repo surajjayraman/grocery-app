@@ -10,7 +10,12 @@ export default function OfficeQuote() {
            <p className="highlighted">Latest Office Quotes!</p>
             <ul>
                 <li>
-                    {body && body.quote}
+                    {body &&
+                    <div>
+                        {body.quote}<br/>
+                        <span style={{color:'blue'}}>{body.character}</span>
+                    </div>
+                    }
                     {error && error.message}
                     {pending && "Please await.."}
                 </li>
