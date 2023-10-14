@@ -5,8 +5,11 @@ export default function ResetScoreboard() {
   return (
     <div>
       <p className='highlighted'>Game: Two players keep track of their scores</p>
-      {isPlayerA &&  <Counter person="Taylor" />}
-      {!isPlayerA && <Counter person="Sarah" />}
+      {isPlayerA ? (
+        <Counter key="Taylor" person="Taylor" />
+      ) : (
+        <Counter key="Sarah" person="Sarah" />
+      )}
       <button onClick={() => {
         setIsPlayerA(!isPlayerA);
       }}>
