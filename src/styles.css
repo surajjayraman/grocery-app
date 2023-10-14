@@ -171,3 +171,8 @@ label {
 .hover {
   background: #ffffd8;
 }
+
+.chat, .contact-list {
+  float: left;
+  margin-bottom: 20px;
+}
