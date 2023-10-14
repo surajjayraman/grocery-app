@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Chat from './Chat.js';
-import ContactList from './ContactList.js';
+import Chat from './chat.js';
+import ContactList from './contactList.js';
 
 const contacts = [
     { id: 0, name: 'Taylor', email: 'taylor@mail.com' },
