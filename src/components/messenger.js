@@ -12,6 +12,7 @@ export default function Messenger() {
   const [to, setTo] = useState(contacts[0]);
   return (
     <div>
+      <p className='highlighted'>Resetting a form with a key</p>  
       <ContactList
         contacts={contacts}
         selectedContact={to}

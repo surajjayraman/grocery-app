@@ -176,3 +176,7 @@ label {
   float: left;
   margin-bottom: 20px;
 }
+textarea {
+  height: 100px;
+  display: block;
+}
