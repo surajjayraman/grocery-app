@@ -158,3 +158,16 @@ label {
   border: 5px solid gold;
   color: #ff6767;
 }
+
+.counterVert {
+  width: 200px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 20px 20px 0;
+}
+
+.hover {
+  background: #ffffd8;
+}

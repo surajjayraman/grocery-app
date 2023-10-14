@@ -58,6 +58,7 @@ import Quote from "./components/quote";
 import ResetCounter from "./components/resetCounter";
 import KanyeQuote from "./components/kanyeQuote";
 import OfficeQuote from "./components/officeQuote";
+import ResetScoreboard from "./components/resetScoreBoard";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -193,6 +194,7 @@ export default function App() {
         <ResetCounter />
         <KanyeQuote />
         <OfficeQuote />
+        <ResetScoreboard />
     </div>
   );
 }
