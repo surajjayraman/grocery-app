@@ -10,6 +10,7 @@ const contacts = [
 
 export default function Messenger() {
   const [to, setTo] = useState(contacts[0]);
+  const [text, setText] = useState('');
   return (
     <div>
       <p className='highlighted'>Resetting a form with a key</p>  
@@ -18,7 +19,8 @@ export default function Messenger() {
         selectedContact={to}
         onSelect={contact => setTo(contact)}
       />
-      <Chat key={to.id} contact={to} />
+      <Chat key={to.id} contact={to} onChange={e => setText(e.target.value)}
+        text={text}/>
     </div>
   )
 }

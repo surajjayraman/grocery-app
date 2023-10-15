@@ -1,16 +1,17 @@
-import { useState } from 'react';
 
-export default function Chat({ contact }) {
-  const [text, setText] = useState('');
+
+export default function Chat(props) {
+  
   return (
     <section className="chat">
       <textarea
-        value={text}
-        placeholder={'Chat to ' + contact.name}
-        onChange={e => setText(e.target.value)}
+        key={props.key}
+        value={props.text}
+        placeholder={'Chat to ' + props.contact.name}
+        onChange={props.onChange}
       />
       <br />
-      <button>Send to {contact.email}</button>
+      <button>Send to {props.contact.email}</button>
     </section>
   );
 }
