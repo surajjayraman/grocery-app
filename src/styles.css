@@ -180,3 +180,16 @@ textarea {
   height: 100px;
   display: block;
 }
+
+li { display: inline-block; }
+li button {
+  padding: 10px;
+}
+label {
+  display: block;
+  margin: 10px 0;
+}
+button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

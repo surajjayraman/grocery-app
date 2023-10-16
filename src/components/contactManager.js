@@ -34,6 +34,7 @@ export default function ContactManager() {
 
   return (
     <div>
+      <p className='highlighted'>Manage your contacts</p> 
       <ContactList
         contacts={contacts}
         selectedId={selectedId}
