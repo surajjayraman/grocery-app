@@ -3,24 +3,25 @@ import { useState } from 'react';
 export default function FavoriteCity() {
   const [showHint, setShowHint] = useState(false);
   const [text, setText] = useState('');
-  if (showHint) {
-    return (
-      <div>
-        <p className='highlighted'><i>Hint: Your favorite city?</i></p>
-        <Form text={text} onChange={e => setText(e.target.value)}/>
-        <button onClick={() => {
-          setShowHint(false);
-        }}>Hide hint</button>
-      </div>
-    );
-  }
+  
   return (
       <>
       <p className='highlighted'>Favorite City</p>
-      <Form text={text} onChange={e => setText(e.target.value)} />
-      <button onClick={() => {
-        setShowHint(true);
-      }}>Show hint</button>
+      {showHint &&  <p className='highlighted'><i>Hint: Your favorite city?</i></p>}
+      <Form text={text} onChange={e => setText(e.target.value)}/>
+      { showHint ? (
+            <button onClick={() => {
+            setShowHint(false);
+            }}>Hide hint</button>
+        )
+        : (
+            <>
+            <button onClick={() => {
+                setShowHint(true);
+            }}>Show hint</button> 
+            </>
+        )
+    }
       </>
   );
 }
