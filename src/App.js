@@ -61,6 +61,7 @@ import OfficeQuote from "./components/officeQuote";
 import ResetScoreboard from "./components/resetScoreBoard";
 import FavoriteCity from "./components/favoriteCity";
 import SwapFields from "./components/swapFields";
+import SwapFormFields from "./components/swapFormFields";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -199,6 +200,7 @@ export default function App() {
         <ResetScoreboard />
         <FavoriteCity />
         <SwapFields />
+        <SwapFormFields />
     </div>
   );
 }
