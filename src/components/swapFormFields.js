@@ -12,7 +12,7 @@ export default function SwapFormFields() {
       Reverse order
     </label>
   );
-  
+
   return reverse ? (
     <>
     <Field key="lastName" label="Last name" />
