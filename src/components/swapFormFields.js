@@ -12,23 +12,20 @@ export default function SwapFormFields() {
       Reverse order
     </label>
   );
-  if (reverse) {
-    return (
-      <>
-        <Field key="lastName" label="Last name" />
-        <Field key="firstName" label="First name" />
-        {checkbox}
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Field key="firstName" label="First name" />
-        <Field key="lastName" label="Last name" />
-        {checkbox}
-      </>
-    );
-  }
+  
+  return reverse ? (
+    <>
+    <Field key="lastName" label="Last name" />
+    <Field key="firstName" label="First name" />
+     {checkbox}
+     </>
+  ) : (
+    <>
+    <Field key="firstName" label="First name" />
+    <Field key="lastName" label="Last name" />
+    {checkbox}
+    </>
+  )
 }
 
 function Field({ label }) {
