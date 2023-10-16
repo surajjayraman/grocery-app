@@ -60,6 +60,7 @@ import KanyeQuote from "./components/kanyeQuote";
 import OfficeQuote from "./components/officeQuote";
 import ResetScoreboard from "./components/resetScoreBoard";
 import FavoriteCity from "./components/favoriteCity";
+import SwapFields from "./components/swapFields";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -197,6 +198,7 @@ export default function App() {
         <OfficeQuote />
         <ResetScoreboard />
         <FavoriteCity />
+        <SwapFields />
     </div>
   );
 }
