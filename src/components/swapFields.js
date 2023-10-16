@@ -2,6 +2,10 @@ import { useState } from 'react';
 
 export default function SwapFields() {
   const [reverse, setReverse] = useState(false);
+  //const [text, setText] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+
   let checkbox = (
     <label>
       <input
@@ -16,8 +20,10 @@ export default function SwapFields() {
     return (
       <>
         <p className='highlighted'>Swap two form fields</p>
-        <Field label="Last name" /> 
-        <Field label="First name" />
+        <Field label="Last name" text={lastName}
+            onChange={e => setLastName(e.target.value)} />
+        <Field label="First name" text={firstName}
+            onChange={e => setFirstName(e.target.value)}/>
         {checkbox}
       </>
     );
@@ -25,16 +31,18 @@ export default function SwapFields() {
     return (
       <>
         <p className='highlighted'>Swap two form fields</p>
-        <Field label="First name" /> 
-        <Field label="Last name" />
+        <Field label="First name" text={firstName}
+            onChange={e => setFirstName(e.target.value)}/>
+        <Field label="Last name" text={lastName}
+            onChange={e => setLastName(e.target.value)} />
         {checkbox}
       </>
     );
   }
 }
 
-function Field({ label }) {
-  const [text, setText] = useState('');
+function Field({ label, text, onChange }) {
+
   return (
     <label>
       {label}:{' '}
@@ -42,7 +50,7 @@ function Field({ label }) {
         type="text"
         value={text}
         placeholder={label}
-        onChange={e => setText(e.target.value)}
+        onChange={onChange}
       />
     </label>
   );
