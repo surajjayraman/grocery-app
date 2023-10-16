@@ -59,7 +59,7 @@ import ResetCounter from "./components/resetCounter";
 import KanyeQuote from "./components/kanyeQuote";
 import OfficeQuote from "./components/officeQuote";
 import ResetScoreboard from "./components/resetScoreBoard";
-import Messenger from "./components/messenger";
+import FavoriteCity from "./components/favoriteCity";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -196,7 +196,7 @@ export default function App() {
         <KanyeQuote />
         <OfficeQuote />
         <ResetScoreboard />
-        <Messenger />
+        <FavoriteCity />
     </div>
   );
 }
