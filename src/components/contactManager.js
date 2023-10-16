@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ContactList from './ContactList.js';
-import EditContact from './EditContact.js';
+import ContactList from './contactManagerList.js';
+import EditContact from './editContact.js';
 
 const initialContacts = [
     { id: 0, name: 'Taylor', email: 'taylor@mail.com' },
