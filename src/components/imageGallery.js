@@ -38,14 +38,14 @@ export default function ImageGallery() {
   let image = images[index];
   return (
     <>
-      <p className='highlighted'>Clear an image while it’s loading</p>
+      <p className='highlighted'>Clear an image while it's loading</p>
       <button onClick={handleClick}>
         Next
       </button>
       <h3>
         Image {index + 1} of {images.length}
       </h3>
-      <img alt='Beautiful Places' src={image.src} />
+      <img key={image.src} alt='Beautiful Places' src={image.src} />
       <p>
         {image.place}
       </p>
