@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ContactList from './contactManagerList.js';
+import ContactManagerList from './contactManagerList.js';
 import EditContact from './editContact.js';
 
 const initialContacts = [
@@ -13,10 +13,12 @@ export default function ContactManager() {
     contacts,
     setContacts
   ] = useState(initialContacts);
+
   const [
     selectedId,
     setSelectedId
   ] = useState(0);
+
   const selectedContact = contacts.find(c =>
     c.id === selectedId
   );
@@ -35,7 +37,7 @@ export default function ContactManager() {
   return (
     <div>
       <p className='highlighted'>Manage your contacts</p> 
-      <ContactList
+      <ContactManagerList
         contacts={contacts}
         selectedId={selectedId}
         onSelect={id => setSelectedId(id)}
@@ -44,6 +46,7 @@ export default function ContactManager() {
       <EditContact
         initialData={selectedContact}
         onSave={handleSave}
+        key={selectedId}
       />
     </div>
   )
