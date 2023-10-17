@@ -63,6 +63,7 @@ import FavoriteCity from "./components/favoriteCity";
 import SwapFields from "./components/swapFields";
 import SwapFormFields from "./components/swapFormFields";
 import ContactManager from "./components/contactManager";
+import ImageGallery from "./components/imageGallery";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -203,6 +204,7 @@ export default function App() {
         <SwapFields />
         <SwapFormFields />
         <ContactManager />
+        <ImageGallery />
     </div>
   );
 }
