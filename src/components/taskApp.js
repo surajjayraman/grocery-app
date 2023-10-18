@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import AddTask from './addTask.js';
 import TaskList from './taskData.js';
+import tasksReducer from './taskReducer.js';
 
 let nextId = 3;
 const initialTasks = [
@@ -10,9 +11,10 @@ const initialTasks = [
 ];
 
 export default function TaskApp() {
-  const [tasks, setTasks] = useState(initialTasks);
+  //const [tasks, setTasks] = useState(initialTasks);
+  const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
 
-  function handleAddTask(text) {
+  /*function handleAddTask(text) {
     setTasks([
       ...tasks,
       {
@@ -37,6 +39,28 @@ export default function TaskApp() {
 
   function handleDeleteTask(taskId) {
     setTasks(tasks.filter((t) => t.id !== taskId));
+  }*/
+
+  function handleAddTask(text) {
+    dispatch({
+      type: 'added',
+      id: nextId++,
+      text: text,
+    });
+  }
+
+  function handleChangeTask(task) {
+    dispatch({
+      type: 'changed',
+      task: task,
+    });
+  }
+
+  function handleDeleteTask(taskId) {
+    dispatch({
+      type: 'deleted',
+      id: taskId,
+    });
   }
 
   return (
