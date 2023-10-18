@@ -65,6 +65,7 @@ import SwapFormFields from "./components/swapFormFields";
 import ContactManager from "./components/contactManager";
 import ImageGallery from "./components/imageGallery";
 import ReverseContactList from "./components/reverseContactList";
+import TaskApp from "./components/taskApp";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -207,6 +208,7 @@ export default function App() {
         <ContactManager />
         <ImageGallery />
         <ReverseContactList />
+        <TaskApp />
     </div>
   );
 }
