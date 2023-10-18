@@ -41,7 +41,7 @@ export default function TaskApp() {
 
   return (
     <>
-      <h1>Prague itinerary</h1>
+      <h1 className='highlighted'>Prague itinerary</h1>
       <AddTask onAddTask={handleAddTask} />
       <TaskList
         tasks={tasks}
