@@ -9,10 +9,12 @@ const contacts = [
 
 export default function ReverseContactList() {
   const [reverse, setReverse] = useState(false);
+  const [displayedContacts, setDisplayedContacts] = useState(contacts);
 
-  const displayedContacts = [...contacts];
-  if (reverse) {
-    displayedContacts.reverse();
+  const handleReverse = (e) => {
+    setReverse(e.target.checked);
+    const reversedContacts = [...displayedContacts.reverse()];
+    setDisplayedContacts(reversedContacts);
   }
 
   return (
@@ -22,15 +24,13 @@ export default function ReverseContactList() {
         <input
           type="checkbox"
           value={reverse}
-          onChange={e => {
-            setReverse(e.target.checked)
-          }}
+          onChange={handleReverse}
         />{' '}
         Show in reverse order
       </label>
       <ul>
-        {displayedContacts.map((contact, i) =>
-          <li key={i}>
+        {displayedContacts.map((contact) =>
+          <li key={contact.id}>
             <Contact contact={contact} />
           </li>
         )}
