@@ -48,7 +48,7 @@ function Post({ title, body }) {
       <Heading>
         {title}
       </Heading>
-      <p><i>{body}</i></p>
+      <p className='highlighted'><i>{body}</i></p>
     </Section>
   );
 }
