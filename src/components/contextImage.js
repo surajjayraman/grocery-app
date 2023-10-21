@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { places } from './data.js';
 import { getImageUrlSize } from './utils.js';
+import { SizeContext } from './sizeContext.js';
 
 export default function ContextImage() {
   const [isLarge, setIsLarge] = useState(false);
@@ -8,18 +9,20 @@ export default function ContextImage() {
   return (
     <>
       <p className='highlighted'>Replace prop drilling with context</p>
-      <label>
-        <input
-          type="checkbox"
-          checked={isLarge}
-          onChange={e => {
-            setIsLarge(e.target.checked);
-          }}
-        />
-        Use large images
-      </label>
-      <hr />
-      <List imageSize={imageSize} />
+      <SizeContext.provider>
+        <label value={imageSize}>
+            <input
+            type="checkbox"
+            checked={isLarge}
+            onChange={e => {
+                setIsLarge(e.target.checked);
+            }}
+            />
+            Use large images
+        </label>
+        <hr />
+        <List />
+      </SizeContext.provider>
     </>
   )
 }
