@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { places } from './data.js';
 import { getImageUrlSize } from './utils.js';
 import { SizeContext } from './sizeContext.js';
@@ -52,14 +52,14 @@ function Place({ place }) {
   );
 }
 
-function PlaceImage({ place, imageSize }) {
-  return (
-    <img
-      key={place.id}
-      src={getImageUrlSize(place)} 
-      alt={place.name}
-      width={imageSize}
-      height={imageSize}
-    />
-  );
+function PlaceImage({ place }) {
+    const imageSize = useContext(SizeContext);
+    return (
+        <img
+        src={getImageUrlSize(place)} 
+        alt={place.name}
+        width={imageSize}
+        height={imageSize}
+        />
+    );
 }
