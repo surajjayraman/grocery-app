@@ -54,12 +54,14 @@ function Place({ place }) {
 
 function PlaceImage({ place }) {
     const imageSize = useContext(SizeContext);
+    console.log(getImageUrlSize(place));
     return (
         <img
         src={getImageUrlSize(place)} 
         alt={place.name}
         width={imageSize}
         height={imageSize}
+        className='imgContext'
         />
     );
 }
