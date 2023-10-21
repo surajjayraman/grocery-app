@@ -5,7 +5,7 @@ import { SizeContext } from './sizeContext.js';
 
 export default function ContextImage() {
   const [isLarge, setIsLarge] = useState(false);
-  const imageSize = isLarge ? 150 : 100;
+  const imageSize = isLarge ? 250 : 100;
   return (
     <>
       <p className='highlighted'>Replace prop drilling with context</p>
@@ -54,7 +54,6 @@ function Place({ place }) {
 
 function PlaceImage({ place }) {
     const imageSize = useContext(SizeContext);
-    console.log(`getImageUrlSize(place) and size=${imageSize}`);
     return (
         <img
         src={getImageUrlSize(place)} 
