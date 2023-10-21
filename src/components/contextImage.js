@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { places } from './data.js';
-import { getImageUrl } from './utils.js';
+import { getImageUrlSize } from './utils.js';
 
 export default function ContextImage() {
   const [isLarge, setIsLarge] = useState(false);
@@ -54,7 +54,8 @@ function Place({ place, imageSize }) {
 function PlaceImage({ place, imageSize }) {
   return (
     <img
-      src={getImageUrl(place)}
+      key={place.id}
+      src={getImageUrlSize(place)} 
       alt={place.name}
       width={imageSize}
       height={imageSize}

@@ -7,4 +7,12 @@ export const getImageUrl = (person, size) => {
     }
     return (baseUrl + person.imageId + thumbnailSize + '.jpg');
 }
+export function getImageUrlSize(place) {
+    return (
+      'https://i.imgur.com/' +
+      place.imageId +
+      'l.jpg'
+    );
+  }
+  
 
