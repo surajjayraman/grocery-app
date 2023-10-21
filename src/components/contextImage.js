@@ -9,7 +9,7 @@ export default function ContextImage() {
   return (
     <>
       <p className='highlighted'>Replace prop drilling with context</p>
-      <SizeContext.provider>
+      <SizeContext.Provider>
         <label value={imageSize}>
             <input
             type="checkbox"
@@ -22,7 +22,7 @@ export default function ContextImage() {
         </label>
         <hr />
         <List />
-      </SizeContext.provider>
+      </SizeContext.Provider>
     </>
   )
 }

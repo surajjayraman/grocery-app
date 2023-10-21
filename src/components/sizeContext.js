@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { createContext } from "react";
 
 
-export const SizeContext = useContext(100);
+export const SizeContext = createContext(500);
