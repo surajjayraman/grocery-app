@@ -9,8 +9,8 @@ export default function ContextImage() {
   return (
     <>
       <p className='highlighted'>Replace prop drilling with context</p>
-      <SizeContext.Provider>
-        <label value={imageSize}>
+      <SizeContext.Provider value={imageSize}r>
+        <label>
             <input
             type="checkbox"
             checked={isLarge}
@@ -54,7 +54,7 @@ function Place({ place }) {
 
 function PlaceImage({ place }) {
     const imageSize = useContext(SizeContext);
-    console.log(getImageUrlSize(place));
+    console.log(`getImageUrlSize(place) and size=${imageSize}`);
     return (
         <img
         src={getImageUrlSize(place)} 
