@@ -27,24 +27,22 @@ export default function ContextImage() {
   )
 }
 
-function List({ imageSize }) {
+function List() {
   const listItems = places.map(place =>
     <li key={place.id}>
       <Place
         place={place}
-        imageSize={imageSize}
       />
     </li>
   );
   return <ul>{listItems}</ul>;
 }
 
-function Place({ place, imageSize }) {
+function Place({ place }) {
   return (
     <>
       <PlaceImage
         place={place}
-        imageSize={imageSize}
       />
       <p>
         <b>{place.name}</b>
