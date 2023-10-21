@@ -68,6 +68,7 @@ import ReverseContactList from "./components/reverseContactList";
 import TaskApp from "./components/taskApp";
 import ContextPage from "./components/contextPage";
 import ProfilePage from "./components/profilePage";
+import ContextImage from "./components/contextImage";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -213,6 +214,7 @@ export default function App() {
         <TaskApp />
         <ContextPage />
         <ProfilePage />
+        <ContextImage />
     </div>
   );
 }
