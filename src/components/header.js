@@ -4,7 +4,8 @@ const Header = (props) => {
 
     return (
         <>
-        <h2 className="highlighted">{props.text}</h2>
+        <p className="highlighted">React Review - My Friends App</p>
+        <h2>{props.text}</h2>
         </>
     )
 
