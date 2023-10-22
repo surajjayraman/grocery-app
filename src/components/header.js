@@ -9,7 +9,7 @@ const Header = (props) => {
         <p className="highlighted">React Review - My Friends App</p>
         <h2>{props.text}</h2>
         <div className="input-form">
-            <input type="text"/>
+            <input type="text" onChange={(e) => setInput(e.target.value)}/>
         </div>
         {input}
         </>
