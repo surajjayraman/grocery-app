@@ -69,6 +69,7 @@ import TaskApp from "./components/taskApp";
 import ContextPage from "./components/contextPage";
 import ProfilePage from "./components/profilePage";
 import ContextImage from "./components/contextImage";
+import Header from "./components/header";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -215,6 +216,7 @@ export default function App() {
         <ContextPage />
         <ProfilePage />
         <ContextImage />
+        <Header text='My Friends'/>
     </div>
   );
 }
