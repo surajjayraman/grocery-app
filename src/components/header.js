@@ -1,6 +1,8 @@
+import { useState } from "react";
 
 
 const Header = (props) => {
+    const [input, setInput] = useState('');
 
     return (
         <>
