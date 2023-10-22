@@ -70,6 +70,7 @@ import ContextPage from "./components/contextPage";
 import ProfilePage from "./components/profilePage";
 import ContextImage from "./components/contextImage";
 import Header from "./components/header";
+import TempleTask from "./components/templeTask";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -217,6 +218,7 @@ export default function App() {
         <ProfilePage />
         <ContextImage />
         <Header text='My Friends'/>
+        <TempleTask />
     </div>
   );
 }

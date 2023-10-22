@@ -39,6 +39,7 @@ export default function TempleTask() {
 
   return (
     <>
+      <p className='highlighted'>Combining a reducer with context</p>
       <h1>Day off in Kyoto</h1>
       <AddTask
         onAddTask={handleAddTask}
