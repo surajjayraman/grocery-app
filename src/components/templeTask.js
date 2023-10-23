@@ -42,14 +42,8 @@ export default function TempleTask() {
     <TasksContext.Provider value={tasks}>
       <TasksDispatchContext.Provider value={dispatch}>
         <h1>Day off in Kyoto</h1>
-        <AddTask
-          onAddTask={handleAddTask}
-        />
-        <TaskList
-          tasks={tasks}
-          onChangeTask={handleChangeTask}
-          onDeleteTask={handleDeleteTask}
-        />
+        <AddTask />
+        <TaskList />
       </TasksDispatchContext.Provider>
     </TasksContext.Provider>
   );
