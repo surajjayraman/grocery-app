@@ -1,4 +1,5 @@
 import { useReducer } from 'react';
+import { TasksContext, TasksDispatchContext } from './taskContext.js'
 import AddTask from './addTempleTask.js';
 import TaskList from './templeTaskList.js';
 
@@ -38,18 +39,19 @@ export default function TempleTask() {
   }
 
   return (
-    <>
-      <p className='highlighted'>Combining a reducer with context</p>
-      <h1>Day off in Kyoto</h1>
-      <AddTask
-        onAddTask={handleAddTask}
-      />
-      <TaskList
-        tasks={tasks}
-        onChangeTask={handleChangeTask}
-        onDeleteTask={handleDeleteTask}
-      />
-    </>
+    <TasksContext.Provider value={tasks}>
+      <TasksDispatchContext.Provider value={dispatch}>
+        <h1>Day off in Kyoto</h1>
+        <AddTask
+          onAddTask={handleAddTask}
+        />
+        <TaskList
+          tasks={tasks}
+          onChangeTask={handleChangeTask}
+          onDeleteTask={handleDeleteTask}
+        />
+      </TasksDispatchContext.Provider>
+    </TasksContext.Provider>
   );
 }
 
