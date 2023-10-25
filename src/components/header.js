@@ -10,16 +10,22 @@ const Header = (props) => {
     const [data, setData] = useState([]);
 
       const addFriends = () => {
+            setData([
+                ...testData,
+                {
+                    uid: 'ccc',
+                    name: input
+                }
+            ]);
+        }
 
-        setData([
-            ...testData,
-            {
-                uid: 'ccc',
-                name: input
-            }
-        ]);
-
-    }
+        const list = data.map(item => {
+            return (
+                <li>
+                    {item.name}
+                </li>
+                )
+        })
 
     return (
         <>
@@ -33,14 +39,7 @@ const Header = (props) => {
                 Add friend
             </button>
             <ul>
-                    {data.map(item => {
-                        return (
-                            <li>
-                                {item.name}
-                            </li>
-                            )
-                        })
-                    }
+                    {list}
             </ul>
         </>
     )
