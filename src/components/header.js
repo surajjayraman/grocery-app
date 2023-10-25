@@ -33,11 +33,11 @@ const Header = (props) => {
             <h2>{props.text}</h2>
             <div className="input-form">
                 <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
+                <button type='button' onClick={addFriends}>
+                    Add friend
+                </button>
             </div>
             {input} <br/>
-            <button type='button' onClick={addFriends}>
-                Add friend
-            </button>
             <ul>
                     {list}
             </ul>
