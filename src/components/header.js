@@ -35,7 +35,7 @@ const Header = (props) => {
                 <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
             </div>
             {input} <br/>
-            <button type='submit' onClick={addFriends}>
+            <button type='button' onClick={addFriends}>
                 Add friend
             </button>
             <ul>
