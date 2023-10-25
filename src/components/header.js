@@ -21,7 +21,7 @@ const Header = (props) => {
 
         const list = data.map(item => {
             return (
-                <li>
+                <li key={item.uid}>
                     {item.name}
                 </li>
                 )
