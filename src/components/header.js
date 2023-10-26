@@ -9,8 +9,9 @@ const Header = (props) => {
     const [input, setInput] = useState('');
     const [data, setData] = useState([]);
 
-      const addFriends = () => {
-            setData([
+      const addFriends = (e) => {
+        e.preventDefault();
+        setData([
                 ...testData,
                 {
                     uid: 'ccc',
@@ -32,10 +33,12 @@ const Header = (props) => {
             <p className="highlighted">React Review - My Friends App</p>
             <h2>{props.text}</h2>
             <div className="input-form">
-                <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-                <button type='button' onClick={addFriends}>
-                    Add friend
-                </button>
+                <form onSubmit={addFriends}>
+                    <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
+                    <button type='button'>
+                        Add friend
+                    </button>
+                </form>
             </div>
             {input} <br/>
             <ul>
