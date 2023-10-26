@@ -35,7 +35,7 @@ const Header = (props) => {
             <div className="input-form">
                 <form onSubmit={addFriends}>
                     <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-                    <button type='button'>
+                    <button>
                         Add friend
                     </button>
                 </form>

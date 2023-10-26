@@ -72,6 +72,7 @@ import ContextImage from "./components/contextImage";
 import Header from "./components/header";
 import TempleTask from "./components/templeTask";
 import RefCounter from "./components/refCounter";
+import Stopwatch from "./components/stopWatch";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -221,6 +222,7 @@ export default function App() {
         <Header text='My Friends'/>
         <TempleTask />
         <RefCounter />
+        <Stopwatch />
     </div>
   );
 }
