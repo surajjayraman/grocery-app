@@ -74,6 +74,7 @@ import TempleTask from "./components/templeTask";
 import RefCounter from "./components/refCounter";
 import Stopwatch from "./components/stopWatch";
 import BrokenChat from "./components/brokenChat";
+import Toggle from "./components/toggle";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -225,6 +226,7 @@ export default function App() {
         <RefCounter />
         <Stopwatch />
         <BrokenChat />
+        <Toggle />
     </div>
   );
 }
