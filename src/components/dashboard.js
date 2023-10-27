@@ -1,10 +1,11 @@
-let timeoutID;
+import { useRef } from "react";
 
 function DebouncedButton({ onClick, children }) {
+    let timeoutID = useRef(null);
   return (
     <button onClick={() => {
-      clearTimeout(timeoutID);
-      timeoutID = setTimeout(() => {
+      clearTimeout(timeoutID.current);
+      timeoutID.current = setTimeout(() => {
         onClick();
       }, 1000);
     }}>
