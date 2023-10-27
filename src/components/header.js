@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 } from 'uuid';
 
 const testData = [
     {uid: 'aaa', name: 'Ali Barber'},
@@ -7,14 +8,15 @@ const testData = [
 
 const Header = (props) => {
     const [input, setInput] = useState('');
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(testData);
+    const uniqueId = v4();
 
       const addFriends = (e) => {
         e.preventDefault();
         setData([
-                ...testData,
+                ...data,
                 {
-                    uid: 'ccc',
+                    uid: uniqueId,
                     name: input
                 }
             ]);
