@@ -8,7 +8,7 @@ const testData = [
 
 const Header = (props) => {
     const [input, setInput] = useState('');
-    const [data, setData] = useState(testData);
+    const [data, setData] = useState([]);
     const uniqueId = v4();
 
       const addFriends = (e) => {
@@ -20,6 +20,10 @@ const Header = (props) => {
                     name: input
                 }
             ]);
+        }
+
+        const getFriends = () => {
+            setData(testData);
         }
 
         const list = data.map(item => {
@@ -41,6 +45,9 @@ const Header = (props) => {
                         Add friend
                     </button>
                 </form>
+                <button onClick={getFriends}>
+                        Get Friends
+                </button>
             </div>
             {input} <br/>
             <ul>
