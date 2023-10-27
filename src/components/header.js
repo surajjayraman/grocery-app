@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { v4 } from 'uuid';
 
 const testData = [
@@ -6,33 +7,43 @@ const testData = [
     {uid: 'bbb', name: 'Jim Holden'}
 ]
 
+const url = 'https://random-data-api.com/api/name/random_name?size=5';
+
 const Header = (props) => {
     const [input, setInput] = useState('');
     const [data, setData] = useState([]);
     const uniqueId = v4();
 
-      const addFriends = (e) => {
-        e.preventDefault();
-        setData([
-                ...data,
-                {
-                    uid: uniqueId,
-                    name: input
-                }
-            ]);
-        }
+    // Get randon mames during load
+    useEffect(() => {
+        axios.get(url)
+            .then(res => {
+                setData(res.data);
+            });
+    }, []);
 
-        const getFriends = () => {
-            setData(testData);
-        }
+    const addFriends = (e) => {
+    e.preventDefault();
+    setData([
+            ...data,
+            {
+                uid: uniqueId,
+                name: input
+            }
+        ]);
+    }
 
-        const list = data.map(item => {
-            return (
-                <li key={item.uid}>
-                    {item.name}
-                </li>
-                )
-        })
+    const getFriends = () => {
+        setData(testData);
+    }
+
+    const list = data.map(item => {
+        return (
+            <li key={item.uid}>
+                {item.name}
+            </li>
+            )
+    })
 
     return (
         <>
@@ -50,6 +61,7 @@ const Header = (props) => {
                 </button>
             </div>
             {input} <br/>
+            <h2 className="highlighted">Random Friends</h2>
             <ul>
                     {list}
             </ul>
