@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function BrokenChat() {
   const [text, setText] = useState('');
   const [isSending, setIsSending] = useState(false);
-  let timeoutID = null;
+  let timeoutID = useRef(null);
 
   function handleSend() {
     setIsSending(true);
-    timeoutID = setTimeout(() => {
+    timeoutID.current = setTimeout(() => {
       alert('Sent!');
       setIsSending(false);
     }, 3000);
@@ -15,7 +15,7 @@ export default function BrokenChat() {
 
   function handleUndo() {
     setIsSending(false);
-    clearTimeout(timeoutID);
+    clearTimeout(timeoutID.current);
   }
 
   return (
