@@ -22,6 +22,8 @@ const Header = (props) => {
             });
     }, []);
 
+    //console.log(data)
+
     const addFriends = (e) => {
     e.preventDefault();
     setData([

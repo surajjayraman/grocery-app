@@ -76,6 +76,7 @@ import Stopwatch from "./components/stopWatch";
 import BrokenChat from "./components/brokenChat";
 import Toggle from "./components/toggle";
 import Dashboard from "./components/dashboard";
+import RefChat from "./components/refChat";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -229,6 +230,7 @@ export default function App() {
         <BrokenChat />
         <Toggle />
         <Dashboard />
+        <RefChat />
     </div>
   );
 }
