@@ -27,15 +27,18 @@ const Header = (props) => {
 
     const addFriends = (e) => {
     e.preventDefault();
-    const friend = {uid, name: input}
-    axios.post('/api/names', friend);
-    setData([
+    const friend = {name: input}
+    axios.post('/api/names', friend)
+        .then(res => {
+            setData([...data, res.data])
+        })
+    /*setData([
             ...data,
             {
                 uid: uniqueId,
                 name: input
             }
-        ]);
+        ]);*/
     }
 
     const getFriends = () => {
