@@ -7,7 +7,8 @@ const testData = [
     {uid: 'bbb', name: 'Jim Holden'}
 ]
 
-const url = 'https://random-data-api.com/api/name/random_name?size=5';
+//const url = 'https://random-data-api.com/api/name/random_name?size=5';
+const url = '/api/names';
 
 const Header = (props) => {
     const [input, setInput] = useState('');
@@ -26,6 +27,8 @@ const Header = (props) => {
 
     const addFriends = (e) => {
     e.preventDefault();
+    const friend = {uid, name: input}
+    axios.post('/api/names', friend);
     setData([
             ...data,
             {
