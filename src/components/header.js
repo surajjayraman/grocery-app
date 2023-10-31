@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { v4 } from 'uuid';
+
 
 const testData = [
     {uid: 'aaa', name: 'Ali Barber'},
@@ -13,7 +13,7 @@ const url = '/api/names';
 const Header = (props) => {
     const [input, setInput] = useState('');
     const [data, setData] = useState([]);
-    const uniqueId = v4();
+    //const uniqueId = v4();
 
     // Get randon mames during load
     useEffect(() => {
@@ -28,6 +28,7 @@ const Header = (props) => {
     const addFriends = (e) => {
     e.preventDefault();
     const friend = {name: input}
+
     axios.post('/api/names', friend)
         .then(res => {
             setData([...data, res.data])
