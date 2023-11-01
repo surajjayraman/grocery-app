@@ -1,4 +1,4 @@
-const { getFriendCount } = require("../helpers/list");
+const { getFriendCount, getFriendNames } = require("../helpers/list");
 
 const data = [
     { name: "Betty White", uid: "1" },
@@ -20,6 +20,13 @@ describe('Helper tests', () => {
 
         expect(count).toBe(4);
     });
+
+    //---------------------------------------
+    it("get correct friends names", () => {
+        const names = getFriendNames(data);
+        expect(names).toContain("Betty White");
+        expect(names.length).toBe(4);
+    })
 
 
 
