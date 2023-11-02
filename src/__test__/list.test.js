@@ -1,4 +1,4 @@
-const { getFriendCount, getFriendNames, addFriend } = require("../helpers/list");
+const { getFriendCount, getFriendNames, addFriend, removeFriend } = require("../helpers/list");
 
 const data = [
     { name: "Betty White", uid: "1" },
@@ -42,6 +42,17 @@ describe('Helper tests', () => {
         const names = getFriendNames(data);
         expect(names).not.toContain("Nathan Brown");
         expect(names.length).toBe(4);
+    });
+    //---------------------------------------
+    it("removes unwanted friend", () => {
+        const tom = { name: "Tom Cruise", uid: "4" };
+
+        expect(data).toContainEqual(tom);
+        // expect(data).toContain(tom);  // Note this doesnt work
+
+        const bestFriends = removeFriend(data, "4");
+        expect(bestFriends).not.toContainEqual(tom);
+        expect(bestFriends.length).toBe(3);
     });
 
 
