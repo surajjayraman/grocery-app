@@ -1,4 +1,4 @@
-const { getFriendCount, getFriendNames } = require("../helpers/list");
+const { getFriendCount, getFriendNames, addFriend } = require("../helpers/list");
 
 const data = [
     { name: "Betty White", uid: "1" },
@@ -27,6 +27,16 @@ describe('Helper tests', () => {
         expect(names).toContain("Betty White");
         expect(names.length).toBe(4);
     })
+    //---------------------------------------
+    it("adds new friend", () => {
+        const moreFriends = addFriend(data, "Nathan Brown", 5);
+        expect(moreFriends.length).toBe(5);
+
+        // expect(moreFriends).toContain("Nathan Brown"); // Doesn't work!
+
+        const nathan = { "name": "Nathan Brown", "uid": 5 };
+        expect(moreFriends).toContainEqual(nathan); // Need this instead
+    });
 
 
 
