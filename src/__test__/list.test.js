@@ -67,6 +67,12 @@ describe('Helper tests', () => {
         expect(result.length).toBe(0);
     });
 
+    // Coverage - getFriendNames: null list
+    test("removeFriend returns empty if list is null", () => {
+        const result = removeFriend(null, 4);
+        expect(result.length).toBe(0);
+    });
+
 
 
 });
