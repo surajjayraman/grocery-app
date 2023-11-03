@@ -54,6 +54,12 @@ describe('Helper tests', () => {
         expect(bestFriends).not.toContainEqual(tom);
         expect(bestFriends.length).toBe(3);
     });
+    //---------- COVERAGE -------------------
+    // Coverage - getFriendNames: null list
+    test("getFriendNames returns empty if list is null", () => {
+        const result = getFriendNames(null);
+        expect(result.length).toBe(0);
+    });
 
 
 
