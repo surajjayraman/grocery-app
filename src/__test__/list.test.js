@@ -72,7 +72,4 @@ describe('Helper tests', () => {
         const result = removeFriend(null, 4);
         expect(result.length).toBe(0);
     });
-
-
-
 });
