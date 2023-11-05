@@ -24,7 +24,7 @@ describe('FriendList Tests', () => {
   it("renders with data and renders a list", () => {
     const {container, getByRole} = render(<FriendList items={data} />);
 
-    // console.log(prettyDOM(container));
+    console.log(prettyDOM(container));
 
     const list = screen.getByRole("list");
     // const list1 = getByRole("list");  // Newer version does not like this!
