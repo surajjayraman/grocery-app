@@ -77,6 +77,7 @@ import BrokenChat from "./components/brokenChat";
 import Toggle from "./components/toggle";
 import Dashboard from "./components/dashboard";
 import RefChat from "./components/refChat";
+import FormRef from "./components/formUseRef";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -231,6 +232,7 @@ export default function App() {
         <Toggle />
         <Dashboard />
         <RefChat />
+        <FormRef />
     </div>
   );
 }

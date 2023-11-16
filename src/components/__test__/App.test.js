@@ -1,6 +1,16 @@
 import {screen, render, cleanup, fireEvent, prettyDOM} from "@testing-library/react";
 import '@testing-library/jest-dom';
 import App from "../../App";
+const {loadNewFriends} = require("../../helpers/load");
+jest.mock('../../helpers/load');
+
+const data = [
+  {name: "Betty White", uid: "1"},
+  {name: "Freddy Mercury", uid: "2"},
+  {name: "James Holden", uid: "3"},
+  {name: "Tom Cruise", uid: "4"},
+];
+
 
 afterEach(cleanup);
 
