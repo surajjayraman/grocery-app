@@ -78,6 +78,7 @@ import Toggle from "./components/toggle";
 import Dashboard from "./components/dashboard";
 import RefChat from "./components/refChat";
 import FormRef from "./components/formUseRef";
+import CatFriends from "./components/catFriends";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -233,6 +234,7 @@ export default function App() {
         <Dashboard />
         <RefChat />
         <FormRef />
+        <CatFriends />
     </div>
   );
 }

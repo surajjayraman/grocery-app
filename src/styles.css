@@ -203,3 +203,27 @@ button {
   border: 4px dashed pink;
 }
 .imgContext { width: 100px; height: 100px; border-radius: 0%; }
+
+div {
+  width: 100%;
+  overflow: hidden;
+}
+
+nav {
+  text-align: center;
+}
+
+button {
+  margin: .25rem;
+}
+
+ul,
+li {
+  list-style: none;
+  white-space: nowrap;
+}
+
+li {
+  display: inline;
+  padding: 0.5rem;
+}
