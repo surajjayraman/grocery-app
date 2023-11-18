@@ -79,6 +79,7 @@ import Dashboard from "./components/dashboard";
 import RefChat from "./components/refChat";
 import FormRef from "./components/formUseRef";
 import CatFriends from "./components/catFriends";
+import TodoListRef from "./components/todoRef";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -235,6 +236,7 @@ export default function App() {
         <RefChat />
         <FormRef />
         <CatFriends />
+        <TodoListRef />
     </div>
   );
 }
