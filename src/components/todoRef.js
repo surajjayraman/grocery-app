@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { flushSync } from 'react-dom';
 
 export default function TodoListRef() {
   const listRef = useRef(null);
@@ -9,8 +10,10 @@ export default function TodoListRef() {
 
   function handleAdd() {
     const newTodo = { id: nextId++, text: text };
-    setText('');
-    setTodos([ ...todos, newTodo]);
+    flushSync(() => {
+      setText('');
+      setTodos([ ...todos, newTodo]);      
+    });
     listRef.current.lastChild.scrollIntoView({
       behavior: 'smooth',
       block: 'nearest'
@@ -19,7 +22,7 @@ export default function TodoListRef() {
 
   return (
     <>
-    <p className='highlighted'>Flushing state updates synchronously with flushSync</p>
+      <p className='highlighted'>Flushing state updates synchronously with flushSync</p> 
       <button onClick={handleAdd}>
         Add
       </button>
@@ -38,9 +41,11 @@ export default function TodoListRef() {
 
 let nextId = 0;
 let initialTodos = [];
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 20; i++) {
   initialTodos.push({
     id: nextId++,
     text: 'Todo #' + (i + 1)
   });
 }
+
+
