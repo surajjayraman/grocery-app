@@ -81,6 +81,7 @@ import FormRef from "./components/formUseRef";
 import CatFriends from "./components/catFriends";
 import TodoListRef from "./components/todoRef";
 import VideoPlayer from "./components/videoPlayer";
+import CatFacebook from "./components/catFacebook";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -239,6 +240,7 @@ export default function App() {
         <CatFriends />
         <TodoListRef />
         <VideoPlayer />
+        <CatFacebook />
     </div>
   );
 }
