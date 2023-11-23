@@ -83,6 +83,7 @@ import TodoListRef from "./components/todoRef";
 import VideoPlayer from "./components/videoPlayer";
 import CatFacebook from "./components/catFacebook";
 import VideoPlayerEffect from "./components/videoPlayerEffect";
+import ChatRoom from "./components/chatRoom";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -243,6 +244,7 @@ export default function App() {
         <VideoPlayer />
         <CatFacebook />
         <VideoPlayerEffect />
+        <ChatRoom />
     </div>
   );
 }
