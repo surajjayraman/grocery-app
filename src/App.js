@@ -84,6 +84,7 @@ import VideoPlayer from "./components/videoPlayer";
 import CatFacebook from "./components/catFacebook";
 import VideoPlayerEffect from "./components/videoPlayerEffect";
 import ChatRoom from "./components/chatRoom";
+import BioPage from "./components/bioPage";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -245,6 +246,7 @@ export default function App() {
         <CatFacebook />
         <VideoPlayerEffect />
         <ChatRoom />
+        <BioPage />
     </div>
   );
 }
