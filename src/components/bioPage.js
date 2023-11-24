@@ -6,10 +6,16 @@ export default function BioPage() {
     const [bio, setBio] = useState(null);
 
     useEffect(() => {
+        let ignore = false;
         setBio(null);
         fetchBio(person).then(result => {
-            setBio(result);
+            if (!ignore) {
+                setBio(result);
+            }
         });
+        return () => {
+            ignore = true;
+        }
     }, [person]);
 
     return (
