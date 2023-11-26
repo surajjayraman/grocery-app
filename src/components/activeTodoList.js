@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { initialTodos, createTodo } from './activeTodos.js';
 
 export default function ActiveTodoList() {
@@ -6,7 +6,17 @@ export default function ActiveTodoList() {
     const [todos, setTodos] = useState(initialTodos);
     const [showActive, setShowActive] = useState(false);
     const activeTodos = todos.filter(todo => !todo.completed);
-    const visibleTodos = showActive ? activeTodos : todos;
+    //const visibleTodos = showActive ? activeTodos : todos;
+    const visibleTodos = useMemo(
+        () => getVisibleTodos(todos, showActive),
+        [todos, showActive]
+    );
+
+    function handleAddClick() {
+        setText('');
+        setTodos([...todos, createTodo(text)]);
+    }
+
 
     return (
         <>
@@ -19,7 +29,10 @@ export default function ActiveTodoList() {
                 />
                 Show only active todos
             </label>
-            <NewTodo onAdd={newTodo => setTodos([...todos, newTodo])} />
+            <input value={text} onChange={e => setText(e.target.value)} />
+            <button onClick={handleAddClick}>
+                Add
+            </button>
             <ul>
                 {visibleTodos.map(todo => (
                     <li key={todo.id}>
