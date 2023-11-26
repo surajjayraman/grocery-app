@@ -2,27 +2,11 @@ import { useState, useEffect } from 'react';
 import { initialTodos, createTodo } from './activeTodos.js';
 
 export default function ActiveTodoList() {
+
     const [todos, setTodos] = useState(initialTodos);
     const [showActive, setShowActive] = useState(false);
-    const [activeTodos, setActiveTodos] = useState([]);
-    const [visibleTodos, setVisibleTodos] = useState([]);
-    const [footer, setFooter] = useState(null);
-
-    useEffect(() => {
-        setActiveTodos(todos.filter(todo => !todo.completed));
-    }, [todos]);
-
-    useEffect(() => {
-        setVisibleTodos(showActive ? activeTodos : todos);
-    }, [showActive, todos, activeTodos]);
-
-    useEffect(() => {
-        setFooter(
-            <footer>
-                {activeTodos.length} todos left
-            </footer>
-        );
-    }, [activeTodos]);
+    const activeTodos = todos.filter(todo => !todo.completed);
+    const visibleTodos = showActive ? activeTodos : todos;
 
     return (
         <>
@@ -43,7 +27,9 @@ export default function ActiveTodoList() {
                     </li>
                 ))}
             </ul>
-            {footer}
+            <footer>
+                {activeTodos.length} todos left
+            </footer>
         </>
     );
 }
