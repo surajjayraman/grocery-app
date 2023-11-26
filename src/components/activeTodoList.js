@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { initialTodos, createTodo } from './activeTodos.js';
 
 export default function ActiveTodoList() {
