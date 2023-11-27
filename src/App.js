@@ -86,15 +86,15 @@ import VideoPlayerEffect from "./components/videoPlayerEffect";
 import ChatRoom from "./components/chatRoom";
 import BioPage from "./components/bioPage";
 import ActiveTodoList from "./components/activeTodoList";
-import ResetContact from "./components/resetContacts";
+
 
 const PRODUCTS = [
-  {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
-  {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},
-  {category: "Fruits", price: "$2", stocked: true, name: "Passionfruit"},
-  {category: "Vegetables", price: "$2", stocked: false, name: "Spinach"},
-  {category: "Vegetables", price: "$4", stocked: true, name: "Pumpkin"},
-  {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
+  { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+  { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+  { category: "Fruits", price: "$2", stocked: true, name: "Passionfruit" },
+  { category: "Vegetables", price: "$2", stocked: false, name: "Spinach" },
+  { category: "Vegetables", price: "$4", stocked: true, name: "Pumpkin" },
+  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
 ];
 
 function useTime() {
@@ -116,35 +116,35 @@ export default function App() {
       <FilterableProductTable products={PRODUCTS} />
       <Bio />
       <h1>Hedy Lamarr's Todos</h1>
-      <img 
-        src="https://i.imgur.com/yXOvdOSs.jpg" 
-        alt="Hedy Lamarr" 
+      <img
+        src="https://i.imgur.com/yXOvdOSs.jpg"
+        alt="Hedy Lamarr"
         className="photo"
       />
       <ul>
-          <li>Invent new traffic lights</li>
-          <li>Rehearse a movie scene</li>
-          <li>Improve the spectrum technology</li>
+        <li>Invent new traffic lights</li>
+        <li>Rehearse a movie scene</li>
+        <li>Improve the spectrum technology</li>
       </ul>
-      <Avatar person={{ baseUrl:'https://i.imgur.com/', name: 'Lin Lanying', imageId: '1bX5QH6' }}
-      size={100}
+      <Avatar person={{ baseUrl: 'https://i.imgur.com/', name: 'Lin Lanying', imageId: '1bX5QH6' }}
+        size={100}
       />
       <TodoList />
       <Profile />
-        <div>
-          <h3>How props change over time</h3>
-          <p>
-            Pick a color:{' '}
-            <select value={color} onChange={e => setColor(e.target.value)}>
-              <option value="lightcoral">lightcoral</option>
-              <option value="midnightblue">midnightblue</option>
-              <option value="rebeccapurple">rebeccapurple</option>
-            </select>
-          </p>
+      <div>
+        <h3>How props change over time</h3>
+        <p>
+          Pick a color:{' '}
+          <select value={color} onChange={e => setColor(e.target.value)}>
+            <option value="lightcoral">lightcoral</option>
+            <option value="midnightblue">midnightblue</option>
+            <option value="rebeccapurple">rebeccapurple</option>
+          </select>
+        </p>
         <Clock color={color} time={time.toLocaleTimeString()} />
       </div>
-      <Gallery person={ { baseUrl :'https://i.imgur.com/', imageId: 'szV5sdG'} } size={70} />
-      <Gallery person={ { baseUrl :'https://i.imgur.com/', imageId: 'YfeOqp2'} } size={70} />
+      <Gallery person={{ baseUrl: 'https://i.imgur.com/', imageId: 'szV5sdG' }} size={70} />
+      <Gallery person={{ baseUrl: 'https://i.imgur.com/', imageId: 'YfeOqp2' }} size={70} />
       <PackingList />
       <DrinkList />
       <List />
@@ -172,85 +172,85 @@ export default function App() {
           id: "My Story 2",
           label: 'Create Story 2'
 
-        }]}/>
-        <Toolbar
+        }]} />
+      <Toolbar
         onPlayMovie={() => alert('Playing!')}
         onUploadImage={() => alert('Uploading!')}
-        />
-        <SignUp />
-        <LightSwitch />
-        <ColorSwitch />
-        <SculptureGallery />
-        <Page />
-        <Form />
-        <FeedbackForm />
-        <FormStateDemo />
-        <Counter />
-        <TrafficLight />
-        <RequestTracker />
-        <AsyncRequestTracker />
-        <ProcessQueue baseState={0} queue={[1,1,1]}/>
-        <ProcessQueue baseState={0} queue={[n => n+1, n => n+1, n => n+1]}/>
-        <ProcessQueue baseState={0} queue={[5, n => n+1]}/>
-        <ProcessQueue baseState={0} queue={[5, n => n+1, 42]}/>
-        <ProcessQueue baseState={0} queue={[5, n => n+1, () => 'Hello Suraj']}/>
-        <MovingDot />
-        <FormUpdate />
-        <ImmerForm />
-        <Scoreboard />
-        <ListUpdate />
-        <CounterList />
-        <ListAdd />
-        <ListInsert />
-        <ListReverse />
-        <BucketList />
-        <ShoppingCart />
-        <TaskManager />
-        <QuizForm />
-        <Picture />
-        <EditProfile />
-        <SurveyForm />
-        <TicketForm />
-        <Menu />
-        <TravelPlan />
-        <MailClient />
-        <MailClone />
-        <Accordion />
-        <SyncedInputs />
-        <FilterableList />
-        <Quote />
-        <ResetCounter />
-        <KanyeQuote />
-        <OfficeQuote />
-        <ResetScoreboard />
-        <FavoriteCity />
-        <SwapFields />
-        <SwapFormFields />
-        <ContactManager />
-        <ImageGallery />
-        <ReverseContactList />
-        <TaskApp />
-        <ContextPage />
-        <ProfilePage />
-        <ContextImage />
-        <Header text='My Friends'/>
-        <TempleTask />
-        <RefCounter />
-        <Stopwatch />
-        <BrokenChat />
-        <Toggle />
-        <Dashboard />
-        <RefChat />
-        <FormRef />
-        <CatFriends />
-        <TodoListRef />
-        <VideoPlayer />
-        <CatFacebook />
-        <VideoPlayerEffect />
-        <ChatRoom />
-        <BioPage />
-        <ActiveTodoList />
-        <ResetContact />
+      />
+      <SignUp />
+      <LightSwitch />
+      <ColorSwitch />
+      <SculptureGallery />
+      <Page />
+      <Form />
+      <FeedbackForm />
+      <FormStateDemo />
+      <Counter />
+      <TrafficLight />
+      <RequestTracker />
+      <AsyncRequestTracker />
+      <ProcessQueue baseState={0} queue={[1, 1, 1]} />
+      <ProcessQueue baseState={0} queue={[n => n + 1, n => n + 1, n => n + 1]} />
+      <ProcessQueue baseState={0} queue={[5, n => n + 1]} />
+      <ProcessQueue baseState={0} queue={[5, n => n + 1, 42]} />
+      <ProcessQueue baseState={0} queue={[5, n => n + 1, () => 'Hello Suraj']} />
+      <MovingDot />
+      <FormUpdate />
+      <ImmerForm />
+      <Scoreboard />
+      <ListUpdate />
+      <CounterList />
+      <ListAdd />
+      <ListInsert />
+      <ListReverse />
+      <BucketList />
+      <ShoppingCart />
+      <TaskManager />
+      <QuizForm />
+      <Picture />
+      <EditProfile />
+      <SurveyForm />
+      <TicketForm />
+      <Menu />
+      <TravelPlan />
+      <MailClient />
+      <MailClone />
+      <Accordion />
+      <SyncedInputs />
+      <FilterableList />
+      <Quote />
+      <ResetCounter />
+      <KanyeQuote />
+      <OfficeQuote />
+      <ResetScoreboard />
+      <FavoriteCity />
+      <SwapFields />
+      <SwapFormFields />
+      <ContactManager />
+      <ImageGallery />
+      <ReverseContactList />
+      <TaskApp />
+      <ContextPage />
+      <ProfilePage />
+      <ContextImage />
+      <Header text='My Friends' />
+      <TempleTask />
+      <RefCounter />
+      <Stopwatch />
+      <BrokenChat />
+      <Toggle />
+      <Dashboard />
+      <RefChat />
+      <FormRef />
+      <CatFriends />
+      <TodoListRef />
+      <VideoPlayer />
+      <CatFacebook />
+      <VideoPlayerEffect />
+      <ChatRoom />
+      <BioPage />
+      <ActiveTodoList />
+
     </div>
   );
 }
