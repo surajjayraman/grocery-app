@@ -86,6 +86,7 @@ import VideoPlayerEffect from "./components/videoPlayerEffect";
 import ChatRoom from "./components/chatRoom";
 import BioPage from "./components/bioPage";
 import ActiveTodoList from "./components/activeTodoList";
+import ResetContact from "./components/resetContacts";
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -249,6 +250,7 @@ export default function App() {
         <ChatRoom />
         <BioPage />
         <ActiveTodoList />
+        <ResetContact />
     </div>
   );
 }
