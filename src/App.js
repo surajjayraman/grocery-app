@@ -86,6 +86,7 @@ import VideoPlayerEffect from "./components/videoPlayerEffect";
 import ChatRoom from "./components/chatRoom";
 import BioPage from "./components/bioPage";
 import ActiveTodoList from "./components/activeTodoList";
+import EffectlessForm from "./components/withoutEffectForm";
 
 
 const PRODUCTS = [
@@ -250,6 +251,7 @@ export default function App() {
       <ChatRoom />
       <BioPage />
       <ActiveTodoList />
+      <EffectlessForm />
 
     </div>
   );
