@@ -25,16 +25,19 @@ export default function EffectlessForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <textarea
-                placeholder="Message"
-                value={message}
-                onChange={e => setMessage(e.target.value)}
-            />
-            <button type="submit" disabled={message === ''}>
-                Send
-            </button>
-        </form>
+        <>
+            <p className='highlighted'>HelpDesk Services</p>
+            <form onSubmit={handleSubmit}>
+                <textarea
+                    placeholder="Message"
+                    value={message}
+                    onChange={e => setMessage(e.target.value)}
+                />
+                <button type="submit" disabled={message === ''}>
+                    Send
+                </button>
+            </form>
+        </>
     );
 }
 
