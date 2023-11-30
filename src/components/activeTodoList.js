@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { initialTodos } from './activeTodos.js';
+import { initialTodos, createTodo } from './activeTodos.js';
 
 export default function ActiveTodoList() {
 
@@ -35,3 +35,20 @@ export default function ActiveTodoList() {
 }
 
 
+function NewTodo({ onAdd }) {
+    const [text, setText] = useState('');
+
+    function handleAddClick() {
+        setText('');
+        onAdd(createTodo(text));
+    }
+
+    return (
+        <>
+            <input value={text} onChange={e => setText(e.target.value)} />
+            <button onClick={handleAddClick}>
+                Add
+            </button>
+        </>
+    );
+}
