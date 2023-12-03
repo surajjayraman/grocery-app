@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { experimental_useEffectEvent as useEffectEvent } from 'react';
+import { useState, useEffect, useRef, experimental_useEffectEvent as useEffectEvent } from 'react';
+//import { experimental_useEffectEvent as useEffectEvent } from 'react';
 import { FadeInAnimation } from './animation.js';
 
 function Welcome({ duration }) {
