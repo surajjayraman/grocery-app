@@ -87,6 +87,7 @@ import ChatRoom from "./components/chatRoom";
 import BioPage from "./components/bioPage";
 import ActiveTodoList from "./components/activeTodoList";
 import EffectlessForm from "./components/withoutEffectForm";
+import WelcomeApp from "./components/welcome";
 
 
 const PRODUCTS = [
@@ -252,7 +253,7 @@ export default function App() {
       <BioPage />
       <ActiveTodoList />
       <EffectlessForm />
-
+      <WelcomeApp />
     </div>
   );
 }
