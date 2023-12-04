@@ -88,6 +88,7 @@ import BioPage from "./components/bioPage";
 import ActiveTodoList from "./components/activeTodoList";
 import EffectlessForm from "./components/withoutEffectForm";
 import WelcomeApp from "./components/welcome";
+import StatusBar from "./components/statusBar";
 
 
 const PRODUCTS = [
@@ -254,6 +255,7 @@ export default function App() {
       <ActiveTodoList />
       <EffectlessForm />
       <WelcomeApp />
+      <StatusBar />
     </div>
   );
 }
