@@ -22,6 +22,7 @@ function SaveButton() {
 export default function StatusBarApp() {
     return (
         <>
+            <p className='highlighted'>Extracting your own custom Hook from a component</p>
             <SaveButton />
             <StatusBar />
         </>
