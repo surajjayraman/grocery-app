@@ -1,1 +1,5 @@
-console.log('Hello World!');
+//console.log('Hello World!')
+function helloTS(greeting) {
+    console.log("Hello ".concat(greeting));
+}
+helloTS('John');

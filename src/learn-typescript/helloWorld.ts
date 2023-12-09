@@ -1,1 +1,7 @@
-console.log('Hello World!')
+//console.log('Hello World!')
+
+function helloTS(greeting : String) {
+    console.log(`Hello ${greeting}`);
+}
+
+helloTS('John')
