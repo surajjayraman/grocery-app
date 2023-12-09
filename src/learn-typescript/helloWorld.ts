@@ -6,3 +6,4 @@ function helloTS(greeting: String) {
 
 helloTS('John')
 helloTS(12345);
+helloTS('Robb')
