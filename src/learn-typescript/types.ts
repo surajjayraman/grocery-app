@@ -1,13 +1,18 @@
-var n: number = 1;
+var n: Number = 1;
 
 //n = 'Bobb';
 n = 12356;
-let isDone: boolean = false;
+let isDone: Boolean = false;
 
-function statusCheck(status: boolean) {
+// array
+let names: String[] = ['Suraj', 'Tejas', 'Sweety'];
+
+function statusCheck(status: Boolean) {
     status ? console.log('All set good to go !') : console.log('Still working on..!')
 }
 
 statusCheck(isDone);
 statusCheck(true);
 statusCheck(n);
+// assign integer
+names = [12345];
