@@ -6,3 +6,4 @@ function statusCheck(isDone) {
     isDone ? console.log('All set good to go !') : console.log('Still working on..!');
 }
 statusCheck(isDone);
+statusCheck(true);

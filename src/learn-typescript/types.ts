@@ -9,3 +9,4 @@ function statusCheck(isDone) {
 }
 
 statusCheck(isDone);
+statusCheck(true);
