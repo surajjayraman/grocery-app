@@ -23,3 +23,10 @@ anyName = [2023];
 function getName(): String {
     return 'Sweety';
 }
+
+// void
+function getWeather(): void {
+    console.log('Winter is coming!');
+}
+
+getWeather();

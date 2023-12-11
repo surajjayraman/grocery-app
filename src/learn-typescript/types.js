@@ -18,3 +18,8 @@ anyName = [2023];
 function getName() {
     return 'Sweety';
 }
+// void
+function getWeather() {
+    console.log('Winter is coming!');
+}
+getWeather();
