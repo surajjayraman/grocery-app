@@ -21,5 +21,5 @@ anyName = [2023];
 
 // invalid type return
 function getName(): String {
-    return 1;
+    return 'Sweety';
 }

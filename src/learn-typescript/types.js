@@ -16,5 +16,5 @@ names = [12345];
 anyName = [2023];
 // invalid type return
 function getName() {
-    return 1;
+    return 'Sweety';
 }
