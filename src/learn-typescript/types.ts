@@ -34,5 +34,12 @@ getWeather();
 // the power of interfaces
 interface Stark {
     name: string;
-    age?: number
+    age?: number;
 }
+
+function printName(stark: Stark) {
+    console.log(stark.name);
+}
+
+printName({ name: "Edward" });
+

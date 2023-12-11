@@ -23,3 +23,7 @@ function getWeather() {
     console.log('Winter is coming!');
 }
 getWeather();
+function printName(stark) {
+    console.log(stark.name);
+}
+printName({ name: "Edward" });
