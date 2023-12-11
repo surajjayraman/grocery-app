@@ -25,5 +25,7 @@ function getWeather() {
 getWeather();
 function printName(stark) {
     console.log(stark.name);
+    console.log(stark.age);
 }
 printName({ name: "Edward" });
+printName({ name: "Joe", age: 35 });

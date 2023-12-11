@@ -39,7 +39,9 @@ interface Stark {
 
 function printName(stark: Stark) {
     console.log(stark.name);
+    console.log(stark.age);
 }
 
 printName({ name: "Edward" });
+printName({ name: "Joe" , age : 35});
 
