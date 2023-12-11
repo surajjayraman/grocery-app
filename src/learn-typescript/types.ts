@@ -30,3 +30,9 @@ function getWeather(): void {
 }
 
 getWeather();
+
+// the power of interfaces
+interface Stark {
+    name: string;
+    age?: number
+}
