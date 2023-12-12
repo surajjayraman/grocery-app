@@ -68,7 +68,10 @@ class Sprite {
     constructor(name: string) {
         this.name = name;
     }
-    isWhat(){
+    isWhat() {
         return `Sprite is ${this.name}`
     }
 }
+
+let drink = new Sprite('Coke');
+console.log(drink.isWhat());

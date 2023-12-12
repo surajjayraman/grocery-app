@@ -41,3 +41,18 @@ var Greeter = /** @class */ (function () {
 }());
 var greeter = new Greeter('world');
 console.log(greeter.greet());
+// inheritance
+var Sprite = /** @class */ (function () {
+    function Sprite(name) {
+        this.name = "";
+        this.x = 0;
+        this.y = 0;
+        this.name = name;
+    }
+    Sprite.prototype.isWhat = function () {
+        return "Sprite is ".concat(this.name);
+    };
+    return Sprite;
+}());
+var drink = new Sprite('Coke');
+console.log(drink.isWhat());
