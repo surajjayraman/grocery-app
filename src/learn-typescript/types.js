@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var n = 1;
 //n = 'Bobb';
 n = 12356;
@@ -56,3 +71,16 @@ var Sprite = /** @class */ (function () {
 }());
 var drink = new Sprite('Coke');
 console.log(drink.isWhat());
+var AwesomeDrink = /** @class */ (function (_super) {
+    __extends(AwesomeDrink, _super);
+    function AwesomeDrink() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    AwesomeDrink.prototype.isWhat = function () {
+        _super.prototype.isWhat.call(this);
+        return "".concat(this.name, " is so awesome");
+    };
+    return AwesomeDrink;
+}(Sprite));
+var newDrink = new AwesomeDrink('Awesome drink');
+console.log(newDrink.isWhat());

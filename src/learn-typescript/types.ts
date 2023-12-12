@@ -75,3 +75,12 @@ class Sprite {
 
 let drink = new Sprite('Coke');
 console.log(drink.isWhat());
+
+class AwesomeDrink extends Sprite {
+    isWhat() {
+        super.isWhat();
+        return `${this.name} is so awesome`;
+    }
+}
+let newDrink = new AwesomeDrink('Awesome drink');
+console.log(newDrink.isWhat());
