@@ -57,3 +57,4 @@ class Greeter {
 }
 
 let greeter = new Greeter('world')
+greeter.greet();

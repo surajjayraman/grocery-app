@@ -40,3 +40,4 @@ var Greeter = /** @class */ (function () {
     return Greeter;
 }());
 var greeter = new Greeter('world');
+greeter.greet();
