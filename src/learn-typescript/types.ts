@@ -45,3 +45,15 @@ function printName(stark: Stark) {
 printName({ name: "Edward" });
 printName({ name: "Joe" , age : 35});
 
+// Add class type
+class Greeter {
+    greeting : string;
+    constructor(message : string){
+        this.greeting = message;
+    }
+    greet(){
+        return `Hello ${this.greeting}`
+    }
+}
+
+let greeter = new Greeter('world')

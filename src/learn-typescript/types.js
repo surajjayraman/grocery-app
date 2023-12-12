@@ -29,3 +29,14 @@ function printName(stark) {
 }
 printName({ name: "Edward" });
 printName({ name: "Joe", age: 35 });
+// Add class type
+var Greeter = /** @class */ (function () {
+    function Greeter(message) {
+        this.greeting = message;
+    }
+    Greeter.prototype.greet = function () {
+        return "Hello ".concat(this.greeting);
+    };
+    return Greeter;
+}());
+var greeter = new Greeter('world');
