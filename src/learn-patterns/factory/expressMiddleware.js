@@ -8,7 +8,7 @@ app.use(
     next();
   },
   (req, res, next) => {
-    console.log(`Request has test header: ${!!req.headers["test-header"]}`);
+    console.log(`Request has test header: ${req.headers["test-header"]}`);
     next();
   }
 );
