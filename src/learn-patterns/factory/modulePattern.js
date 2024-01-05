@@ -1,3 +1,4 @@
+// import properties from mathData module
 const { add, multiply, subtract, square } = require("./mathData")
 
 console.log(add(2, 3));
