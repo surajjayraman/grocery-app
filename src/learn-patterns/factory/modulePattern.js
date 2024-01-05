@@ -1,15 +1,4 @@
-function add(x, y) {
-    return x + y;
-}
-function multiply(x) {
-    return x * 2;
-}
-function subtract(x, y) {
-    return x - y;
-}
-function square(x) {
-    return x * x;
-}
+const { add, multiply, subtract, square } = require("./mathData")
 
 console.log(add(2, 3));
 console.log(multiply(2));

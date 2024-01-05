@@ -1,12 +1,14 @@
-export function add(x, y) {
+exports.add = function (x, y) {
     return x + y;
 }
-function multiply(x) {
+exports.multiply = function multiply(x) {
     return x * 2;
 }
-function subtract(x, y) {
+exports.subtract = function (x, y) {
     return x - y;
 }
-function square(x) {
+exports.square = function (x) {
     return x * x;
 }
+
+
