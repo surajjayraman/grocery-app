@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 
 import Input from "./materialInput";
-import Button from "./Button";
+import Button from "./materialButton";
 
 function InputRow({ addTodoItem }) {
     const [input, setInput] = useState("");
