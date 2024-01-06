@@ -22,7 +22,7 @@ function InputRow({ addTodoItem }) {
     );
 }
 
-export function TodoList() {
+export function MaterialTodoList() {
     const [todos, setTodos] = useState(["Improve JS skills 💪", "Pet dog 🐶"]);
 
     function addTodoItem(todo) {
@@ -35,19 +35,22 @@ export function TodoList() {
     }
 
     return (
-        <div className="todo-list">
-            <h1>Todo Items</h1>
-            <InputRow addTodoItem={addTodoItem} />
-            <List>
-                {todos.map((todo, i) => (
-                    <ListItem key={`${todo}-${i}`}>
-                        <ListItemText>{todo}</ListItemText>
-                        <Button color="secondary" onClick={() => removeTodoItem(i)}>
-                            Remove
-                        </Button>
-                    </ListItem>
-                ))}
-            </List>
-        </div>
+        <>
+            <p className='highlighted'>Module Pattern - a basic todo-list.</p>
+            <div className="todo-list">
+                <h1>Todo Items</h1>
+                <InputRow addTodoItem={addTodoItem} />
+                <List>
+                    {todos.map((todo, i) => (
+                        <ListItem key={`${todo}-${i}`}>
+                            <ListItemText>{todo}</ListItemText>
+                            <Button color="secondary" onClick={() => removeTodoItem(i)}>
+                                Remove
+                            </Button>
+                        </ListItem>
+                    ))}
+                </List>
+            </div>
+        </>
     );
 }

@@ -90,6 +90,7 @@ import EffectlessForm from "./components/withoutEffectForm";
 import WelcomeApp from "./components/welcome";
 import StatusBar from "./components/statusBar";
 import StatusBarApp from "./components/statusBarApp";
+import { MaterialTodoList } from "./components/materialTodoList";
 
 
 const PRODUCTS = [
@@ -258,6 +259,7 @@ export default function App() {
       <WelcomeApp />
       <StatusBar />
       <StatusBarApp />
+      <MaterialTodoList />
     </div>
   );
 }

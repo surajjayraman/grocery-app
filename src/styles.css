@@ -244,3 +244,7 @@ img {
   background: rgba(0, 100, 150, 0.4);
 }
 video { width: 250px; }
+
+.todo-list {
+  padding: 0 3rem;
+}
