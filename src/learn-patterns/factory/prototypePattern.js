@@ -4,7 +4,7 @@ class Dog {
     }
 
     bark() {
-        return `Woof!`;
+        console.log(`Woof!`);
     }
 }
 
@@ -26,3 +26,4 @@ Dog.prototype.play = () => console.log("Playing now!");
 
 dog1.play();
 dog2.fly();
+dog2.bark();
