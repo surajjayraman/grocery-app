@@ -11,3 +11,20 @@ export const themes = {
         color: "#fff"
     }
 };
+
+export const ThemeContext = React.createContext()
+
+export default function ThemeManager() {
+
+    return (
+        <>
+            <p className="highlighted">Provider Pattern - switch between lightmode and darkmode</p>
+            <div>
+
+
+            </div>
+        </>
+
+    )
+
+}
