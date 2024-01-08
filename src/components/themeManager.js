@@ -1,5 +1,5 @@
-import { useState } from "react";
-import "./themes.css"
+import React, { useState } from "react";
+import "../themes.css"
 
 export const themes = {
     light: {
@@ -15,13 +15,22 @@ export const themes = {
 export const ThemeContext = React.createContext()
 
 export default function ThemeManager() {
+    const [theme, setTheme] = useState('dark')
+
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : '')
+    }
 
     return (
         <>
             <p className="highlighted">Provider Pattern - switch between lightmode and darkmode</p>
-            <div>
-
-
+            <div className={`App theme-${theme}`}>
+                <ThemeContext.Provider value={{ theme: themes[theme], toggleTheme }}>
+                    <>
+                        <Toggle />
+                        <List />
+                    </>
+                </ThemeContext.Provider>
             </div>
         </>
 

@@ -91,6 +91,7 @@ import WelcomeApp from "./components/welcome";
 import StatusBar from "./components/statusBar";
 import StatusBarApp from "./components/statusBarApp";
 import { MaterialTodoList } from "./components/materialTodoList";
+import ThemeManager from "./components/themeManager";
 
 
 const PRODUCTS = [
@@ -260,6 +261,7 @@ export default function App() {
       <StatusBar />
       <StatusBarApp />
       <MaterialTodoList />
+      <ThemeManager />
     </div>
   );
 }
