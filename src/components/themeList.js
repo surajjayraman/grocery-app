@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./themeManager";
 
-
 function ListItem() {
     const theme = useContext(ThemeContext);
 
@@ -18,7 +17,7 @@ function ListItem() {
 export default function Boxes() {
     return (
         <ul className="list">
-            {new Array(10).fill(0).map((x, i) => (
+            {new Array(10).fill(1).map((x, i) => (
                 <ListItem key={i} />
             ))}
         </ul>

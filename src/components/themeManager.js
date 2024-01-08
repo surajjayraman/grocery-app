@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../themes.css"
-import List from "./themeList";
+import Boxes from "./themeList";
 import Toggle from "./themeToggle";
 
 export const themes = {
@@ -30,7 +30,7 @@ export default function ThemeManager() {
                 <ThemeContext.Provider value={{ theme: themes[theme], toggleTheme }}>
                     <>
                         <Toggle />
-                        <List />
+                        <Boxes />
                     </>
                 </ThemeContext.Provider>
             </div>
