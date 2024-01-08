@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../themes.css"
 import List from "./themeList";
+import Toggle from "./themeToggle";
 
 export const themes = {
     light: {
