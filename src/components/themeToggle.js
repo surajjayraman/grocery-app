@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "./themeManager";
+import React from "react";
+import { useThemeContext } from "./themeManager";
 
 export default function Toggle() {
-    const theme = useContext(ThemeContext);
+    const theme = useThemeContext();
 
     return (
         <label className="switch">

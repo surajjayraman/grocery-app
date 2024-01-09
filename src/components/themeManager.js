@@ -17,7 +17,7 @@ export const themes = {
 export const ThemeContext = React.createContext()
 
 // refactor with hooks
-function useThemeContext() {
+export function useThemeContext() {
     const theme = useContext(ThemeContext);
     if (!theme) {
         throw new Error("useThemeContext must be used within ThemeProvider");
@@ -55,12 +55,12 @@ export default function ThemeManager() {
         <>
             <p className="highlighted">Provider Pattern - switch between lightmode and darkmode</p>
             <div className={`App theme-${theme}`}>
-                <ThemeContext.Provider value={{ theme: themes[theme], toggleTheme }}>
+                <ThemeProvider value={{ theme: themes[theme], toggleTheme }}>
                     <>
                         <Toggle />
                         <Boxes />
                     </>
-                </ThemeContext.Provider>
+                </ThemeProvider>
             </div>
         </>
 
