@@ -47,11 +47,15 @@ function ThemeProvider({ children }) {
 export default function ThemeManager() {
     const [theme, setTheme] = useState('dark')
 
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : '')
+    }
+
     return (
         <>
             <p className="highlighted">Provider Pattern - switch between lightmode and darkmode</p>
             <div className={`App theme-${theme}`}>
-                <ThemeProvider>
+                <ThemeProvider value={{ theme: themes[theme], toggleTheme }}>
                     <>
                         <Toggle />
                         <Boxes />
