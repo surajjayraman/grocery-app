@@ -6,3 +6,7 @@ const person = {
     age: 42,
     nationality: "American"
 }
+
+// create a proxy object
+
+const personProxy = new Proxy(person, {})
