@@ -19,3 +19,7 @@ const personProxy = new Proxy(person, {
         return true;
     }
 })
+
+personProxy.name
+personProxy.age = 43
+
