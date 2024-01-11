@@ -24,6 +24,7 @@ export function useThemeContext() {
     }
     return theme;
 }
+
 function ThemeProvider({ children }) {
     const [theme, setTheme] = useState("dark");
 
