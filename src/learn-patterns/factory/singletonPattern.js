@@ -17,3 +17,8 @@ class Counter {
     return --counter;
   }
 }
+
+const counter1 = new Counter()
+const counter2 = new Counter()
+
+console.log(counter1 === counter2)
