@@ -31,4 +31,4 @@ class Counter {
 //console.log(counter1.getInstance() === counter2.getInstance())
 
 const singletonCounter = Object.freeze(new Counter())
-export default singletonCounter;
+module.exports = singletonCounter;
