@@ -25,7 +25,10 @@ class Counter {
     }
 }
 
-const counter1 = new Counter()
-const counter2 = new Counter()
+//const counter1 = new Counter()
+//const counter2 = new Counter()
 
-console.log(counter1.getInstance() === counter2.getInstance())
+//console.log(counter1.getInstance() === counter2.getInstance())
+
+const singletonCounter = Object.freeze(new Counter())
+export default singletonCounter;
