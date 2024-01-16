@@ -39,8 +39,10 @@ console.log(months);
 
 // use of Map
 const userMap = new Map([
-    [1, {name : 'kyle'}],
-    [2, {name: 'Sally'}]
+    [1, { name: 'kyle' }],
+    [2, { name: 'Sally' }]
 ])
 
+console.log(userMap)
+userMap.set(3, { name: 'John' })
 console.log(userMap)
