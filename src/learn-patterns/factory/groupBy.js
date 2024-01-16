@@ -36,3 +36,11 @@ console.log(sortedUsers)
 const months = ['March', 'Jan', 'Feb', 'Dec'];
 months.sort();
 console.log(months);
+
+// use of Map
+const userMap = new Map([
+    [1, {name : 'kyle'}],
+    [2, {name: 'Sally'}]
+])
+
+console.log(userMap)
