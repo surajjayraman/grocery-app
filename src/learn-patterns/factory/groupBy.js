@@ -32,7 +32,7 @@ function sortByName(users) {
 const sortedUsers = sortByName(users)
 console.log(sortedUsers)
 
-
+// regular array sort
 const months = ['March', 'Jan', 'Feb', 'Dec'];
 months.sort();
 console.log(months);
