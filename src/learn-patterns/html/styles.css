@@ -1,6 +1,5 @@
 .flex {
     display: flex;
-    justify-content: space-between;
 }
 
 .box {
@@ -8,4 +7,12 @@
     width: 50px;
     border: 1px solid red;
     background-color: rgb(255, 0, 0, .5);
+}
+
+.box:first-child {
+    margin-right: auto;
+}
+
+.box:last-child {
+    margin-left: auto;
 }
