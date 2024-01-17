@@ -1,0 +1,11 @@
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+    background-color: rgb(255, 0, 0, .5);
+}
