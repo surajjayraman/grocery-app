@@ -46,3 +46,11 @@ const userMap = new Map([
 console.log(userMap)
 userMap.set(3, { name: 'John' })
 console.log(userMap)
+
+// functions are just variables
+
+function test() {
+
+}
+const test2 = test
+console.log(test2 === test)
