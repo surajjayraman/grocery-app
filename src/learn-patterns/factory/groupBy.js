@@ -69,3 +69,6 @@ function sum_char_codes(n){
 }
 
 console.log(sum_char_codes('suraj'))
+
+const a = new ArrayBuffer(6)
+console.log(a)
