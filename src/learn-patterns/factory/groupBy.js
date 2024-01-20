@@ -59,7 +59,7 @@ console.dir(test)
 
 // Big O
 
-function sum_char_codes(n){
+function sum_char_codes(n) {
     let sum = 0;
     for (let i = 0; i < n.length; ++i) {
         sum += n.charCodeAt(i);
@@ -72,3 +72,14 @@ console.log(sum_char_codes('suraj'))
 
 const a = new ArrayBuffer(6)
 console.log(a)
+
+// promise demo
+const promise1 = new Promise((resolve, reject) => {
+    resolve('Success!');
+});
+
+promise1.then((value) => {
+    console.log(value);
+    // Expected output: "Success!"
+});
+
