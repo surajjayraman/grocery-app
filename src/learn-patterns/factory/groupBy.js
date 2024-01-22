@@ -99,3 +99,26 @@ testLuck
   .catch((error) => {
     console.log(error);
   });
+
+const inventory = {
+  sunglasses: 1900,
+  pants: 1088,
+  bags: 1344,
+};
+
+// Write your code below:
+const orderSunglasses = new Promise((resolve, reject) => {
+  if (inventory.sunglasses > 0) {
+    resolve("Sunglasses order processed.");
+  } else {
+    reject("That item is sold out.");
+  }
+});
+
+orderSunglasses
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
