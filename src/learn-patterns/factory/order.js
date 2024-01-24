@@ -1,7 +1,7 @@
 const { checkInventory } = require("./library.js");
 
 const order = [
-  ["sunglasses", 11000],
+  ["sunglasses", 1],
   ["bags", 2],
 ];
 
