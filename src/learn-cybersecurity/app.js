@@ -2,6 +2,7 @@ const express = require("express");
 const partials = require("express-partials");
 const path = require("path");
 // Require Validator module here
+const validator = require("validator");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 app.get("/", (req, res) => {
   res.render("form", { emailStatus: null });
+  // res.json({ message: 'hello' });
 });
 
 app.post("/submit", (req, res) => {
