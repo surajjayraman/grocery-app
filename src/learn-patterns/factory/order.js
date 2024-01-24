@@ -15,4 +15,4 @@ function handleFailure(value) {
   console.log(value);
 }
 
-checkInventory(order).then(handleSuccess, handleFailure);
+checkInventory(order).then(handleSuccess).catch(handleFailure);
