@@ -1,4 +1,4 @@
-const { checkInventory, processPayment, shipOrder } = require("./library.js");
+const { checkInventory, processPayment, shipOrder } = require("./promiseLibrary.js");
 
 const order = {
   items: [
