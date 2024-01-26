@@ -35,4 +35,4 @@ const checkAvailability = (itemName, distributorName) => {
   });
 };
 
-module.exports = { checkInventory };
+module.exports = { checkInventory, checkAvailability };
