@@ -35,4 +35,10 @@ const checkAvailability = (itemName, distributorName) => {
   });
 };
 
+// This is a function that returns true 80% of the time
+// We're using it to simulate a request to the distributor being successful this often
+function restockSuccess() {
+  return Math.random() > 0.2;
+}
+
 module.exports = { checkInventory, checkAvailability };
