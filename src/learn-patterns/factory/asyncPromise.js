@@ -19,3 +19,10 @@ withConstructor(0).then((data) =>
     ` withConstructor(0) returned a promise which resolved to ${data}`
   )
 );
+
+async function withAsync(num) {
+  if (num === 0) {
+    return "zero";
+  }
+  return "not zero";
+}
