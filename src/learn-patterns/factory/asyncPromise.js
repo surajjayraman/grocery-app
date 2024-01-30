@@ -13,3 +13,9 @@ function withConstructor(num) {
     }
   });
 }
+
+withConstructor(0).then((data) =>
+  console.log(
+    ` withConstructor(0) returned a promise which resolved to ${data}`
+  )
+);
