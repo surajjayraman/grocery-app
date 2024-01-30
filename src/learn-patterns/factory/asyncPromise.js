@@ -1,5 +1,5 @@
 const numberPromise = async () => {
-  return 5;
+  return Math.random();
 };
 
 numberPromise()
