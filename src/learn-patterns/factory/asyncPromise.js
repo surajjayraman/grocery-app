@@ -26,3 +26,9 @@ async function withAsync(num) {
   }
   return "not zero";
 }
+
+withAsync(100).then((resolveValue) => {
+  console.log(
+    ` withAsync(100) returned a promise which resolved to: ${resolveValue}.`
+  );
+});
