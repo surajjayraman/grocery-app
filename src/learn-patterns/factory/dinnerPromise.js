@@ -27,10 +27,14 @@ const myPromise = () => {
   });
 };
 
-async function noawait() {
+async function noAwait() {
   const value = myPromise();
   console.log(value);
 }
-noawait();
+noAwait();
 
-
+async function yesAwait() {
+  const value = await myPromise();
+  console.log(value);
+}
+yesAwait()
