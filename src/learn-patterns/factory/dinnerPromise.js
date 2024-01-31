@@ -27,4 +27,10 @@ const myPromise = () => {
   });
 };
 
-myPromise();
+async function noawait() {
+  const value = myPromise();
+  console.log(value);
+}
+noawait();
+
+
