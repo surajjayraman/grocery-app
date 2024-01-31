@@ -21,7 +21,10 @@ announceDinner();
 const myPromise = () => {
   return new Promise((resolve, reject) => {
     console.log(`Hello from myPromise`);
+    setTimeout(() => {
+      resolve("Yay I resolved");
+    }, 2000);
   });
 };
 
-myPromise()
+myPromise();
