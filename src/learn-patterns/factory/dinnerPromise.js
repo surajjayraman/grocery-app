@@ -16,3 +16,12 @@ async function announceDinner() {
 cookDinner();
 
 announceDinner();
+
+// await / noawait demo
+const myPromise = () => {
+  return new Promise((resolve, reject) => {
+    console.log(`Hello from myPromise`);
+  });
+};
+
+myPromise()
