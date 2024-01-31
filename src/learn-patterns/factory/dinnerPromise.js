@@ -1,9 +1,11 @@
 const brainstormDinner = require("./dinnerLibrary");
 
 //Native promise version
-brainstormDinner().then((meal) =>
-  console.log(`I will be cooking ${meal} for dinner`)
-);
+const cookDinner = () => {
+  brainstormDinner().then((meal) =>
+    console.log(`I will be cooking ${meal} for dinner`)
+  );
+};
 
 // async/await version:
 async function announceDinner() {
@@ -11,5 +13,6 @@ async function announceDinner() {
   console.log(`I will be cooking ${meal} for dinner`);
 }
 
-announceDinner()
+cookDinner();
 
+announceDinner();
