@@ -37,4 +37,14 @@ const shopForBeans = () => {
   });
 };
 
-module.exports = { brainstormDinner, shopForBeans };
+let soakTheBeans = (beanType) => {
+  return new Promise((resolve, reject) => {
+    console.log("Time to soak the beans.");
+    setTimeout(() => {
+      console.log(`... The ${beanType} beans are softened.`);
+      resolve(true);
+    }, 1000);
+  });
+};
+
+module.exports = { brainstormDinner, shopForBeans, soakTheBeans };
