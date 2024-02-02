@@ -26,3 +26,16 @@ const countCharsLookUp = (str) => {
 };
 
 console.log(countCharsLookUp("Abracadabrahabracadabra"));
+
+//calculate the time complexity for the
+//native methods below (separately)
+
+const myList = ["hello", "hola"];
+
+myList.push("bonjour");
+
+console.log(myList);
+
+myList.shift();
+console.log(myList);
+
