@@ -2,6 +2,7 @@ const {
   brainstormDinner,
   shopForBeans,
   soakTheBeans,
+  cookTheBeans,
 } = require("./dinnerLibrary");
 
 //Native promise version
@@ -49,5 +50,7 @@ async function getBeans() {
   console.log(`I got ${beanType} beans for dinner`);
   const soakedBean = await soakTheBeans(beanType);
   console.log(soakedBean);
+  const dinner = await cookTheBeans(soakedBean);
+  console.log(dinner);
 }
 getBeans();
