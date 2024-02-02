@@ -19,3 +19,10 @@ const countChars = (str) => {
 };
 
 console.log(countChars("Today is a friday!")); // TC = O(n)
+
+// string property lookup O(1)
+const countCharsLookUp = (str) => {
+  return str.length;
+};
+
+console.log(countCharsLookUp("Abracadabrahabracadabra"));
