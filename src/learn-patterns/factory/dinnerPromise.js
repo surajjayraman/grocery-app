@@ -1,4 +1,8 @@
-const { brainstormDinner, shopForBeans } = require("./dinnerLibrary");
+const {
+  brainstormDinner,
+  shopForBeans,
+  soakTheBeans,
+} = require("./dinnerLibrary");
 
 //Native promise version
 const cookDinner = () => {
@@ -43,5 +47,7 @@ yesAwait();
 async function getBeans() {
   const beanType = await shopForBeans();
   console.log(`I got ${beanType} beans for dinner`);
+  const soakedBean = await soakTheBeans(beanType);
+  console.log(soakedBean);
 }
 getBeans();
