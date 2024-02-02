@@ -39,3 +39,21 @@ console.log(myList);
 myList.shift();
 console.log(myList);
 
+// TC = O(n^2)
+const isUnique = (arr) => {
+  let result = true;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (i !== j && arr[i] === arr[j]) {
+        result = false;
+        break;
+      }
+    }
+  }
+  return result;
+};
+
+console.log(isUnique([1, 2, 3]));
+console.log(isUnique([1, 2, 1]));
+console.log(isUnique([1, 1, 3]));
+console.log(isUnique([1, 2, 3, 4, 4, 5]));
