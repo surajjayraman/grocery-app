@@ -87,7 +87,9 @@ console.log(
 //input: [4,2,2,3,2,2,2] => output: [2,3,4]
 
 const uniqSort = (arr) => {
-  return arr.sort((a, b) => a - b);
+  const cache = {};
+  let sortedArray = arr.sort((a, b) => a - b);
+  return sortedArray;
 };
 
 console.log(uniqSort([4, 2, 2, 3, 2, 2, 2])); // => [2,3,4]
