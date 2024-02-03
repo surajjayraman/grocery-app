@@ -69,8 +69,13 @@ const isUniqueOn = (arr) => {
     }
     cache[item] = true;
   }
-  console.log(`Cache object ${JSON.stringify(cache)}:`);
+  console.log(`Cache object ${JSON.stringify(cache)}`);
   return result;
 };
 
-console.log(`Refactored isUnique`, isUniqueOn([1, 2, 3, 4, 4]));
+console.log(
+  `Refactored isUnique`,
+  isUniqueOn([
+    1, 2, 3, 4, 5, 6, 7, 8, 10000, 0.3, 9, 11, 12, 13, 14, 8, 255, 256, 257,
+  ])
+);
