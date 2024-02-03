@@ -89,7 +89,15 @@ console.log(
 const uniqSort = (arr) => {
   const cache = {};
   let sortedArray = arr.sort((a, b) => a - b);
-  return sortedArray;
+  let uniqSortArr = [];
+  for (let item of sortedArray) {
+    if (cache[item]) {
+      continue;
+    }
+    cache[item] = true;
+    uniqSortArr.push(item);
+  }
+  return uniqSortArr;
 };
 
 console.log(uniqSort([4, 2, 2, 3, 2, 2, 2])); // => [2,3,4]
