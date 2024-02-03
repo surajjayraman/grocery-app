@@ -47,3 +47,27 @@ try {
 } catch (e) {
   console.error(`Task3 error: ${e}`);
 }
+
+// make it more generic using callbacks
+console.log("------Task4------");
+const memoizedClosureTimes = (cb) => {
+  const cache = {};
+  const memoTimes = (n) => {
+    console.log(`Cache holds: ${JSON.stringify(cache)}, ${cache[n]}`);
+    if (!cache[n]) {
+      console.log("------Caching------");
+      cache[n] = cb(n);
+    }
+    return cache[n];
+  };
+  return memoTimes;
+};
+
+const memoClosureTimes = memoizedClosureTimes(times10);
+
+try {
+  console.log(`Task4 calculated value: ${memoClosureTimes(9)}`);
+  console.log(`Task4 cached value: ${memoClosureTimes(9)}`);
+} catch (e) {
+  console.error(`Task4 error: ${e}`);
+}
