@@ -57,3 +57,20 @@ console.log(isUnique([1, 2, 3]));
 console.log(isUnique([1, 2, 1]));
 console.log(isUnique([1, 1, 3]));
 console.log(isUnique([1, 2, 3, 4, 4, 5]));
+
+// Refactor TC = O(n) for isUnique
+const isUniqueOn = (arr) => {
+  const cache = {};
+  let result = true;
+  for (let item of arr) {
+    if (cache[item]) {
+      result = false;
+      break;
+    }
+    cache[item] = true;
+  }
+  console.log(`Cache object ${JSON.stringify(cache)}:`);
+  return result;
+};
+
+console.log(`Refactored isUnique`, isUniqueOn([1, 2, 3, 4, 4]));
