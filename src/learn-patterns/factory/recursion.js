@@ -9,3 +9,15 @@ const callMe = () => {
 };
 
 console.log(callMe());
+
+// translating loops into recursion
+
+const loopNTimes = (n) => {
+  console.log(`n === ${n}`);
+  if (n <= 1) {
+    return "Complete!";
+  }
+  return loopNTimes(n - 1);
+};
+
+console.log(loopNTimes(10));
