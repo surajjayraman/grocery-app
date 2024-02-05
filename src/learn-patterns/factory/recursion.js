@@ -20,3 +20,15 @@ const loopNTimes = (n) => {
 };
 
 console.log(loopNTimes(10));
+
+const computeFactorial = (n) => {
+  let result = 1;
+  console.log(`n === ${n}`);
+  if (n >= 1) {
+    result = result * n;
+    return result * computeFactorial(n - 1);
+  }
+  return 1;
+};
+
+console.log(computeFactorial(5));
