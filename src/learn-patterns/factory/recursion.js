@@ -64,4 +64,4 @@ const joinElements = (array, joinString) => {
   return recurse(0, "");
 };
 
-console.log(joinElements(["s", "cr", "tcod", " :) :)"], "e"));
+console.log(joinElements(["s", "cr", "t cod", " :) :)"], "e"));
