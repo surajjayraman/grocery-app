@@ -42,8 +42,8 @@ const logNumbersRecursively = (start, end) => {
     if (i < end) {
       recurse(i + 1);
     }
-    recurse(start);
   };
+  recurse(start);
 };
 
 logNumbersRecursively(5, 10);
