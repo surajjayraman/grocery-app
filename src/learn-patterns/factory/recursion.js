@@ -51,6 +51,10 @@ logNumbersRecursively(5, 10);
 // Wrapper + Accumulator pattern
 const joinElements = (array, joinString) => {
   console.log(`Accumulator Pattern: Joining strings`);
+  const recurse = (index, resultSoFar) => {
+    console.log(`index: ${index} and result so far: ${resultSoFar}`);
+  };
+  return recurse(0, "");
 };
 
 joinElements(["s", "cr", "tcod", ":) :)"], "e");
