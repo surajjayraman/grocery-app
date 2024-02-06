@@ -21,18 +21,57 @@ const loopNTimes = (n) => {
 
 console.log(loopNTimes(10));
 
-const computeFactorial = (n) => {
-  let result = 1;
-  console.log(`n === ${n}`);
-  if (n < 1) {
-    return 1;
-  }
-  result = result * n;
-  return result * computeFactorial(n - 1);
+// const computeFactorial = (n) => {
+//
+//   let result = 1;
+//   const cache = {};
+//   console.log(`n === ${n}`);
+//   if (n < 1) {
+//     return 1;
+//   }
+//   //   result = result * n;
+//   result = n * computeFactorial(n - 1);
+//   cache[n] = result;
+//   //   return result * computeFactorial(n - 1);
+//   return result;
+// };
+const computeFactorial = () => {
+  console.log(`Computing Factorial: `);
+  const cache = {};
+
+  const factorial = (n) => {
+    let result = 1;
+    console.log(`n === ${n}`);
+    console.log(`Contents of cache: ${JSON.stringify(cache)}`);
+
+    if (n < 1) {
+      return 1;
+    }
+    //   result = result * n;
+    // check cache
+    if (!cache[n]) {
+      console.log("Calculating and storing in cache...");
+      result = n * factorial(n - 1);
+      cache[n] = result;
+      return result;
+    }
+    console.log("Retrieving from cache...");
+    result = cache[n];
+    //   return result * computeFactorial(n - 1);
+    return result;
+  };
+
+  return factorial;
 };
 
-console.log(computeFactorial(5));
-console.log(computeFactorial(6));
+// console.log(computeFactorial(5));
+// console.log(computeFactorial(6));
+
+const calcFactorial = computeFactorial();
+console.log(calcFactorial(5));
+console.log(calcFactorial(6));
+console.log(calcFactorial(5));
+console.log(calcFactorial(6));
 
 // log numbers recursively
 const logNumbersRecursively = (start, end) => {
