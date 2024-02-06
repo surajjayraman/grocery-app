@@ -33,3 +33,9 @@ const computeFactorial = (n) => {
 
 console.log(computeFactorial(5));
 console.log(computeFactorial(6));
+
+// log numbers recursively
+const logNumbersRecursively = (start, end) => {
+  console.log(`Recursively looping from ${start} to ${end}`);
+};
+logNumbersRecursively(10, 5);
