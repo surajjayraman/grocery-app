@@ -48,7 +48,7 @@ const logNumbersRecursively = (start, end) => {
 
 logNumbersRecursively(5, 10);
 
-// Accumulator pattern
+// Wrapper + Accumulator pattern
 const joinElements = (array, joinString) => {
   console.log(`Accumulator Pattern: Joining strings`);
 };
