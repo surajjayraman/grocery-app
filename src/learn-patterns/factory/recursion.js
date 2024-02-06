@@ -37,5 +37,13 @@ console.log(computeFactorial(6));
 // log numbers recursively
 const logNumbersRecursively = (start, end) => {
   console.log(`Recursively looping from ${start} to ${end}`);
+  const recurse = (i) => {
+    console.log(`Hitting index i: ${i}`);
+    if (i < end) {
+      recurse(i + 1);
+    }
+    recurse(start);
+  };
 };
-logNumbersRecursively(10, 5);
+
+logNumbersRecursively(5, 10);
