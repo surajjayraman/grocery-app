@@ -55,13 +55,13 @@ const joinElements = (array, joinString) => {
     console.log(`index: ${index} and result so far: ${resultSoFar}`);
     if (index < array.length - 1) {
       resultSoFar = resultSoFar + array[index] + joinString;
-      recurse(index + 1, resultSoFar);
+      return recurse(index + 1, resultSoFar);
     }
     if (index === array.length - 1) {
-      return resultSoFar;
+      return resultSoFar + array[index];
     }
   };
   return recurse(0, "");
 };
 
-joinElements(["s", "cr", "tcod", ":) :)"], "e");
+console.log(joinElements(["s", "cr", "tcod", " :) :)"], "e"));
