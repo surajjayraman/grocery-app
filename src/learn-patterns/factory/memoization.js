@@ -3,6 +3,14 @@ const sayHello = (name) => {
   return `hello there ${name}`;
 };
 
+// factorial func to be memoized
+const factorial = (n) => {
+  if (n <= 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+};
+
 //console.log(sayHello("suraj"));
 
 const memoizeFunc = (cb) => {
@@ -24,7 +32,9 @@ const memoizeFunc = (cb) => {
   return wrapper;
 };
 
+// tests for random func memoization
 const sayHelloMemo = memoizeFunc(sayHello);
 console.log(sayHelloMemo("Sweety"));
 console.log(sayHelloMemo("Suraj"));
 console.log(sayHelloMemo("Suraj"));
+
