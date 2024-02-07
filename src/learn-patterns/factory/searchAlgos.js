@@ -16,11 +16,25 @@ console.log(linearSearch([2, 55, 6, 77, 90, 6], 666));
 // implement a binary search
 
 const binarySearch = (list, item) => {
-  let index = -1;
+  let guess = -1;
   let min = 0;
   let max = list.length - 1;
+
+  while (min <= max) {
+    guess = Math.floor((min + max) / 2);
+
+    if (item === list[guess]) {
+      return guess;
+    }
+
+    if (item > list[guess]) {
+      min = guess + 1;
+    } else {
+      max = guess - 1;
+    }
+  }
   console.log(`input array: ${list}`);
-  return index;
+  return guess;
 };
 
 console.log(
