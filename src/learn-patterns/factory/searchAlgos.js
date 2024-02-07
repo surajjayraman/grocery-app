@@ -11,3 +11,4 @@ function linearSearch(list, item) {
 }
 
 console.log(linearSearch([2, 55, 6, 77, 90, 6], 6));
+console.log(linearSearch([2, 55, 6, 77, 90, 6], 666));
