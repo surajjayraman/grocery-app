@@ -38,3 +38,8 @@ console.log(sayHelloMemo("Sweety"));
 console.log(sayHelloMemo("Suraj"));
 console.log(sayHelloMemo("Suraj"));
 
+// tests for factorial func
+const computeFactorial = memoizeFunc(factorial);
+console.log(computeFactorial(5));
+console.log(computeFactorial(6));
+console.log(computeFactorial(5));
