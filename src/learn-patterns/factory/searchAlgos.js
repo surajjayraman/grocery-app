@@ -19,6 +19,7 @@ const binarySearch = (list, item) => {
   let guess = -1;
   let min = 0;
   let max = list.length - 1;
+  console.log(`input array: ${list}`);
 
   while (min <= max) {
     guess = Math.floor((min + max) / 2);
@@ -33,8 +34,8 @@ const binarySearch = (list, item) => {
       max = guess - 1;
     }
   }
-  console.log(`input array: ${list}`);
-  return guess;
+
+  return -1;
 };
 
 console.log(
@@ -42,6 +43,12 @@ console.log(
     [2, 55, 6, 77, 90, 6].sort((a, b) => {
       return a - b;
     }),
-    6
+    3
   )
+);
+
+console.log(
+  [38, 27, 43, 3, 9, 82, 10].sort((a, b) => {
+    return a - b;
+  })
 );
