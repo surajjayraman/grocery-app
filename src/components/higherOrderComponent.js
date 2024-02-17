@@ -18,7 +18,12 @@ export default function DogImages() {
   return (
     <div>
       <p className="highlighted">Higher Order Component Pattern</p>
-      <h1>Dogs</h1>
+      <h1>
+        Browse Dog Images{" "}
+        <span role="img" aria-label="emoji">
+          🐕
+        </span>
+      </h1>
       <ul>
         {dogs.map((dog, index) => {
           return (
