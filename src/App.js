@@ -90,6 +90,7 @@ import EffectlessForm from "./components/withoutEffectForm";
 import WelcomeApp from "./components/welcome";
 import StatusBar from "./components/statusBar";
 import StatusBarApp from "./components/statusBarApp";
+import DogImages from "./components/higherOrderComponent.js";
 
 
 
@@ -260,6 +261,7 @@ export default function App() {
       <WelcomeApp />
       <StatusBar />
       <StatusBarApp />
+      <DogImages />
     </div>
   );
 }
