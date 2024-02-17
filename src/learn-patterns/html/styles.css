@@ -1,5 +1,6 @@
 .flex {
     display: flex;
+    gap: 1rem;
 }
 
 .box {
@@ -15,4 +16,12 @@
 
 .box:last-child {
     margin-left: auto;
+}
+
+.grid {
+    display: grid
+}
+
+.column {
+    column-count: 2;
 }
