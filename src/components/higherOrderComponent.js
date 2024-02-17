@@ -15,6 +15,10 @@ export default function DogImages() {
     fetchDogs();
   }, []);
 
+  if (!dogs) {
+    return <p>Loading...</p>;
+  }
+
   // with styles HOC pattern
   const withStyles = (Component) => {
     return () => {
