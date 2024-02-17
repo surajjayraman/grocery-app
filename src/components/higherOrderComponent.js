@@ -15,6 +15,30 @@ export default function DogImages() {
     fetchDogs();
   }, []);
 
+  // with styles HOC pattern
+  const withStyles = (Component) => {
+    return () => {
+      return (
+        <Component
+          style={{
+            "box-shadow":
+              "0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)",
+          }}
+        />
+      );
+    };
+  };
+
+  const Button = (props) => {
+    return (
+      <button {...props} onClick={() => alert("Button Clicked")}>
+        Click me
+      </button>
+    );
+  };
+
+  const StyledButton = withStyles(Button);
+
   return (
     <div>
       <p className="highlighted">Higher Order Component Pattern</p>
@@ -33,7 +57,8 @@ export default function DogImages() {
           );
         })}
       </ul>
+      <Button />
+      <StyledButton />
     </div>
   );
 }
-
