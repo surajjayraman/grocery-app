@@ -1,7 +1,8 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function DogImages() {
+  const [dogs, setDogs] = useState([]);
   // fetch dog images
   useEffect(() => {
     async function fetchDogs() {
@@ -9,6 +10,7 @@ export default function DogImages() {
         "https://dog.ceo/api/breed/labrador/images/random/4"
       );
       console.log(JSON.stringify(data));
+      setDogs(data.message);
     }
     fetchDogs();
   }, []);
