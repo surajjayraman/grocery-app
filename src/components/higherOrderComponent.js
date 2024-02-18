@@ -7,7 +7,7 @@ export default function DogImages() {
   useEffect(() => {
     async function fetchDogs() {
       const { data } = await axios.get(
-        "https://dog.ceo/api/breed/labrador/images/random/4"
+        "https://dog.ceo/api/breed/labrador/images/random/5"
       );
       console.log(JSON.stringify(data));
       setDogs(data.message);
