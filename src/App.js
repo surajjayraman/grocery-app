@@ -91,6 +91,8 @@ import WelcomeApp from "./components/welcome";
 import StatusBar from "./components/statusBar";
 import StatusBarApp from "./components/statusBarApp";
 import DogImages from "./components/higherOrderComponent.js";
+import { ThemeProvider } from "./providers/providerPattern.js";
+import ToggleTheme from "./components/toggleTheme.js";
 
 const PRODUCTS = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -284,6 +286,9 @@ export default function App() {
       <StatusBar />
       <StatusBarApp />
       <DogImages />
+      <ThemeProvider>
+        <ToggleTheme />
+      </ThemeProvider>
     </div>
   );
 }
