@@ -5,13 +5,13 @@ import Bio from "./components/bio";
 import Avatar from "./components/avatar";
 import TodoList from "./components/todoList";
 import Profile from "./components/profile";
-import Clock from "./components/clock"
-import { useState, useEffect } from 'react';
+import Clock from "./components/clock";
+import { useState, useEffect } from "react";
 import PackingList from "./components/packingList";
 import DrinkList from "./components/drinkList";
 import List from "./components/list";
 import RecipeList from "./components/recipeList";
-import Poem from './components/poem';
+import Poem from "./components/poem";
 import TeaSet from "./components/teaSet";
 import ClockRender from "./components/clockRender";
 import FixProfile from "./components/fixProfile";
@@ -43,7 +43,7 @@ import BucketList from "./components/bucketList";
 import ShoppingCart from "./components/shoppingCart";
 import TaskManager from "./components/taskManager";
 import QuizForm from "./components/quizForm";
-import Picture from './components/picture'
+import Picture from "./components/picture";
 import EditProfile from "./components/editProfile";
 import SurveyForm from "./components/surveyForm";
 import TicketForm from "./components/ticketForm";
@@ -91,9 +91,8 @@ import WelcomeApp from "./components/welcome";
 import StatusBar from "./components/statusBar";
 import StatusBarApp from "./components/statusBarApp";
 import DogImages from "./components/higherOrderComponent.js";
-
-
-
+import { ThemeProvider } from "./providers/providerPattern.js";
+import ToggleTheme from "./components/toggleTheme.js";
 
 const PRODUCTS = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
@@ -101,7 +100,7 @@ const PRODUCTS = [
   { category: "Fruits", price: "$2", stocked: true, name: "Passionfruit" },
   { category: "Vegetables", price: "$2", stocked: false, name: "Spinach" },
   { category: "Vegetables", price: "$4", stocked: true, name: "Pumpkin" },
-  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" },
 ];
 
 function useTime() {
@@ -117,7 +116,7 @@ function useTime() {
 
 export default function App() {
   const time = useTime();
-  const [color, setColor] = useState('lightcoral');
+  const [color, setColor] = useState("lightcoral");
   return (
     <div>
       <FilterableProductTable products={PRODUCTS} />
@@ -133,7 +132,12 @@ export default function App() {
         <li>Rehearse a movie scene</li>
         <li>Improve the spectrum technology</li>
       </ul>
-      <Avatar person={{ baseUrl: 'https://i.imgur.com/', name: 'Lin Lanying', imageId: '1bX5QH6' }}
+      <Avatar
+        person={{
+          baseUrl: "https://i.imgur.com/",
+          name: "Lin Lanying",
+          imageId: "1bX5QH6",
+        }}
         size={100}
       />
       <TodoList />
@@ -141,8 +145,8 @@ export default function App() {
       <div>
         <h3>How props change over time</h3>
         <p>
-          Pick a color:{' '}
-          <select value={color} onChange={e => setColor(e.target.value)}>
+          Pick a color:{" "}
+          <select value={color} onChange={(e) => setColor(e.target.value)}>
             <option value="lightcoral">lightcoral</option>
             <option value="midnightblue">midnightblue</option>
             <option value="rebeccapurple">rebeccapurple</option>
@@ -150,8 +154,14 @@ export default function App() {
         </p>
         <Clock color={color} time={time.toLocaleTimeString()} />
       </div>
-      <Gallery person={{ baseUrl: 'https://i.imgur.com/', imageId: 'szV5sdG' }} size={70} />
-      <Gallery person={{ baseUrl: 'https://i.imgur.com/', imageId: 'YfeOqp2' }} size={70} />
+      <Gallery
+        person={{ baseUrl: "https://i.imgur.com/", imageId: "szV5sdG" }}
+        size={70}
+      />
+      <Gallery
+        person={{ baseUrl: "https://i.imgur.com/", imageId: "YfeOqp2" }}
+        size={70}
+      />
       <PackingList />
       <DrinkList />
       <List />
@@ -160,29 +170,37 @@ export default function App() {
       <TeaSet />
       <ClockRender time={time} />
       <h1>Panel Profiles</h1>
-      <FixProfile person={{
-        imageId: 'lrWQx8l',
-        name: 'Subrahmanyan Chandrasekhar',
-      }} />
-      <FixProfile person={{
-        imageId: 'MK3eW3A',
-        name: 'Creola Katherine Johnson',
-      }} />
+      <FixProfile
+        person={{
+          imageId: "lrWQx8l",
+          name: "Subrahmanyan Chandrasekhar",
+        }}
+      />
+      <FixProfile
+        person={{
+          imageId: "MK3eW3A",
+          name: "Creola Katherine Johnson",
+        }}
+      />
       <h1> Story Board</h1>
-      <p>It is <Clock color={color} time={time.toLocaleTimeString()} /> now!</p>
-      <StoryTray stories=
-        {[{
-          id: "My Story 1",
-          label: 'Create Story 1'
-        },
-        {
-          id: "My Story 2",
-          label: 'Create Story 2'
-
-        }]} />
+      <p>
+        It is <Clock color={color} time={time.toLocaleTimeString()} /> now!
+      </p>
+      <StoryTray
+        stories={[
+          {
+            id: "My Story 1",
+            label: "Create Story 1",
+          },
+          {
+            id: "My Story 2",
+            label: "Create Story 2",
+          },
+        ]}
+      />
       <Toolbar
-        onPlayMovie={() => alert('Playing!')}
-        onUploadImage={() => alert('Uploading!')}
+        onPlayMovie={() => alert("Playing!")}
+        onUploadImage={() => alert("Uploading!")}
       />
       <SignUp />
       <LightSwitch />
@@ -197,10 +215,16 @@ export default function App() {
       <RequestTracker />
       <AsyncRequestTracker />
       <ProcessQueue baseState={0} queue={[1, 1, 1]} />
-      <ProcessQueue baseState={0} queue={[n => n + 1, n => n + 1, n => n + 1]} />
-      <ProcessQueue baseState={0} queue={[5, n => n + 1]} />
-      <ProcessQueue baseState={0} queue={[5, n => n + 1, 42]} />
-      <ProcessQueue baseState={0} queue={[5, n => n + 1, () => 'Hello Suraj']} />
+      <ProcessQueue
+        baseState={0}
+        queue={[(n) => n + 1, (n) => n + 1, (n) => n + 1]}
+      />
+      <ProcessQueue baseState={0} queue={[5, (n) => n + 1]} />
+      <ProcessQueue baseState={0} queue={[5, (n) => n + 1, 42]} />
+      <ProcessQueue
+        baseState={0}
+        queue={[5, (n) => n + 1, () => "Hello Suraj"]}
+      />
       <MovingDot />
       <FormUpdate />
       <ImmerForm />
@@ -240,7 +264,7 @@ export default function App() {
       <ContextPage />
       <ProfilePage />
       <ContextImage />
-      <Header text='My Friends' />
+      <Header text="My Friends" />
       <TempleTask />
       <RefCounter />
       <Stopwatch />
@@ -262,8 +286,9 @@ export default function App() {
       <StatusBar />
       <StatusBarApp />
       <DogImages />
+      <ThemeProvider>
+        <ToggleTheme />
+      </ThemeProvider>
     </div>
   );
 }
-
-
