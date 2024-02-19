@@ -8,7 +8,13 @@ export default function ToggleTheme() {
       <p className="highlighted">Provider Pattern</p>
       Current theme: {theme}
       <button
-        style={{ "background-color": theme, color: "white" }}
+        style={{
+          "background-color": theme,
+          color: "white",
+          padding: "10px",
+          margin: "10px",
+          "border-radius": "5px",
+        }}
         onClick={toggleTheme}
       >
         Toggle Theme
