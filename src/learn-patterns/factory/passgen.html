@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Generator</title>
+  <script src="./passgen.js">
+    
+  </script>
+</head>
+<body>
+  <h1>Password Generator</h1>
+  <form onsubmit="event.preventDefault(); generateAndDisplayPassword();">
+    <label for="length">Length:</label>
+    <input type="number" id="length" min="1" value="10">
+    <br>
+    <label for="includeUppercase">Include uppercase letters:</label>
+    <input type="checkbox" id="includeUppercase" checked>
+    <br>
+    <label for="includeLowercase">Include lowercase letters:</label>
+    <input type="checkbox" id="includeLowercase" checked>
+    <br>
+    <label for="includeNumbers">Include numbers:</label>
+    <input type="checkbox" id="includeNumbers" checked>
+    <br>
+    <label for="includeSpecialCharacters">Include special characters:</label>
+    <input type="checkbox" id="includeSpecialCharacters" checked>
+    <br>
+    <button type="submit">Generate Password</button>
+  </form>
+  <h2>Password:</h2>
+  <p id="password"></p>
+</body>
+</html>
