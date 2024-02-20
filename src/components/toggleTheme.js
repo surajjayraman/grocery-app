@@ -17,7 +17,7 @@ export default function ToggleTheme() {
         }}
         onClick={toggleTheme}
       >
-        Toggle Theme
+        Button Toggle Theme
       </button>
     </>
   );
