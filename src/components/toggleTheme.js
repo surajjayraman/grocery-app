@@ -5,7 +5,7 @@ export default function ToggleTheme() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <>
-      <p className="highlighted">Provider Pattern</p>
+      <p className="highlighted">Provider Pattern - Toggle Theme</p>
       Current theme: {theme}
       <button
         style={{
